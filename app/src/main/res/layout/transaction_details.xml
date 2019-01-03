@@ -200,6 +200,7 @@
                 android:layout_marginTop="14dp"
                 android:layout_toEndOf="@id/memo_label"
                 android:background="@android:color/transparent"
+                android:textColor="#ffff"
                 android:cursorVisible="false"
                 android:gravity="end"
                 android:hint="@string/TransactionDetails.commentsPlaceholder"
@@ -207,7 +208,8 @@
                 android:inputType="text"
                 android:paddingEnd="16dp"
                 android:paddingStart="16dp"
-                android:textColor="@color/white"
+                android:textColorHint="@color/balance_crypto_color"
+
                 android:textSize="12sp"
                 app:customTFont="CircularPro-Book.otf"/>
 
