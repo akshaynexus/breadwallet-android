@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:background="@color/white">
+    android:background="@color/almost_black">
 
 
     <com.breadwallet.presenter.customviews.BaseTextView
@@ -14,7 +14,7 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
         android:text="Dec 2"
-        android:textColor="@color/total_assets_usd_color"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:customTFont="CircularPro-Book.otf" />
 
