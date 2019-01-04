@@ -166,13 +166,13 @@ public final class SettingsUtil {
         final WalletBchManager walletBchManager = WalletBchManager.getInstance(activity);
         String bchSettingsLabel = String.format("%s %s", walletBchManager.getName(), activity.getString(R.string.Settings_title));
 
-        items.add(new BRSettingsItem(bchSettingsLabel, currentFiatCode, new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                BRSharedPrefs.putCurrentWalletIso(activity, walletBchManager.getIso());
-                startCurrencySettings(activity);
-            }
-        }, false, 0));
+//        items.add(new BRSettingsItem(bchSettingsLabel, currentFiatCode, new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                BRSharedPrefs.putCurrentWalletIso(activity, walletBchManager.getIso());
+//                startCurrencySettings(activity);
+//            }
+//        }, false, 0));
         items.add(new BRSettingsItem(activity.getString(R.string.Prompts_ShareData_title), currentFiatCode, new View.OnClickListener() {
             @Override
             public void onClick(View view) {

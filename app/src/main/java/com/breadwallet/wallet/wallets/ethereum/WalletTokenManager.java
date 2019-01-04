@@ -104,7 +104,7 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
     //for testing only
     public static WalletTokenManager getBrdWallet(WalletEthManager walletEthManager) {
         BREthereumWallet brdWallet = walletEthManager.node.getWallet(walletEthManager.node.getBRDToken());
-        if (brdWallet.getToken() == null) {
+            if (brdWallet.getToken() == null) {
             BRReportsManager.reportBug(new NullPointerException("getBrd failed"));
             return null;
         }

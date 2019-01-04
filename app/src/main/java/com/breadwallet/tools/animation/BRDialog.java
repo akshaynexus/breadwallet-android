@@ -58,6 +58,7 @@ public class BRDialog {
             @Override
             public void run() {
                 dialog = new BRDialogView();
+
                 dialog.setTitle(title);
                 dialog.setMessage(message);
                 dialog.setPosButton(posButton);

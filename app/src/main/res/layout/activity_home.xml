@@ -79,7 +79,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/extra_light_blue_background">
+                        android:background="@color/almost_black">
 
                         <com.breadwallet.presenter.customviews.BaseTextView
                             android:id="@+id/prompt_title"
@@ -88,7 +88,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:text="@string/Prompts.PaperKey.title"
-                            android:textColor="@color/almost_black"
+                            android:textColor="@color/white"
                             android:textSize="16sp"
                             app:customTFont="CircularPro-Bold.otf"/>
 
@@ -97,7 +97,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/prompt_title"
-                            android:textColor="@color/almost_black"
+                            android:textColor="@color/white"
                             android:layout_marginEnd="16dp"
                             android:layout_marginStart="16dp"
                             android:text="@string/Prompts.PaperKey.body"
@@ -193,50 +193,50 @@
             android:padding="8dp"
             android:stretchColumns="0,1,2">
 
-            <TableRow>
 
-                <LinearLayout
-                    android:id="@+id/buy_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_buy_cash"/>
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/buy_layout"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="bottom"-->
+                    <!--android:orientation="vertical">-->
 
-                    <com.breadwallet.presenter.customviews.BaseTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/HomeScreen.buy"
-                        android:textColor="@color/sync_toolbar_retry_text"/>
+                    <!--<ImageView-->
+                        <!--android:layout_width="24dp"-->
+                        <!--android:layout_height="24dp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:src="@drawable/ic_buy_cash"/>-->
 
-                </LinearLayout>
+                    <!--<com.breadwallet.presenter.customviews.BaseTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:text="@string/HomeScreen.buy"-->
+                        <!--android:textColor="@color/sync_toolbar_retry_text"/>-->
 
-                <LinearLayout
-                    android:id="@+id/trade_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:orientation="vertical">
+                <!--</LinearLayout>-->
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_trade"/>
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/trade_layout"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="bottom"-->
+                    <!--android:orientation="vertical">-->
 
-                    <com.breadwallet.presenter.customviews.BaseTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/HomeScreen.trade"
-                        android:textColor="@color/sync_toolbar_retry_text"/>
-                </LinearLayout>
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/ic_trade"/>-->
+
+                    <!--<com.breadwallet.presenter.customviews.BaseTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:text="@string/HomeScreen.trade"-->
+                        <!--android:textColor="@color/sync_toolbar_retry_text"/>-->
+                <!--</LinearLayout>-->
 
                 <LinearLayout
                     android:id="@+id/menu_layout"
@@ -260,7 +260,7 @@
                         android:textColor="@color/sync_toolbar_retry_text"/>
                 </LinearLayout>
 
-            </TableRow>
+
 
         </TableLayout>
 

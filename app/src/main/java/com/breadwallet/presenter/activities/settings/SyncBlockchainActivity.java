@@ -53,6 +53,7 @@ public class SyncBlockchainActivity extends BRActivity {
                             @Override
                             public void onClick(BRDialogView brDialogView) {
                                 brDialogView.dismissWithAnimation();
+
                                 rescanClicked();
                             }
                         }, new BRDialogView.BROnClickListener() {

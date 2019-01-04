@@ -83,23 +83,23 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
         mPromptContinue = findViewById(R.id.continue_button);
         mPromptDismiss = findViewById(R.id.dismiss_button);
 
-        mBuyLayout = findViewById(R.id.buy_layout);
-        mTradeLayout = findViewById(R.id.trade_layout);
+//        mBuyLayout = findViewById(R.id.buy_layout);
+//        mTradeLayout = findViewById(R.id.trade_layout);
         mMenuLayout = findViewById(R.id.menu_layout);
 
-        mBuyLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = String.format(BRConstants.CURRENCY_PARAMETER_STRING_FORMAT, HTTPServer.URL_BUY, WalletBitcoinManager.getInstance(HomeActivity.this).getIso());
-                UiUtils.startWebActivity(HomeActivity.this, url);
-            }
-        });
-        mTradeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                UiUtils.startWebActivity(HomeActivity.this, HTTPServer.URL_TRADE);
-            }
-        });
+//        mBuyLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String url = String.format(BRConstants.CURRENCY_PARAMETER_STRING_FORMAT, HTTPServer.URL_BUY, WalletBitcoinManager.getInstance(HomeActivity.this).getIso());
+//                UiUtils.startWebActivity(HomeActivity.this, url);
+//            }
+//        });
+//        mTradeLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                UiUtils.startWebActivity(HomeActivity.this, HTTPServer.URL_TRADE);
+//            }
+//        });
         mMenuLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,7 +119,8 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
                     Intent newIntent = new Intent(HomeActivity.this, WalletActivity.class);
                     startActivity(newIntent);
                     overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
-                } else {
+                }
+                else {
                     Intent intent = new Intent(HomeActivity.this, AddWalletsActivity.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);

@@ -86,7 +86,6 @@ public class BRDialogView extends DialogFragment {
         mMainLayout = view.findViewById(R.id.main_layout);
         mButtonsLayout = view.findViewById(R.id.linearLayout3);
         mHelpButton = view.findViewById(R.id.help_icon);
-
         //assuming that is the last text to bet set.
         if (Utils.isNullOrEmpty(mTitle)) {
             mMainLayout.removeView(titleText);

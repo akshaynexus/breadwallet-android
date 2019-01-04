@@ -65,6 +65,33 @@ add_library( # The name of the library.
              src/main/jni/breadwallet-core/BRWallet.c
              src/main/jni/breadwallet-core/BRWallet.h
 
+    # X11 files
+             src/main/jni/breadwallet-core/quark.c
+             src/main/jni/breadwallet-core/quark.h
+             src/main/jni/breadwallet-core/sha3/aes_helper.c
+            src/main/jni/breadwallet-core/sha3/blake.c
+            src/main/jni/breadwallet-core/sha3/bmw.c
+            src/main/jni/breadwallet-core/sha3/cubehash.c
+            src/main/jni/breadwallet-core/sha3/echo.c
+            src/main/jni/breadwallet-core/sha3/groestl.c
+            src/main/jni/breadwallet-core/sha3/jh.c
+            src/main/jni/breadwallet-core/sha3/keccak.c
+            src/main/jni/breadwallet-core/sha3/luffa.c
+            src/main/jni/breadwallet-core/sha3/shavite.c
+            src/main/jni/breadwallet-core/sha3/simd.c
+            src/main/jni/breadwallet-core/sha3/skein.c
+            src/main/jni/breadwallet-core/sha3/sph_blake.h
+            src/main/jni/breadwallet-core/sha3/sph_bmw.h
+            src/main/jni/breadwallet-core/sha3/sph_cubehash.h
+            src/main/jni/breadwallet-core/sha3/sph_echo.h
+            src/main/jni/breadwallet-core/sha3/sph_groestl.h
+            src/main/jni/breadwallet-core/sha3/sph_jh.h
+            src/main/jni/breadwallet-core/sha3/sph_keccak.h
+            src/main/jni/breadwallet-core/sha3/sph_luffa.h
+            src/main/jni/breadwallet-core/sha3/sph_shavite.h
+            src/main/jni/breadwallet-core/sha3/sph_simd.h
+            src/main/jni/breadwallet-core/sha3/sph_skein.h
+            src/main/jni/breadwallet-core/sha3/sph_types.h
              # BCash files
              src/main/jni/breadwallet-core/bcash/BRBCashAddr.c
              src/main/jni/breadwallet-core/bcash/BRBCashAddr.h

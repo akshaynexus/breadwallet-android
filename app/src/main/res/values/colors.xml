@@ -30,8 +30,8 @@
     <item name="warning_status_bar" type="color">#7f5225</item>
     <item name="camera_guideline" type="color">#50636363</item>
 
-    <item name="logo_gradient_start" type="color">#F8A445</item>
-    <item name="logo_gradient_end" type="color">#fc5394</item>
+    <item name="logo_gradient_start" type="color">#2feece</item>
+    <item name="logo_gradient_end" type="color">#46bdf4</item>
 
     <item name="finger_gradient_start" type="color">#9c7ee2</item>
     <item name="finger_gradient_end" type="color">#7F52E6</item>
@@ -52,7 +52,7 @@
     <item name="extra_light_blue_background" type="color">#F5F8FA</item>
 
     <item name="button_primary_normal" type="color">#29ABE2</item>
-    <item name="button_secondary" type="color">#F5F8FA</item>
+    <item name="button_secondary" type="color">#303030</item>
     <item name="button_secondary_text" type="color">#232426</item>
     <item name="confirmation_box" type="color">#141233</item>
 
@@ -67,9 +67,9 @@
     <color name="viewfinder_border">#ffafed44</color>
 
     //Currency screen
-    <color name="currency_header_background">#f29500</color>
+    <color name="currency_header_background">#2feece</color>
     <color name="currency_subheading_color">#F0E5D7</color>
-    <color name="currency_buttons_color">#ffac26</color>
+    <color name="currency_buttons_color">#1f7e6e</color>
 
     //Home screen
     <color name="total_assets_label_color">#788f9e</color>
@@ -101,8 +101,8 @@
     <color name="add_wallets_border_color">#e5e5e5</color>
 
     // Dark Mode colors
-    <color name="primary_background">#251935</color>
-    <color name="secondary_background">#302442</color>
+    <color name="primary_background">#1e1e1e</color>
+    <color name="secondary_background">#303030</color>
     <color name="tertiary_background">#2E2540</color>
     <color name="button_gradient_start_color">#FF5193</color>
     <color name="button_gradient_end_color">#F29500</color>

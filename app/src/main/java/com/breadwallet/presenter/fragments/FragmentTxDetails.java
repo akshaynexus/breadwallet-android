@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -113,7 +114,7 @@ public class FragmentTxDetails extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.transaction_details, container, false);
-
+//rootView.setBackgroundColor(Color.BLACK);
         mAmountNow = rootView.findViewById(R.id.amount_now);
         mAmountWhenSent = rootView.findViewById(R.id.amount_when_sent);
         mTxAction = rootView.findViewById(R.id.tx_action);

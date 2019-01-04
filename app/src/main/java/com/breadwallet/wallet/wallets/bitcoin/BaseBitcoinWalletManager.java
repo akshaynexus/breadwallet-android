@@ -110,7 +110,7 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
         String firstAddress = masterPubKey.getPubKeyAsCoreKey().address();
         BRSharedPrefs.putFirstAddress(context, firstAddress);
 
-        mUiConfig = new WalletUiConfiguration(getColor(), null, true, WalletManagerHelper.MAX_DECIMAL_PLACES_FOR_UI);
+        mUiConfig = new WalletUiConfiguration("#2feece", "#46bdf4", true, WalletManagerHelper.MAX_DECIMAL_PLACES_FOR_UI);
 
     }
 
@@ -764,7 +764,12 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
         BRCoreTransaction arr[] = new BRCoreTransaction[txs.size()];
         for (int i = 0; i < txs.size(); i++) {
             BRTransactionEntity ent = txs.get(i);
-            arr[i] = new BRCoreTransaction(ent.getBuff(), ent.getBlockheight(), ent.getTimestamp());
+            try {
+                arr[i] = new BRCoreTransaction(ent.getBuff(), ent.getBlockheight(), ent.getTimestamp());
+            }
+            catch (BRCoreTransaction.FailedToParse e){
+                e.printStackTrace();
+            }
         }
         return arr;
     }

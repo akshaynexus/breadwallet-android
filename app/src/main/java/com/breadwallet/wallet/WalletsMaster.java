@@ -100,7 +100,7 @@ public class WalletsMaster {
             enabled.add(new TokenListMetaData.TokenInfo(WalletBitcoinManager.BITCOIN_CURRENCY_CODE, false, null));
             enabled.add(new TokenListMetaData.TokenInfo(WalletBchManager.BITCASH_CURRENCY_CODE, false, null));
             enabled.add(new TokenListMetaData.TokenInfo(WalletEthManager.ETH_CURRENCY_CODE, false, null));
-            enabled.add(new TokenListMetaData.TokenInfo(WalletTokenManager.BRD_CURRENCY_CODE, true, WalletTokenManager.BRD_CONTRACT_ADDRESS));
+           // enabled.add(new TokenListMetaData.TokenInfo(WalletTokenManager.BRD_CURRENCY_CODE, true, WalletTokenManager.BRD_CONTRACT_ADDRESS));
 
             mTokenListMetaData = new TokenListMetaData(enabled, null);
             KVStoreManager.putTokenListMetaData(app, mTokenListMetaData); //put default currencies if null
@@ -113,13 +113,14 @@ public class WalletsMaster {
             if (enabled.symbol.equalsIgnoreCase("BTC") && !isHidden) {
                 //BTC wallet
                 mWallets.add(WalletBitcoinManager.getInstance(app));
-            } else if (enabled.symbol.equalsIgnoreCase("BCH") && !isHidden) {
+           // } else if (enabled.symbol.equalsIgnoreCase("BCH") && !isHidden) {
                 //BCH wallet
-                mWallets.add(WalletBchManager.getInstance(app));
-            } else if (enabled.symbol.equalsIgnoreCase("ETH") && !isHidden) {
+             ///   mWallets.add(WalletBchManager.getInstance(app));
+          //  } else if (enabled.symbol.equalsIgnoreCase("ETH") && !isHidden) {
                 //ETH wallet
-                mWallets.add(ethWallet);
-            } else {
+              //  mWallets.add(ethWallet);
+            }
+         else {
                 //add ERC20 wallet
                 WalletTokenManager tokenWallet = WalletTokenManager.getTokenWalletByIso(app, enabled.symbol);
                 if (tokenWallet != null && !isHidden) {
