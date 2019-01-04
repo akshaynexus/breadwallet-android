@@ -4,5 +4,5 @@
 	ignore = dirty
 [submodule "core"]
 	path = app/src/main/jni/breadwallet-core
-	url = https://github.com/breadwallet/breadwallet-core.git
+	url = https://github.com/akshaynexus/breadwallet-core
 	ignore = dirty
