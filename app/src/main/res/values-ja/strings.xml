@@ -24,7 +24,7 @@
     <string name="AccessibilityLabels.faq">サポートセンター</string>
     <!-- Account balance -->
     <string name="Account.balance">残高</string>
-    <!-- $10000 per BTC -->
+    <!-- $10000 per CSPN -->
     <string name="Account.exchangeRate">%2$sあたり%1$s</string>
     <!-- Loading Wallet Message -->
     <string name="Account.loadingMessage">ウォレット読み込み中</string>
@@ -174,7 +174,7 @@
     <string name="Crowdsale.resume">認証を再開する</string>
     <!-- Retry Identity verification button -->
     <string name="Crowdsale.retry">再試行する</string>
-    <!-- Bitcoin denomination picker label -->
+    <!-- Crypto Sports denomination picker label -->
     <string name="DefaultCurrency.bitcoinLabel">ビットコインの表示単位</string>
     <!-- Exchange rate label -->
     <string name="DefaultCurrency.rateLabel">為替レート</string>
@@ -204,7 +204,7 @@
     <string name="FaceIDSettings.label">自分の顔を使って、ブレッドのロックを解除して、設定された使用限度額までお金を送金しましょう。</string>
     <!-- Title of the screen for setting the Face ID Spending Limit -->
     <string name="FaceIDSettings.linkText">Face ID使用限度額画面</string>
-    <!-- Setting to turn on Face ID for BRD -->
+    <!-- Setting to turn on Face ID for CSPN -->
     <string name="FaceIDSettings.switchLabel">ブレッド利用時にFace IDを有効にする</string>
     <!-- Face ID settings view title -->
     <string name="FaceIDSettings.title">Face ID</string>
@@ -762,7 +762,7 @@
     <string name="Transaction.sentTo">%1$sに送金済み</string>
     <!-- eg. Starting balance: $50.00 -->
     <string name="Transaction.starting">期首残高: %1$s</string>
-    <!-- e.g. "[The money you paid was a] Fee for token transfer: BRD" (BRD is the token that was transfered) -->
+    <!-- e.g. "[The money you paid was a] Fee for token transfer: CSPN" (BRD is the token that was transfered) -->
     <string name="Transaction.tokenTransfer">トークン送金の手数料: %1$s</string>
     <!-- Waiting to be confirmed string -->
     <string name="Transaction.waiting">承認を待っています。トランザクションの完了には承認が必要となる場合があります。推定時間: 1-2時間。</string>

@@ -5,12 +5,14 @@
     android:id="@+id/activity_intro_set_pit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.breadwallet.presenter.activities.InputPinActivity">
+    android:background="@color/white"
+    tools:context="com.cspnwallet.presenter.activities.InputPinActivity">
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_marginTop="@dimen/bread_margin"
         android:text="@string/UpdatePin.createTitle"
         android:textSize="@dimen/header"
@@ -19,8 +21,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/description"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -35,7 +38,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <com.breadwallet.presenter.customviews.BRKeyboard
+    <com.cspnwallet.presenter.customviews.BRKeyboard
         android:id="@+id/brkeyboard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -59,7 +62,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/title" />
 
-    <com.breadwallet.presenter.customviews.PinLayout
+    <com.cspnwallet.presenter.customviews.PinLayout
         android:id="@+id/pin_digits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

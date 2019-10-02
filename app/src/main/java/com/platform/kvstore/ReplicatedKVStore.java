@@ -33,23 +33,21 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.app.ApplicationLifecycleObserver;
-import com.breadwallet.core.BRCoreKey;
-import com.breadwallet.tools.crypto.CryptoHelper;
-import com.breadwallet.tools.manager.BREventManager;
-import com.breadwallet.tools.security.BRKeyStore;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.tools.util.Utils;
+import com.cspnwallet.BreadApp;
+import com.cspnwallet.app.ApplicationLifecycleObserver;
+import com.cspnwallet.core.BRCoreKey;
+import com.cspnwallet.tools.crypto.CryptoHelper;
+import com.cspnwallet.tools.security.BRKeyStore;
+import com.cspnwallet.tools.util.BRConstants;
+import com.cspnwallet.tools.util.Utils;
 import com.platform.interfaces.KVStoreAdaptor;
 import com.platform.sqlite.KVItem;
 import com.platform.sqlite.PlatformSqliteHelper;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -69,8 +67,12 @@ public class ReplicatedKVStore implements ApplicationLifecycleObserver.Applicati
     public boolean syncImmediately = false;
     private boolean syncRunning = false;
     private KVStoreAdaptor remoteKvStore;
+    private KVStoreAdaptor mRemoteKvStore;
+
     private static Context mContext;
     private static byte[] tempAuthKey;
+    private AtomicBoolean mSyncRunning = new AtomicBoolean(false);
+
     // Database fields
 //    private SQLiteDatabase readDb;
 //    private SQLiteDatabase writeDb;
@@ -97,6 +99,8 @@ public class ReplicatedKVStore implements ApplicationLifecycleObserver.Applicati
 //        if (ActivityUTILS.isMainThread()) throw new NetworkOnMainThreadException();
         mContext = context;
         this.remoteKvStore = remoteKvStore;
+        this.mRemoteKvStore = remoteKvStore;
+
         dbHelper = PlatformSqliteHelper.getInstance(context);
     }
 
@@ -467,7 +471,37 @@ public class ReplicatedKVStore implements ApplicationLifecycleObserver.Applicati
             syncRunning = false;
         }
     }
+    /**
+     * Sync an individual key. Normally this is only called internally and you should call syncAllKeys
+     */
+    public void syncKeyAlt(final String key, final long remoteVersion, final long remoteTime, final CompletionObject.RemoteKVStoreError err) {
+        if (!mSyncRunning.compareAndSet(false, true)) {
+            return;
+        }
 
+        try {
+            if (remoteVersion == 0 || remoteTime == 0) {
+                final CompletionObject completionObject = mRemoteKvStore.ver(key);
+                Log.e(TAG, String.format("syncKey: completionObject: version: %d, value: %s, err: %s, time: %d",
+                        completionObject.version, Arrays.toString(completionObject.value), completionObject.err, completionObject.time));
+                _syncKey(key, completionObject.version, completionObject.time, completionObject.err);
+
+            } else {
+//                BRExecutor.getInstance().forBackgroundTasks().execute(new Runnable() {
+//                    @Override
+//                    public void run() {
+                _syncKey(key, remoteVersion, remoteTime, err);
+//                    }
+//                });
+
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            mSyncRunning.set(false);
+        }
+    }
     /**
      * the syncKey kernel - this is provided so syncAllKeys can provide get a bunch of key versions at once
      * and fan out the _syncKey operations

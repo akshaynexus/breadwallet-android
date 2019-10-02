@@ -1,0 +1,3 @@
+C:/Users/Akshay/Documents/breadwallet-android-cspn/app/.cxx/cmake/brdTestnetDebug/arm64-v8a/CMakeFiles/core.dir
+C:/Users/Akshay/Documents/breadwallet-android-cspn/app/.cxx/cmake/brdTestnetDebug/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Akshay/Documents/breadwallet-android-cspn/app/.cxx/cmake/brdTestnetDebug/arm64-v8a/CMakeFiles/rebuild_cache.dir

@@ -6,9 +6,9 @@
     android:id="@+id/activity_intro_set_pit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.breadwallet.presenter.activities.settings.NodesActivity">
+    tools:context="com.cspnwallet.presenter.activities.settings.NodesActivity">
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"/>
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/node_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description"/>
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/node_text"/>
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/node_status"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"/>
 
-    <com.breadwallet.presenter.customviews.BRButton
+    <com.cspnwallet.presenter.customviews.BRButton
         android:id="@+id/button_switch"
         android:layout_width="0dp"
         android:layout_height="@dimen/big_button_height"

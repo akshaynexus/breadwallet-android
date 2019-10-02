@@ -1,22 +1,21 @@
 package com.platform.tools;
 
-import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.security.keystore.UserNotAuthenticatedException;
 import android.util.Base64;
 import android.util.Log;
 
-import com.breadwallet.core.BRCoreKey;
-import com.breadwallet.core.BRCoreMasterPubKey;
-import com.breadwallet.presenter.interfaces.BRAuthCompletion;
-import com.breadwallet.tools.manager.BRSharedPrefs;
-import com.breadwallet.tools.security.AuthManager;
-import com.breadwallet.tools.security.BRKeyStore;
-import com.breadwallet.tools.security.PostAuth;
-import com.breadwallet.tools.threads.executor.BRExecutor;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.tools.util.Utils;
+import com.cspnwallet.core.BRCoreKey;
+import com.cspnwallet.core.BRCoreMasterPubKey;
+import com.cspnwallet.presenter.interfaces.BRAuthCompletion;
+import com.cspnwallet.tools.manager.BRSharedPrefs;
+import com.cspnwallet.tools.security.AuthManager;
+import com.cspnwallet.tools.security.BRKeyStore;
+import com.cspnwallet.tools.security.PostAuth;
+import com.cspnwallet.tools.threads.executor.BRExecutor;
+import com.cspnwallet.tools.util.BRConstants;
+import com.cspnwallet.tools.util.Utils;
 import com.platform.APIClient;
 import com.platform.middlewares.plugins.WalletPlugin;
 
@@ -25,7 +24,6 @@ import junit.framework.Assert;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -40,7 +38,6 @@ import java.util.Map;
 
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
 
 
 /**
@@ -69,7 +66,7 @@ import okhttp3.Response;
  */
 public class BRBitId {
     public static final String TAG = BRBitId.class.getName();
-    public static final String BITCOIN_SIGNED_MESSAGE_HEADER = "Bitcoin Signed Message:\n";
+    public static final String BITCOIN_SIGNED_MESSAGE_HEADER = "Crypto Sports Signed Message:\n";
 
     private static String _bitUri;
     private static String _bitIdUrl;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <com.breadwallet.presenter.customviews.BRButton
+    <com.cspnwallet.presenter.customviews.BRButton
         android:id="@+id/send_button"
         android:layout_width="0dp"
         android:layout_height="@dimen/big_button_height"
@@ -93,7 +93,7 @@
                 android:orientation="vertical"
                 android:weightSum="2">
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -108,7 +108,7 @@
                     android:textCursorDrawable="@null"
                     app:customEFont="CircularPro-Medium.otf" />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -127,7 +127,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -141,7 +141,7 @@
                     android:nextFocusForward="@+id/word3"
                     />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -160,7 +160,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -174,7 +174,7 @@
                     android:nextFocusForward="@+id/word4"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -200,7 +200,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -214,7 +214,7 @@
                     android:nextFocusForward="@+id/word5"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -233,7 +233,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -247,7 +247,7 @@
                     android:nextFocusForward="@+id/word6"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -266,7 +266,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -280,7 +280,7 @@
                     android:nextFocusForward="@+id/word7"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -306,7 +306,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -320,7 +320,7 @@
                     android:nextFocusForward="@+id/word8"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -339,7 +339,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -353,7 +353,7 @@
                     android:nextFocusForward="@+id/word9"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -372,7 +372,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -386,7 +386,7 @@
                     android:nextFocusForward="@+id/word10"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -414,7 +414,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -428,7 +428,7 @@
                     android:nextFocusForward="@+id/word11"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -448,7 +448,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -462,7 +462,7 @@
                     android:nextFocusForward="@+id/word12"
                      />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
@@ -482,7 +482,7 @@
 
                 >
 
-                <com.breadwallet.presenter.customviews.BREdit
+                <com.cspnwallet.presenter.customviews.BREdit
                     android:id="@+id/word12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -494,7 +494,7 @@
                     android:inputType="textVisiblePassword"
                     android:lines="1" />
 
-                <com.breadwallet.presenter.customviews.BaseTextView
+                <com.cspnwallet.presenter.customviews.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"

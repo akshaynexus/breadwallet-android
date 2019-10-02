@@ -13,7 +13,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/token_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:textSize="18sp"
         app:customTFont="CircularPro-Bold.otf" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/token_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         android:textSize="14sp"
         app:customTFont="CircularPro-Book.otf" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/token_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

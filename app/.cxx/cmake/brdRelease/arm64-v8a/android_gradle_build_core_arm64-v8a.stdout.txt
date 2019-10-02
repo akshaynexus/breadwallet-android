@@ -1,0 +1,19 @@
+[1/5] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRPeerManager.c.o
+[2/5] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreChainParams.c.o
+[3/5] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCorePeerManager.c.o
+[4/5] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreWallet.c.o
+C:\Users\Akshay\Documents\breadwallet-android-cspn\app\src\main\jni\breadwallet-core\Java\com_cspnwallet_core_BRCoreWallet.c:343:12: warning: overflow in expression; result is 1411065408 with type 'int' [-Winteger-overflow]
+    return MAX_FEE_PER_KB;
+           ^
+../../../../src/main/jni/breadwallet-core/BRWallet.h:40:43: note: expanded from macro 'MAX_FEE_PER_KB'
+#define MAX_FEE_PER_KB     ((TX_FEE_PER_KB*1000100 + 190)/191) // slightly higher than a 10,000bit fee on a 191byte tx
+                                          ^
+1 warning generated.
+C:\Users\Akshay\Documents\breadwallet-android-cspn\app\src\main\jni\breadwallet-core\BRPeerManager.c:1398:74: warning: overflow in expression; result is 1411065408 with type 'int' [-Winteger-overflow]
+    if (secondFeePerKb*3/2 > DEFAULT_FEE_PER_KB && secondFeePerKb*3/2 <= MAX_FEE_PER_KB &&
+                                                                         ^
+../../../../src/main/jni/breadwallet-core/BRWallet.h:40:43: note: expanded from macro 'MAX_FEE_PER_KB'
+#define MAX_FEE_PER_KB     ((TX_FEE_PER_KB*1000100 + 190)/191) // slightly higher than a 10,000bit fee on a 191byte tx
+                                          ^
+1 warning generated.
+[5/5] Linking C shared library ..\..\..\..\build\intermediates\cmake\brdRelease\obj\arm64-v8a\libcore.so

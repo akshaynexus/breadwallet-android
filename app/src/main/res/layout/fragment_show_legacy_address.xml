@@ -45,7 +45,7 @@
 
     </android.support.constraint.ConstraintLayout>
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
@@ -54,7 +54,7 @@
       android:textSize="18sp"
       app:customTFont="CircularPro-Book.otf" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
@@ -76,7 +76,7 @@
       android:layout_marginEnd="8dp"
       android:src="@drawable/ic_check_mark_grey" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
       android:id="@+id/address_text"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
       android:textColor="@color/light_gray"
       android:textSize="14sp" />
 
-    <com.breadwallet.presenter.customviews.BRLinearLayoutWithCaret
+    <com.cspnwallet.presenter.customviews.BRLinearLayoutWithCaret
       android:id="@+id/copied_layout"
       android:layout_width="match_parent"
       android:layout_height="60dp"
@@ -99,7 +99,7 @@
       app:backgroundColor="@color/button_primary_normal"
       app:withStroke="false">
 
-      <com.breadwallet.presenter.customviews.BaseTextView
+      <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/copied_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -110,9 +110,9 @@
         android:text="@string/Receive.copied"
         android:textColor="@color/white"
         android:textSize="@dimen/paragraph" />
-    </com.breadwallet.presenter.customviews.BRLinearLayoutWithCaret>
+    </com.cspnwallet.presenter.customviews.BRLinearLayoutWithCaret>
 
-    <com.breadwallet.presenter.customviews.BRButton
+    <com.cspnwallet.presenter.customviews.BRButton
       android:id="@+id/share_button"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
       app:hasShadow="false"
       app:isBreadButton="true" />
 
-    <com.breadwallet.presenter.customviews.BRLinearLayoutWithCaret xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.cspnwallet.presenter.customviews.BRLinearLayoutWithCaret xmlns:app="http://schemas.android.com/apk/res-auto"
       android:id="@+id/share_buttons_layout"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
       app:strokeColor="@color/extra_light_gray"
       app:withStroke="true">
 
-      <com.breadwallet.presenter.customviews.BRButton
+      <com.cspnwallet.presenter.customviews.BRButton
         android:id="@+id/share_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
         app:hasShadow="false"
         app:isBreadButton="true" />
 
-      <com.breadwallet.presenter.customviews.BRButton
+      <com.cspnwallet.presenter.customviews.BRButton
         android:id="@+id/share_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
         app:hasShadow="false"
         app:isBreadButton="true" />
 
-    </com.breadwallet.presenter.customviews.BRLinearLayoutWithCaret>
+    </com.cspnwallet.presenter.customviews.BRLinearLayoutWithCaret>
 
   </LinearLayout>
 

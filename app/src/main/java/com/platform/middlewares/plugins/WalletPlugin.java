@@ -4,21 +4,21 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.presenter.entities.CryptoRequest;
-import com.breadwallet.presenter.interfaces.BRAuthCompletion;
-import com.breadwallet.tools.animation.BRDialog;
-import com.breadwallet.tools.manager.BREventManager;
-import com.breadwallet.tools.manager.BRReportsManager;
-import com.breadwallet.tools.manager.BRSharedPrefs;
-import com.breadwallet.tools.manager.SendManager;
-import com.breadwallet.tools.security.AuthManager;
-import com.breadwallet.tools.threads.executor.BRExecutor;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.tools.util.Utils;
-import com.breadwallet.wallet.WalletsMaster;
-import com.breadwallet.wallet.abstracts.BaseWalletManager;
-import com.breadwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
+import com.cspnwallet.BreadApp;
+import com.cspnwallet.presenter.entities.CryptoRequest;
+import com.cspnwallet.presenter.interfaces.BRAuthCompletion;
+import com.cspnwallet.tools.animation.BRDialog;
+import com.cspnwallet.tools.manager.BREventManager;
+import com.cspnwallet.tools.manager.BRReportsManager;
+import com.cspnwallet.tools.manager.BRSharedPrefs;
+import com.cspnwallet.tools.manager.SendManager;
+import com.cspnwallet.tools.security.AuthManager;
+import com.cspnwallet.tools.threads.executor.BRExecutor;
+import com.cspnwallet.tools.util.BRConstants;
+import com.cspnwallet.tools.util.Utils;
+import com.cspnwallet.wallet.WalletsMaster;
+import com.cspnwallet.wallet.abstracts.BaseWalletManager;
+import com.cspnwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.interfaces.Plugin;
@@ -37,7 +37,6 @@ import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -93,7 +92,7 @@ public class WalletPlugin implements Plugin {
 
                 String address = w.getReceiveAddress(app).stringify();
                 if (Utils.isNullOrEmpty(address)) {
-                    throw new IllegalArgumentException("Bitcoin address is empty");
+                    throw new IllegalArgumentException("Crypto Sports address is empty");
                 }
 
                 /**the current receive address*/

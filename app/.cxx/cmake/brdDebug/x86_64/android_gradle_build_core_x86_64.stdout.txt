@@ -1,0 +1,101 @@
+[1/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRBIP38Key.c.o
+[2/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRTransaction.c.o
+[3/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRBIP32Sequence.c.o
+[4/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRBase58.c.o
+[5/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRBech32.c.o
+[6/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRAddress.c.o
+[7/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRBIP39Mnemonic.c.o
+[8/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRBloomFilter.c.o
+[9/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRCrypto.c.o
+[10/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRKeyECIES.c.o
+[11/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRMerkleBlock.c.o
+[12/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRSet.c.o
+[13/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRPeerManager.c.o
+[14/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRPeer.c.o
+[15/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRKey.c.o
+[16/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRPaymentProtocol.c.o
+[17/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/jh.c.o
+[18/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/groestl.c.o
+[19/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/echo.c.o
+[20/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/aes_helper.c.o
+[21/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/blake.c.o
+[22/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/cubehash.c.o
+[23/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/BRWallet.c.o
+[24/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/bmw.c.o
+[25/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/quark.c.o
+[26/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreJniReference.c.o
+[27/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/bcash/BRBCashAddr.c.o
+[28/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/BRCoreJni.c.o
+[29/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/skein.c.o
+[30/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreAddress.c.o
+[31/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/keccak.c.o
+[32/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/shavite.c.o
+[33/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreChainParams.c.o
+[34/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/luffa.c.o
+[35/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/sha3/simd.c.o
+[36/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreKey.c.o
+[37/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereum.c.o
+[38/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumAccount.c.o
+[39/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCorePeerManager.c.o
+[40/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCorePeer.c.o
+[41/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreTransaction.c.o
+[42/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreTransactionInput.c.o
+[43/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCorePaymentProtocol.c.o
+[44/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreTransactionOutput.c.o
+C:\Users\Akshay\Documents\breadwallet-android-cspn\app\src\main\jni\breadwallet-core\BRMerkleBlock.c:138:20: warning: passing 'const uint8_t *' (aka 'const unsigned char *') to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        quark_hash(buf,&block->blockHash);
+                   ^~~
+../../../../src/main/jni/breadwallet-core/quark.h:4:29: note: passing argument to parameter 'input' here
+void quark_hash(const char* input, char* output);
+                            ^
+C:\Users\Akshay\Documents\breadwallet-android-cspn\app\src\main\jni\breadwallet-core\BRMerkleBlock.c:138:24: warning: incompatible pointer types passing 'UInt256 *' to parameter of type 'char *' [-Wincompatible-pointer-types]
+        quark_hash(buf,&block->blockHash);
+                       ^~~~~~~~~~~~~~~~~
+../../../../src/main/jni/breadwallet-core/quark.h:4:42: note: passing argument to parameter 'output' here
+void quark_hash(const char* input, char* output);
+                                         ^
+2 warnings generated.
+[45/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreMasterPubKey.c.o
+[46/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreMerkleBlock.c.o
+[47/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/Java/com_cspnwallet_core_BRCoreWallet.c.o
+[48/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumAccountState.c.o
+[49/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumBlock.c.o
+[50/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumBloomFilter.c.o
+[51/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumContract.c.o
+[52/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumHash.c.o
+[53/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumAmount.c.o
+[54/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumGas.c.o
+[55/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumEther.c.o
+[56/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumNetwork.c.o
+[57/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumLightNodeAnnounce.c.o
+[58/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumLog.c.o
+[59/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumTransaction.c.o
+[60/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumTransactionReceipt.c.o
+[61/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumLightNodeListen.c.o
+[62/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumWallet.c.o
+[63/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumToken.c.o
+[64/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/event/BREvent.c.o
+[65/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/BREthereumLightNode.c.o
+[66/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/rlp/BRRlpCoder.c.o
+[67/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/Java/com_cspnwallet_core_ethereum_BREthereumNetwork.c.o
+[68/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/Java/com_cspnwallet_core_ethereum_BREthereumToken.c.o
+[69/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/event/BREventQueue.c.o
+[70/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/util/BRUtilHex.c.o
+[71/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/util/BRUtilMath.c.o
+[72/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/util/BRUtilMathParse.c.o
+[73/74] Building C object CMakeFiles/core.dir/src/main/jni/breadwallet-core/ethereum/Java/com_cspnwallet_core_ethereum_BREthereumLightNode.c.o
+C:\Users\Akshay\Documents\breadwallet-android-cspn\app\src\main\jni\breadwallet-core\Java\com_cspnwallet_core_BRCoreWallet.c:343:12: warning: overflow in expression; result is 1411065408 with type 'int' [-Winteger-overflow]
+    return MAX_FEE_PER_KB;
+           ^
+../../../../src/main/jni/breadwallet-core/BRWallet.h:40:43: note: expanded from macro 'MAX_FEE_PER_KB'
+#define MAX_FEE_PER_KB     ((TX_FEE_PER_KB*1000100 + 190)/191) // slightly higher than a 10,000bit fee on a 191byte tx
+                                          ^
+1 warning generated.
+C:\Users\Akshay\Documents\breadwallet-android-cspn\app\src\main\jni\breadwallet-core\BRPeerManager.c:1398:74: warning: overflow in expression; result is 1411065408 with type 'int' [-Winteger-overflow]
+    if (secondFeePerKb*3/2 > DEFAULT_FEE_PER_KB && secondFeePerKb*3/2 <= MAX_FEE_PER_KB &&
+                                                                         ^
+../../../../src/main/jni/breadwallet-core/BRWallet.h:40:43: note: expanded from macro 'MAX_FEE_PER_KB'
+#define MAX_FEE_PER_KB     ((TX_FEE_PER_KB*1000100 + 190)/191) // slightly higher than a 10,000bit fee on a 191byte tx
+                                          ^
+1 warning generated.
+[74/74] Linking C shared library ..\..\..\..\build\intermediates\cmake\brdDebug\obj\x86_64\libcore.so

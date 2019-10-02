@@ -5,237 +5,365 @@
     android:id="@+id/activity_intro_set_pit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.breadwallet.presenter.activities.settings.AboutActivity">
+    android:background="@color/white"
+    tools:context="com.cspnwallet.presenter.activities.settings.AboutActivity"
+    tools:layout_editor_absoluteY="25dp">
 
 
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="619dp"
         android:background="?attr/toolbar_back_arrow"
-        app:layout_constraintStart_toStartOf="@id/brd_rewards_id"
-        app:layout_constraintTop_toTopOf="@id/title"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-
-    <com.breadwallet.presenter.customviews.BaseTextView
-        android:id="@+id/brd_rewards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="@string/About.walletID"
-        android:textSize="18sp"
-        app:customTFont="CircularPro-Book.otf"
-        app:layout_constraintBottom_toTopOf="@+id/divider4"
-        app:layout_constraintLeft_toLeftOf="@id/divider4" />
-
-    <com.breadwallet.presenter.customviews.BaseTextView
-        android:id="@+id/brd_rewards_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:textSize="16sp"
-        app:customTFont="CircularPro-Book.otf"
-        app:layout_constraintLeft_toLeftOf="@id/divider4"
-        app:layout_constraintTop_toBottomOf="@+id/brd_rewards" />
-
-    <View
-        android:id="@+id/divider4"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@color/extra_light_gray"
-        app:layout_constraintBottom_toTopOf="@+id/textView24"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <com.breadwallet.presenter.customviews.BaseTextView
-        android:id="@+id/brd_copy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:text="@string/URLHandling.copy"
-        android:textColor="@color/dark_blue"
-        android:textSize="20sp"
-        app:customTFont="CircularPro-Book.otf"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/brd_rewards" />
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
 
     <ImageView
         android:id="@+id/brd_logo"
-        android:layout_width="132dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="497dp"
         android:gravity="center_horizontal"
-        android:src="@drawable/brd_logo_gradient"
+        android:src="@drawable/cspnblocklogo"
         android:textColor="@color/white"
         android:textSize="48sp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/About.title"
-        android:textSize="@dimen/header"
-        app:layout_constraintRight_toRightOf="parent"
-        app:customTFont="CircularPro-Bold.otf"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/divider1"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@color/extra_light_gray"
-        app:layout_constraintBottom_toTopOf="@+id/policy_text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+    <ImageView
+        android:id="@+id/twitter_share_button"
+        android:layout_width="24dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_share"
+        android:tint="@color/redcolor"
+        app:layout_constraintBottom_toTopOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <ImageView
+        android:id="@+id/blog_share_button"
+        android:layout_width="24dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_share"
+        android:tint="@color/redcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <ImageView
+        android:id="@+id/facebook_open_button"
+        android:layout_width="24dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_share"
+        android:tint="@color/redcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
+
+    <ImageView
+        android:id="@+id/discord_open_button"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_share"
+        android:tint="@color/redcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
+
+    <ImageView
+        android:id="@+id/telegram_open_button"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+
+        android:src="@drawable/ic_share"
+        android:tint="@color/redcolor"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toEndOf="@+id/textView65"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        app:layout_constraintVertical_bias="0.56" />
 
     <View
         android:id="@+id/view4"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@color/extra_light_gray"
-        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintBottom_toBottomOf="@+id/info_text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:layout_constraintVertical_bias="0.216" />
 
     <View
         android:id="@+id/view5"
+        android:layout_width="395dp"
+        android:layout_height="1dp"
+        android:background="@color/extra_light_gray"
+        app:layout_constraintBottom_toTopOf="@+id/policy_text"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <View
+        android:id="@+id/divider1"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/extra_light_gray"
-        app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider5"
+        app:layout_constraintVertical_bias="0.135" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
-        android:id="@+id/textView22"
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="395dp"
+        android:layout_height="1dp"
+        android:background="@color/extra_light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:layout_constraintVertical_bias="0.428"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/extra_light_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/policy_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <com.cspnwallet.presenter.customviews.BaseTextView
+        android:id="@+id/brd_rewards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+
+        android:text="@string/About.walletID"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:customTFont="CircularPro-Book.otf"
+        tools:layout_editor_absoluteX="778dp"
+        tools:layout_editor_absoluteY="-26dp" />
+
+
+    <com.cspnwallet.presenter.customviews.BaseTextView
+        android:id="@+id/brd_rewards_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:customTFont="CircularPro-Book.otf"
+        tools:layout_editor_absoluteX="395dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <com.cspnwallet.presenter.customviews.BaseTextView
+        android:id="@+id/title"
+        android:layout_width="152dp"
+        android:layout_height="24dp"
+        android:text="@string/About.title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header"
+        app:customTFont="CircularPro-Bold.otf"
+        app:layout_constraintBottom_toTopOf="@+id/brd_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cspnwallet.presenter.customviews.BaseTextView
+        android:id="@+id/textView22"
+        android:layout_width="111dp"
+        android:layout_height="24dp"
         android:text="@string/About.twitter"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:customTFont="CircularPro-Book.otf"
         app:layout_constraintBottom_toTopOf="@+id/view4"
-        app:layout_constraintLeft_toLeftOf="@+id/divider1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:layout_constraintVertical_bias="0.419" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginLeft="0dp"
-        android:text="@string/About.blog"
+        android:layout_width="104dp"
+        android:layout_height="29dp"
+        android:text="Website"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:customTFont="CircularPro-Book.otf"
-        app:layout_constraintBottom_toTopOf="@+id/view5"
-        app:layout_constraintLeft_toLeftOf="@+id/divider1" />
+        app:layout_constraintBottom_toTopOf="@+id/divider6"
+        app:layout_constraintEnd_toEndOf="@+id/divider6"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="@+id/divider6"
+        app:layout_constraintTop_toBottomOf="@+id/brd_logo"
+        app:layout_constraintVertical_bias="0.724" />
 
-    <ImageView
-        android:id="@+id/twitter_share_button"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:src="@drawable/ic_share"
-        app:layout_constraintBottom_toBottomOf="@+id/textView22"
-        app:layout_constraintRight_toRightOf="@+id/view4"
-        app:layout_constraintTop_toTopOf="@+id/textView22" />
-
-    <ImageView
-        android:id="@+id/blog_share_button"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/ic_share"
-        app:layout_constraintBottom_toBottomOf="@+id/textView24"
-        app:layout_constraintRight_toRightOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/textView24" />
-
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/policy_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="629dp"
+        android:layout_marginEnd="155dp"
+
+        android:layout_marginBottom="7dp"
         android:alpha="0.8"
         android:text="@string/About.privacy"
         android:textColor="@color/dark_blue"
         android:textSize="16sp"
         app:customTFont="CircularPro-Book.otf"
-        app:layout_constraintBottom_toTopOf="@+id/info_text"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/info_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="@string/About.footer"
+        android:textColor="@color/almost_black"
         app:customTFont="CircularPro-Book.otf"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/policy_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        app:layout_constraintVertical_bias="0.934" />
 
-    <com.breadwallet.presenter.customviews.BaseTextView
+    <com.cspnwallet.presenter.customviews.BaseTextView
         android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="@string/About.reddit"
+        android:layout_width="108dp"
+        android:layout_height="28dp"
+        android:text="Facebook"
+        android:textColor="@color/almost_black"
         android:textSize="18sp"
         app:customTFont="CircularPro-Book.otf"
         app:layout_constraintBottom_toTopOf="@+id/divider1"
-        app:layout_constraintLeft_toLeftOf="@+id/divider1" />
+        app:layout_constraintEnd_toEndOf="@+id/divider1"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="@+id/divider1"
+        app:layout_constraintTop_toBottomOf="@+id/divider5"
+        app:layout_constraintVertical_bias="0.428" />
 
-    <ImageView
-        android:id="@+id/reddit_share_button"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:src="@drawable/ic_share"
-        app:layout_constraintBottom_toBottomOf="@+id/textView21"
-        app:layout_constraintRight_toRightOf="@+id/divider1"
-        app:layout_constraintTop_toTopOf="@+id/textView21" />
+    <com.cspnwallet.presenter.customviews.BaseTextView
+        android:id="@+id/textView25"
+        android:layout_width="104dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Discord"
+        android:textColor="@color/almost_black"
+        android:textSize="18sp"
+        app:customTFont="CircularPro-Book.otf"
+        app:layout_constraintBottom_toTopOf="@+id/divider1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider6"
+        app:layout_constraintVertical_bias="0.129" />
 
+    <com.cspnwallet.presenter.customviews.BaseTextView
+        android:id="@+id/textView65"
+        android:layout_width="109dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Telegram"
+        android:textColor="@color/almost_black"
+        android:textSize="18sp"
+        app:customTFont="CircularPro-Book.otf"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        app:layout_constraintVertical_bias="0.823" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 </android.support.constraint.ConstraintLayout>

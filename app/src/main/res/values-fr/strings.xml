@@ -5,7 +5,7 @@
     <!-- About screen blog label -->
     <string name="About.blog">Blog</string>
     <!-- About screen footer -->
-    <string name="About.footer">Fait par l\'équipe BRD monde. Version %1$s Build %2$s</string>
+    <string name="About.footer">Fait par l\'équipe CSPN monde. Version %1$s Build %2$s</string>
     <!-- Privay Policy button label -->
     <string name="About.privacy">Politique de confidentialité</string>
     <!-- About screen reddit label -->
@@ -17,19 +17,19 @@
     <!-- About screen twitter label -->
     <string name="About.twitter">Twitter</string>
     <!-- About screen wallet ID label -->
-    <string name="About.walletID">ID de récompenses BRD</string>
+    <string name="About.walletID">ID de récompenses CSPN</string>
     <!-- Close modal button accessibility label -->
     <string name="AccessibilityLabels.close">Fermer</string>
     <!-- Support center accessibiliy label -->
     <string name="AccessibilityLabels.faq">Centre d\'assistance</string>
     <!-- Account balance -->
     <string name="Account.balance">Solde</string>
-    <!-- $10000 per BTC -->
+    <!-- $10000 per CSPN -->
     <string name="Account.exchangeRate">%1$s par %2$s</string>
     <!-- Loading Wallet Message -->
     <string name="Account.loadingMessage">Chargement du portefeuille</string>
     <!-- Default wallet name -->
-    <string name="AccountHeader.defaultWalletName">Mon BRD</string>
+    <string name="AccountHeader.defaultWalletName">Mon CSPN</string>
     <!-- Third party keyboard warning -->
     <string name="Alert.customKeyboard.android">Il semble que vous utilisez un clavier tiers. Ce dernier peut enregistrer ce que vous tapez et voler votre portefeuille papier. Veuillez basculer vers le clavier Android par défaut pour plus de sécurité.</string>
     <!-- Error alert title -->
@@ -37,7 +37,7 @@
     <!-- Keystore error -->
     <string name="Alert.keystore.generic.android">Un problème est survenu avec votre keystore Android OS, veuillez contacter support@breadwallet.com</string>
     <!-- KeyStore error, keys are invalidated -->
-    <string name="Alert.keystore.invalidated.android">Vos données cryptées de BRD ont été récemment invalidées, car le verrouillage de l\'écran de votre appareil Android a été désactivé.</string>
+    <string name="Alert.keystore.invalidated.android">Vos données cryptées de CSPN ont été récemment invalidées, car le verrouillage de l\'écran de votre appareil Android a été désactivé.</string>
     <!-- Keystore error title -->
     <string name="Alert.keystore.title.android">Erreur avec le KeyStore Android</string>
     <!-- No internet alert message -->
@@ -65,7 +65,7 @@
     <!-- Fingerprint was recognized by the scanner -->
     <string name="Alerts.touchIdSucceeded.android">Empreinte digitale reconnue</string>
     <!-- Tell the user where they can enable permissions to access device storage. -->
-    <string name="Android.allowFileSystemAccess">Veuillez activer les autorisations de stockage dans les paramètres de votre appareil : « Paramètres » &gt; « Applications » &gt; « BRD » &gt; « Autorisations ».</string>
+    <string name="Android.allowFileSystemAccess">Veuillez activer les autorisations de stockage dans les paramètres de votre appareil : « Paramètres » &gt; « Applications » &gt; « CSPN » &gt; « Autorisations ».</string>
     <!-- The "home" screen is the name of the top level menu for the app. -->
     <string name="Android.BCH.welcome.message">Vous pouvez consulter le montant de BCH de votre portefeuille via l\'écran d\'accueil.</string>
     <!-- Warning about using apps that can alter the screen -->
@@ -174,8 +174,8 @@
     <string name="Crowdsale.resume">Reprendre la vérification</string>
     <!-- Retry Identity verification button -->
     <string name="Crowdsale.retry">Réessayer</string>
-    <!-- Bitcoin denomination picker label -->
-    <string name="DefaultCurrency.bitcoinLabel">Unité d\'affichage Bitcoin</string>
+    <!-- Crypto Sports denomination picker label -->
+    <string name="DefaultCurrency.bitcoinLabel">Unité d\'affichage Crypto Sports</string>
     <!-- Exchange rate label -->
     <string name="DefaultCurrency.rateLabel">Taux de change</string>
     <!-- The wallet is disabled. -->
@@ -201,11 +201,11 @@
     <!-- You can customize your Face ID Spending Limit from the [menu] -->
     <string name="FaceIDSettings.customizeText">Vous pouvez personnaliser votre limite de dépense Face ID à partir de %1$s.</string>
     <!-- Face Id screen label -->
-    <string name="FaceIDSettings.label">Utilisez votre visage pour déverrouiller votre BRD et envoyer de l\'argent jusqu\'à une limite définie.</string>
+    <string name="FaceIDSettings.label">Utilisez votre visage pour déverrouiller votre CSPN et envoyer de l\'argent jusqu\'à une limite définie.</string>
     <!-- Title of the screen for setting the Face ID Spending Limit -->
     <string name="FaceIDSettings.linkText">Réglage des limites de dépenses Face ID</string>
-    <!-- Setting to turn on Face ID for BRD -->
-    <string name="FaceIDSettings.switchLabel">Activer Face ID pour BRD</string>
+    <!-- Setting to turn on Face ID for CSPN -->
+    <string name="FaceIDSettings.switchLabel">Activer Face ID pour CSPN</string>
     <!-- Face ID settings view title -->
     <string name="FaceIDSettings.title">Face ID</string>
     <!-- Instructions on how to turn on face id on the iPhone. Please ensure the name of the menu in this string matches the wording Apple uses in the iPhone menu. -->
@@ -263,13 +263,13 @@
     <!-- Caption for graphics -->
     <string name="Import.leftCaption">Portefeuille à importer</string>
     <!-- Import wallet intro screen message -->
-    <string name="Import.message">Importer un portefeuille signifie le transfert de tout son contenu dans votre portfeuille BRD en une seule transaction.\n</string>
+    <string name="Import.message">Importer un portefeuille signifie le transfert de tout son contenu dans votre portfeuille CSPN en une seule transaction.\n</string>
     <!-- Enter password alert view title -->
     <string name="Import.password">Cette clé privée est protégée par mot de passe.</string>
     <!-- password textfield placeholder -->
     <string name="Import.passwordPlaceholder">mot de passe</string>
     <!-- Caption for graphics -->
-    <string name="Import.rightCaption">Votre portefeuille BRD</string>
+    <string name="Import.rightCaption">Votre portefeuille CSPN</string>
     <!-- Scan Private key button label -->
     <string name="Import.scan">Scanner la clé privée</string>
     <!-- Import wallet success alert title -->
@@ -289,9 +289,9 @@
     <!-- Ignore jailbreak warning button -->
     <string name="JailbreakWarnings.ignore">Ignorer</string>
     <!-- Jailbreak warning message -->
-    <string name="JailbreakWarnings.messageWithBalance">SÉCURITÉ DU DISPOSITIF COMPROMISE\nToute application « évasive » peut accéder aux données du porte-clé de BRD et voler vos bitcoins ! Détruisez ce portefeuille immédiatement et restaurez-le sur un appareil sécurisé.</string>
+    <string name="JailbreakWarnings.messageWithBalance">SÉCURITÉ DU DISPOSITIF COMPROMISE\nToute application « évasive » peut accéder aux données du porte-clé de CSPN et voler vos bitcoins ! Détruisez ce portefeuille immédiatement et restaurez-le sur un appareil sécurisé.</string>
     <!-- Jailbreak warning message -->
-    <string name="JailbreakWarnings.messageWithoutBalance">SÉCURITÉ DU DISPOSITIF COMPROMISE\nToute application « évasive » peut accéder aux données du porte-clé de BRD et voler vos bitcoins. N\'utilisez BRD que sur un appareil non évasif.</string>
+    <string name="JailbreakWarnings.messageWithoutBalance">SÉCURITÉ DU DISPOSITIF COMPROMISE\nToute application « évasive » peut accéder aux données du porte-clé de CSPN et voler vos bitcoins. N\'utilisez CSPN que sur un appareil non évasif.</string>
     <!-- Jailbreak warning title -->
     <string name="JailbreakWarnings.title">AVERTISSEMENT</string>
     <!-- Wipe wallet button -->
@@ -361,7 +361,7 @@
     <!-- Node status label -->
     <string name="NodeSelector.statusLabel">Statut de connexion du nœud</string>
     <!-- Node Selector view title -->
-    <string name="NodeSelector.title">Nœuds Bitcoin</string>
+    <string name="NodeSelector.title">Nœuds Crypto Sports</string>
     <!-- Eg. Send 1.0Eth to purchase CCC -->
     <string name="PaymentConfirmation.amountText">Envoyer %1$s pour acheter %2$s</string>
     <!-- Payment confirmation view title -->
@@ -377,9 +377,9 @@
     <!-- Payment too small alert title -->
     <string name="PaymentProtocol.Errors.smallOutputError">Impossible de faire un paiement</string>
     <!-- Amount too small error message -->
-    <string name="PaymentProtocol.Errors.smallPayment">Les paiements par Bitcoin ne peuvent être inférieurs à %1$s.</string>
+    <string name="PaymentProtocol.Errors.smallPayment">Les paiements par Crypto Sports ne peuvent être inférieurs à %1$s.</string>
     <!-- Output too small error message. -->
-    <string name="PaymentProtocol.Errors.smallTransaction">Les résultats des transactions de Bitcoin ne peuvent pas être inférieurs à %1$s.</string>
+    <string name="PaymentProtocol.Errors.smallTransaction">Les résultats des transactions de Crypto Sports ne peuvent pas être inférieurs à %1$s.</string>
     <!-- Unsupported signature type payment protocol error message -->
     <string name="PaymentProtocol.Errors.unsupportedSignatureType">type de signature non pris en charge</string>
     <!-- Untrusted certificate payment protocol error message -->
@@ -405,7 +405,7 @@
     <!-- Transaction rejected prompt title -->
     <string name="Prompts.RecommendRescan.title">Transaction rejetée</string>
     <!-- Share data prompt body -->
-    <string name="Prompts.ShareData.body">Aidez à améliorer BRD en partageant vos données anonymes avec nous</string>
+    <string name="Prompts.ShareData.body">Aidez à améliorer CSPN en partageant vos données anonymes avec nous</string>
     <!-- Share data prompt title -->
     <string name="Prompts.ShareData.title">Partager les données anonymes</string>
     <!-- Enable touch ID prompt body -->
@@ -423,7 +423,7 @@
     <!-- Upgrade PIN prompt title. -->
     <string name="Prompts.UpgradePin.title">Mettre à jour le code PIN</string>
     <!-- Notifications will be added later but users can set their preferences now, which is why we specify "in the future". -->
-    <string name="PushNotifications.body">Activez les notifications pour recevoir des messages spéciaux de BRD à l\'avenir.</string>
+    <string name="PushNotifications.body">Activez les notifications pour recevoir des messages spéciaux de CSPN à l\'avenir.</string>
     <!-- Push notifications are disabled alert title" -->
     <string name="PushNotifications.disabled">Notifications désactivées</string>
     <!-- Push notifications settings instructions -->
@@ -457,7 +457,7 @@
     <!-- Enter paper key instruction -->
     <string name="RecoverWallet.instruction">Entrez la clé papier</string>
     <!-- Recover wallet intro -->
-    <string name="RecoverWallet.intro">Récupérez votre BRD avec votre clé papier.</string>
+    <string name="RecoverWallet.intro">Récupérez votre CSPN avec votre clé papier.</string>
     <!-- Invalid paper key message -->
     <string name="RecoverWallet.invalid">La clé papier saisie n\'est pas valide. Revérifiez chaque mot et réessayez.</string>
     <!-- Previous button accessibility label -->
@@ -485,7 +485,7 @@
     <!-- extimated time -->
     <string name="ReScan.body1">20-45 minutes</string>
     <!-- Syncing explanation -->
-    <string name="ReScan.body2">Si une transaction apparaît comme achevée sur le réseau de bitcoin mais pas dans votre BRD.</string>
+    <string name="ReScan.body2">Si une transaction apparaît comme achevée sur le réseau de bitcoin mais pas dans votre CSPN.</string>
     <!-- Syncing explanation -->
     <string name="ReScan.body3">Vous recevez de manière répétée un message d\'erreur vous informant du rejet de votre transaction.</string>
     <!-- Start Sync button label -->
@@ -517,11 +517,11 @@
     <!-- Paper Key button title -->
     <string name="SecurityCenter.paperKeyTitle">Clé papier</string>
     <!-- PIN button description -->
-    <string name="SecurityCenter.pinDescription">Protège vos BRD contre les utilisateurs non autorisés.</string>
+    <string name="SecurityCenter.pinDescription">Protège vos CSPN contre les utilisateurs non autorisés.</string>
     <!-- PIN button title -->
     <string name="SecurityCenter.pinTitle">PIN à six chiffres</string>
     <!-- Touch ID button description -->
-    <string name="SecurityCenter.touchIdDescription">Débloquez convenablement vos BRD et envoyez de l\'argent jusqu\'à une limite définie.</string>
+    <string name="SecurityCenter.touchIdDescription">Débloquez convenablement vos CSPN et envoyez de l\'argent jusqu\'à une limite définie.</string>
     <!-- Touch ID button title -->
     <string name="SecurityCenter.touchIdTitle">Touch ID</string>
     <!-- Security center fingerprint authentication button -->
@@ -531,7 +531,7 @@
     <!-- Balance: $4.00 -->
     <string name="Send.balance">Solde : %1$s</string>
     <!-- Instructions how to allow the camera access for the app -->
-    <string name="Send.cameraUnavailabeMessage.android">Autoriser l\'accès à l\'appareil photo en allant dans « Paramètres » &gt; « Apps » &gt; « BRD » &gt; « Permissions »</string>
+    <string name="Send.cameraUnavailabeMessage.android">Autoriser l\'accès à l\'appareil photo en allant dans « Paramètres » &gt; « Apps » &gt; « CSPN » &gt; « Permissions »</string>
     <!-- Permission required to access camera -->
     <string name="Send.cameraUnavailabeTitle.android">BRD n\'est pas autorisé à accéder à l\'appareil photo</string>
     <!-- Camera not allowed message -->
@@ -593,7 +593,7 @@
     <!-- Send money to label -->
     <string name="Send.toLabel">A</string>
     <!-- Adress already used alert message - first part -->
-    <string name="Send.UsedAddress.firstLine">Les adresses Bitcoin sont destinées à une utilisation unique.</string>
+    <string name="Send.UsedAddress.firstLine">Les adresses Crypto Sports sont destinées à une utilisation unique.</string>
     <!-- Adress already used alert message - second part -->
     <string name="Send.UsedAddress.secondLIne">La réutilisation réduit la confidentialité pour vous et le destinataire et peut entraîner une perte si le destinataire ne contrôle pas directement l\'adresse.</string>
     <!-- Adress already used alert title -->
@@ -613,7 +613,7 @@
     <!-- Join Early access label -->
     <string name="Settings.earlyAccess">Rejoignez l\'accès anticipé</string>
     <!-- Are you enjoying bread alert message body -->
-    <string name="Settings.enjoying">Vous aimez BRD ?</string>
+    <string name="Settings.enjoying">Vous aimez CSPN ?</string>
     <!-- Face ID spending limit label -->
     <string name="Settings.faceIdLimit">Limite de dépenses Face ID</string>
     <!-- Redeem the funds stored on this private key. -->
@@ -645,7 +645,7 @@
     <!-- Unlink/delete your wallet from the current device. -->
     <string name="Settings.wipe">Supprimer le lien de cet appareil</string>
     <!-- Share data view body -->
-    <string name="ShareData.body">Aidez à améliorer BRD en partageant vos données anonymes avec nous. Cela n\'inclut aucune information financière. Nous respectons votre confidentialité financière.</string>
+    <string name="ShareData.body">Aidez à améliorer CSPN en partageant vos données anonymes avec nous. Cela n\'inclut aucune information financière. Nous respectons votre confidentialité financière.</string>
     <!-- Share data header -->
     <string name="ShareData.header">Partager les données ?</string>
     <!-- Share data switch label. -->
@@ -653,7 +653,7 @@
     <!-- button label -->
     <string name="StartPaperPhrase.againButtonTitle">Enregistrez la clé papier à nouveau</string>
     <!-- Paper key explanation text. -->
-    <string name="StartPaperPhrase.body">Votre clé papier est la seule façon de restaurer votre BRD si votre téléphone est perdu, volé, cassé ou mis à niveau.\n\nNous allons vous montrer une liste de mots à écrire sur un morceau de papier et à garder en sécurité.</string>
+    <string name="StartPaperPhrase.body">Votre clé papier est la seule façon de restaurer votre CSPN si votre téléphone est perdu, volé, cassé ou mis à niveau.\n\nNous allons vous montrer une liste de mots à écrire sur un morceau de papier et à garder en sécurité.</string>
     <!-- button label -->
     <string name="StartPaperPhrase.buttonTitle">Écrire la clé papier</string>
     <!-- Argument is date -->
@@ -705,13 +705,13 @@
     <!-- Fingerprint Is Not Setup -->
     <string name="TouchIdSettings.disabledWarning.title.android">L\'identification par empreinte digitale n\'est pas activée</string>
     <!-- Touch Id screen label -->
-    <string name="TouchIdSettings.label">Utilisez votre empreinte digitale pour débloquer votre BRD et envoyer de l\'argent jusqu\'à une limite définie.</string>
+    <string name="TouchIdSettings.label">Utilisez votre empreinte digitale pour débloquer votre CSPN et envoyer de l\'argent jusqu\'à une limite définie.</string>
     <!-- Link Text (see TouchIdSettings.customizeText) -->
     <string name="TouchIdSettings.linkText">Écran de plafond de dépenses Touch ID</string>
     <!-- Spending Limit: b100,000 ($100) -->
     <string name="TouchIdSettings.spendingLimit">Limite de dépenses : %1$s (%2$s)</string>
     <!-- Touch id switch label. -->
-    <string name="TouchIdSettings.switchLabel">Activer Touch ID pour BRD</string>
+    <string name="TouchIdSettings.switchLabel">Activer Touch ID pour CSPN</string>
     <!-- Enable fingerprint for this wallet called Bread -->
     <string name="TouchIdSettings.switchLabel.android">Activer l\'identification par empreinte digitale</string>
     <!-- Touch ID settings view title -->
@@ -762,7 +762,7 @@
     <string name="Transaction.sentTo">envoyé à %1$s</string>
     <!-- eg. Starting balance: $50.00 -->
     <string name="Transaction.starting">Solde initial : %1$s</string>
-    <!-- e.g. "[The money you paid was a] Fee for token transfer: BRD" (BRD is the token that was transfered) -->
+    <!-- e.g. "[The money you paid was a] Fee for token transfer: CSPN" (BRD is the token that was transfered) -->
     <string name="Transaction.tokenTransfer">Frais de transfert du jeton : %1$s</string>
     <!-- Waiting to be confirmed string -->
     <string name="Transaction.waiting">En attente d\'être confirmé. Certains marchands exigent une confirmation pour mener à bien une transaction. Temps estimé : 1-2 heures.</string>
@@ -877,7 +877,7 @@
     <!-- Instruction to touch the sensor for fingerprint authentication -->
     <string name="UnlockScreen.touchIdInstructions.android">Appuyez sur le capteur</string>
     <!-- TouchID prompt text -->
-    <string name="UnlockScreen.touchIdPrompt">Déverrouillez votre BRD.</string>
+    <string name="UnlockScreen.touchIdPrompt">Déverrouillez votre CSPN.</string>
     <!-- Device authentication body -->
     <string name="UnlockScreen.touchIdPrompt.android">Veuillez déverrouiller votre appareil Android pour continuer.</string>
     <!-- Unlock with TouchID accessibility label -->
@@ -887,7 +887,7 @@
     <!-- Update PIN caption text -->
     <string name="UpdatePin.caption">Souvenez-vous de ce code PIN. Si vous l\'oubliez, vous ne pourrez pas accéder à votre bitcoin.</string>
     <!-- PIN creation info. -->
-    <string name="UpdatePin.createInstruction">Votre PIN sera utilisé pour débloquer votre BRD et envoyer de l\'argent.</string>
+    <string name="UpdatePin.createInstruction">Votre PIN sera utilisé pour débloquer votre CSPN et envoyer de l\'argent.</string>
     <!-- Update PIN title -->
     <string name="UpdatePin.createTitle">Définir PIN</string>
     <!-- Update PIN title -->
@@ -921,7 +921,7 @@
     <!-- Authorize transaction with touch id message -->
     <string name="VerifyPin.touchIdMessage">Autoriser cette transaction</string>
     <!-- 'No wallet' warning for watch app -->
-    <string name="Watch.noWalletWarning">Ouvrez l\'application BRD de l\'iPhone pour configurer votre portefeuille.</string>
+    <string name="Watch.noWalletWarning">Ouvrez l\'application CSPN de l\'iPhone pour configurer votre portefeuille.</string>
     <!-- Dismiss button label -->
     <string name="Webview.dismiss">Ignorer</string>
     <!-- Webview loading error message -->
@@ -929,9 +929,9 @@
     <!-- Updating webview message -->
     <string name="Webview.updating">Mise à jour...</string>
     <!-- Welcome screen text. (?) will be replaced with the help icon users should look for. -->
-    <string name="Welcome.body">BRDwallet revient sous le nom de BRD, avec un nouveau design et de nouvelles fonctionnalités. \n\nSi vous avez besoin d\'aide, cliquez sur le (?) en haut à droite de la plupart des écrans.</string>
+    <string name="Welcome.body">BRDwallet revient sous le nom de CSPN, avec un nouveau design et de nouvelles fonctionnalités. \n\nSi vous avez besoin d\'aide, cliquez sur le (?) en haut à droite de la plupart des écrans.</string>
     <!-- Top title of welcome screen -->
-    <string name="Welcome.title">Bienvenue chez BRD!</string>
+    <string name="Welcome.title">Bienvenue chez CSPN!</string>
     <!-- Wipe wallet alert message -->
     <string name="WipeWallet.alertMessage">Souhaitez-vous vraiment supprimer ce portefeuille ?</string>
     <!-- Wipe wallet alert title -->
@@ -943,7 +943,7 @@
     <!-- Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). -->
     <string name="WipeWallet.instruction">Pour commencer un nouveau portefeuille ou rétablir un portefeuille existant, vous devez d\'abord supprimer le portefeuille actuellement installé. Pour continuer, saisissez la Clé Papier du portefeuille actuel.</string>
     <!-- Instructions for unlinking the wallet -->
-    <string name="WipeWallet.startMessage">Démarrer ou récupérer un autre portefeuille vous permet d\'accéder et de gérer un portefeuille BRD différent sur cet appareil.</string>
+    <string name="WipeWallet.startMessage">Démarrer ou récupérer un autre portefeuille vous permet d\'accéder et de gérer un portefeuille CSPN différent sur cet appareil.</string>
     <!-- Start wipe wallet view warning -->
     <string name="WipeWallet.startWarning">Vous ne pourrez plus accéder à votre portefeuille courant depuis cet appareil. Si vous souhaitez le récupérer plus tard, vous devrais réentrer la clé papier.</string>
     <!-- Unlink this wallet from this device. -->

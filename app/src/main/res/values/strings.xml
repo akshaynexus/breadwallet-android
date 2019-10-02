@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <!-- App name -->
-    <string name="About.appName.android">BRD</string>
+    <string name="About.appName.android">Crypto Sports</string>
     <!-- About screen blog label -->
-    <string name="About.blog">Blog</string>
+    <string name="About.website">Website</string>
     <!-- About screen footer -->
-    <string name="About.footer">Made by the global BRD team. Version %1$s Build %2$s</string>
+    <string name="About.footer">Made by the global CSPN team. Version %1$s Build %2$s</string>
     <!-- Privay Policy button label -->
     <string name="About.privacy">Privacy Policy</string>
     <!-- About screen reddit label -->
@@ -24,12 +24,12 @@
     <string name="AccessibilityLabels.faq">Support Center</string>
     <!-- Account balance -->
     <string name="Account.balance">Balance</string>
-    <!-- $10000 per BTC -->
+    <!-- $10000 per CSPN -->
     <string name="Account.exchangeRate">%1$s per %2$s</string>
     <!-- Loading Wallet Message -->
     <string name="Account.loadingMessage">Loading Wallet</string>
     <!-- Default wallet name -->
-    <string name="AccountHeader.defaultWalletName">My BRD</string>
+    <string name="AccountHeader.defaultWalletName">My CSPN</string>
     <!-- Third party keyboard warning -->
     <string name="Alert.customKeyboard.android">It looks like you are using a third-party keyboard, which can record what you type and steal your Paper Key. Please switch to the default Android keyboard for extra protection.</string>
     <!-- Error alert title -->
@@ -37,7 +37,7 @@
     <!-- Keystore error -->
     <string name="Alert.keystore.generic.android">There is a problem with your Android OS keystore, please contact support@breadwallet.com</string>
     <!-- KeyStore error, keys are invalidated -->
-    <string name="Alert.keystore.invalidated.android">Your BRD encrypted data was recently invalidated because your Android lock screen was disabled.</string>
+    <string name="Alert.keystore.invalidated.android">Your CSPN encrypted data was recently invalidated because your Android lock screen was disabled.</string>
     <!-- Keystore error title -->
     <string name="Alert.keystore.title.android">Android KeyStore Error</string>
     <!-- No internet alert message -->
@@ -176,8 +176,8 @@
     <string name="Crowdsale.resume">Resume Verification</string>
     <!-- Retry Identity verification button -->
     <string name="Crowdsale.retry">Retry</string>
-    <!-- Bitcoin denomination picker label -->
-    <string name="DefaultCurrency.bitcoinLabel">Bitcoin Display Unit</string>
+    <!-- Crypto Sports denomination picker label -->
+    <string name="DefaultCurrency.bitcoinLabel">Crypto Sports Display Unit</string>
     <!-- Exchange rate label -->
     <string name="DefaultCurrency.rateLabel">Exchange Rate</string>
     <!-- The wallet is disabled. -->
@@ -203,11 +203,11 @@
     <!-- You can customize your Face ID Spending Limit from the [menu] -->
     <string name="FaceIDSettings.customizeText">You can customize your Face ID spending limit from the %1$s.</string>
     <!-- Face Id screen label -->
-    <string name="FaceIDSettings.label">Use your face to unlock your BRD and send money up to a set limit.</string>
+    <string name="FaceIDSettings.label">Use your face to unlock your CSPN and send money up to a set limit.</string>
     <!-- Title of the screen for setting the Face ID Spending Limit -->
     <string name="FaceIDSettings.linkText">Face ID Spending Limit Screen</string>
-    <!-- Setting to turn on Face ID for BRD -->
-    <string name="FaceIDSettings.switchLabel">Enable Face ID for BRD</string>
+    <!-- Setting to turn on Face ID for CSPN -->
+    <string name="FaceIDSettings.switchLabel">Enable Face ID for CSPN</string>
     <!-- Face ID settings view title -->
     <string name="FaceIDSettings.title">Face ID</string>
     <!-- Instructions on how to turn on face id on the iPhone. Please ensure the name of the menu in this string matches the wording Apple uses in the iPhone menu. -->
@@ -265,13 +265,13 @@
     <!-- Caption for graphics -->
     <string name="Import.leftCaption">Wallet to be imported</string>
     <!-- Import wallet intro screen message -->
-    <string name="Import.message">Importing a wallet transfers all the money from your other wallet into your BRD wallet using a single transaction.</string>
+    <string name="Import.message">Importing a wallet transfers all the money from your other wallet into your CSPN wallet using a single transaction.</string>
     <!-- Enter password alert view title -->
     <string name="Import.password">This private key is password protected.</string>
     <!-- password textfield placeholder -->
     <string name="Import.passwordPlaceholder">password</string>
     <!-- Caption for graphics -->
-    <string name="Import.rightCaption">Your BRD Wallet</string>
+    <string name="Import.rightCaption">Your CSPN Wallet</string>
     <!-- Scan Private key button label -->
     <string name="Import.scan">Scan Private Key</string>
     <!-- Import wallet success alert title -->
@@ -291,9 +291,9 @@
     <!-- Ignore jailbreak warning button -->
     <string name="JailbreakWarnings.ignore">Ignore</string>
     <!-- Jailbreak warning message -->
-    <string name="JailbreakWarnings.messageWithBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access BRD\'s keychain data and steal your bitcoin! Wipe this wallet immediately and restore on a secure device.</string>
+    <string name="JailbreakWarnings.messageWithBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access CSPN\'s keychain data and steal your bitcoin! Wipe this wallet immediately and restore on a secure device.</string>
     <!-- Jailbreak warning message -->
-    <string name="JailbreakWarnings.messageWithoutBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access BRD\'s keychain data and steal your bitcoin. Please only use BRD on a non-jailbroken device.</string>
+    <string name="JailbreakWarnings.messageWithoutBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access CSPN\'s keychain data and steal your bitcoin. Please only use CSPN on a non-jailbroken device.</string>
     <!-- Jailbreak warning title -->
     <string name="JailbreakWarnings.title">WARNING</string>
     <!-- Wipe wallet button -->
@@ -363,7 +363,7 @@
     <!-- Node status label -->
     <string name="NodeSelector.statusLabel">Node Connection Status</string>
     <!-- Node Selector view title -->
-    <string name="NodeSelector.title">Bitcoin Nodes</string>
+    <string name="NodeSelector.title">Crypto Sports Nodes</string>
     <!-- Eg. Send 1.0Eth to purchase CCC -->
     <string name="PaymentConfirmation.amountText">Send %1$s to purchase %2$s</string>
     <!-- Payment confirmation view title -->
@@ -379,9 +379,9 @@
     <!-- Payment too small alert title -->
     <string name="PaymentProtocol.Errors.smallOutputError">Couldn\'t make payment</string>
     <!-- Amount too small error message -->
-    <string name="PaymentProtocol.Errors.smallPayment">Bitcoin payments can\'t be less than %1$s.</string>
+    <string name="PaymentProtocol.Errors.smallPayment">Crypto Sports payments can\'t be less than %1$s.</string>
     <!-- Output too small error message. -->
-    <string name="PaymentProtocol.Errors.smallTransaction">Bitcoin transaction outputs can\'t be less than %1$s.</string>
+    <string name="PaymentProtocol.Errors.smallTransaction">Crypto Sports transaction outputs can\'t be less than %1$s.</string>
     <!-- Unsupported signature type payment protocol error message -->
     <string name="PaymentProtocol.Errors.unsupportedSignatureType">unsupported signature type</string>
     <!-- Untrusted certificate payment protocol error message -->
@@ -407,7 +407,7 @@
     <!-- Transaction rejected prompt title -->
     <string name="Prompts.RecommendRescan.title">Transaction Rejected</string>
     <!-- Share data prompt body -->
-    <string name="Prompts.ShareData.body">Help improve BRD by sharing your anonymous data with us</string>
+    <string name="Prompts.ShareData.body">Help improve CSPN by sharing your anonymous data with us</string>
     <!-- Share data prompt title -->
     <string name="Prompts.ShareData.title">Share Anonymous Data</string>
     <!-- Enable touch ID prompt body -->
@@ -425,7 +425,7 @@
     <!-- Upgrade PIN prompt title. -->
     <string name="Prompts.UpgradePin.title">Upgrade PIN</string>
     <!-- Notifications will be added later but users can set their preferences now, which is why we specify "in the future". -->
-    <string name="PushNotifications.body">Turn on notifications to receive special messages from BRD in the future.</string>
+    <string name="PushNotifications.body">Turn on notifications to receive special messages from CSPN in the future.</string>
     <!-- Push notifications are disabled alert title" -->
     <string name="PushNotifications.disabled">Notifications Disabled</string>
     <!-- Push notifications settings instructions -->
@@ -459,7 +459,7 @@
     <!-- Enter paper key instruction -->
     <string name="RecoverWallet.instruction">Enter Paper Key</string>
     <!-- Recover wallet intro -->
-    <string name="RecoverWallet.intro">Recover your BRD with your paper key.</string>
+    <string name="RecoverWallet.intro">Recover your CSPN with your paper key.</string>
     <!-- Invalid paper key message -->
     <string name="RecoverWallet.invalid">The paper key you entered is invalid. Please double-check each word and try again.</string>
     <!-- Previous button accessibility label -->
@@ -487,7 +487,7 @@
     <!-- extimated time -->
     <string name="ReScan.body1">20-45 minutes</string>
     <!-- Syncing explanation -->
-    <string name="ReScan.body2">If a transaction shows as completed on the network but not in your BRD.</string>
+    <string name="ReScan.body2">If a transaction shows as completed on the network but not in your CSPN.</string>
     <!-- Syncing explanation -->
     <string name="ReScan.body3">You repeatedly get an error saying your transaction was rejected.</string>
     <!-- Start Sync button label -->
@@ -519,11 +519,11 @@
     <!-- Paper Key button title -->
     <string name="SecurityCenter.paperKeyTitle">Paper Key</string>
     <!-- PIN button description -->
-    <string name="SecurityCenter.pinDescription">Protects your BRD from unauthorized users.</string>
+    <string name="SecurityCenter.pinDescription">Protects your CSPN from unauthorized users.</string>
     <!-- PIN button title -->
     <string name="SecurityCenter.pinTitle">6-Digit PIN</string>
     <!-- Touch ID button description -->
-    <string name="SecurityCenter.touchIdDescription">Conveniently unlock your BRD and send money up to a set limit.</string>
+    <string name="SecurityCenter.touchIdDescription">Conveniently unlock your CSPN and send money up to a set limit.</string>
     <!-- Touch ID button title -->
     <string name="SecurityCenter.touchIdTitle">Touch ID</string>
     <!-- Security center fingerprint authentication button -->
@@ -569,7 +569,7 @@
     <!-- Is rescanning error message -->
     <string name="Send.isRescanning">Sending is disabled during a full rescan.</string>
     <!-- Warning when the user is trying to send bitcoin cash to a legacy bitcoin address (possible, but probably not what the user wants to do) -->
-    <string name="Send.legacyAddressWarning">Warning: this is a legacy bitcoin address. Are you sure you want to send Bitcoin Cash to it?</string>
+    <string name="Send.legacyAddressWarning">Warning: this is a legacy bitcoin address. Are you sure you want to send Crypto Sports Cash to it?</string>
     <!-- We are loading the request (now) -->
     <string name="Send.loadingRequest">Loading Request</string>
     <!-- Transaction fee could not be be caluculated error. -->
@@ -595,7 +595,7 @@
     <!-- Send money to label -->
     <string name="Send.toLabel">To</string>
     <!-- Adress already used alert message - first part -->
-    <string name="Send.UsedAddress.firstLine">Bitcoin addresses are intended for single use only.</string>
+    <string name="Send.UsedAddress.firstLine">Crypto Sports addresses are intended for single use only.</string>
     <!-- Adress already used alert message - second part -->
     <string name="Send.UsedAddress.secondLIne">Re-use reduces privacy for both you and the recipient and can result in loss if the recipient doesn\'t directly control the address.</string>
     <!-- Adress already used alert title -->
@@ -615,17 +615,17 @@
     <!-- Join Early access label -->
     <string name="Settings.earlyAccess">Join Early Access</string>
     <!-- Are you enjoying bread alert message body -->
-    <string name="Settings.enjoying">Are you enjoying BRD?</string>
+    <string name="Settings.enjoying">Are you enjoying CSPN?</string>
     <!-- Face ID spending limit label -->
     <string name="Settings.faceIdLimit">Face ID Spending Limit</string>
     <!-- Redeem the funds stored on this private key. -->
     <string name="Settings.importTitle">Redeem Private Key</string>
     <!-- View legacy address (old format). -->
     <string name="Settings.ViewLegacyAddress">View Legacy Receive Address</string>
-    <!-- Receive Bitcoin -->
-    <string name="Settings.ViewLegacyAddressReceiveTitle">Receive Bitcoin</string>
-    <!-- Receive Bitcoin -->
-    <string name="Settings.ViewLegacyAddressReceiveDescription">Only send Bitcoin (BTC) to this address. Any other asset sent to this address will be lost permanently.</string>
+    <!-- Receive Crypto Sports -->
+    <string name="Settings.ViewLegacyAddressReceiveTitle">Receive Crypto Sports</string>
+    <!-- Receive Crypto Sports -->
+    <string name="Settings.ViewLegacyAddressReceiveDescription">Only send Crypto Sports (CSPN) to this address. Any other asset sent to this address will be lost permanently.</string>
     <!-- Enable segwit. -->
     <string name="Settings.EnableSegwit">Enable Segwit</string>
     <!-- Segwit extra confirmation title. -->
@@ -637,7 +637,7 @@ Are you sure you want to continue?</string>
     <string name="Segwit.ConfirmationInstructionsPart2">Thank you for helping move bitcoin forward.</string>
     <!-- Segwit description . -->
     <string name="Segwit.description">SegWit support is still a beta feature.\n\nOnce SegWit is enabled, it will not be possible
-to disable it. You will be able to find the legacy address under Settings. \n\nSome third-party services, including crypto trading, may be unavailable to users who have enabled SegWit. In case of emergency, you will be able to generate a lecacy address from Preferences > Bitcoin Settings. \n\nSegWit will automatically be enabled for all
+to disable it. You will be able to find the legacy address under Settings. \n\nSome third-party services, including crypto trading, may be unavailable to users who have enabled SegWit. In case of emergency, you will be able to generate a lecacy address from Preferences > Crypto Sports Settings. \n\nSegWit will automatically be enabled for all
 users in a future update. </string>
     <!-- Manage settings section header -->
     <string name="Settings.manage">Manage</string>
@@ -666,7 +666,7 @@ users in a future update. </string>
     <!-- Unlink/delete your wallet from the current device. -->
     <string name="Settings.wipe">Unlink from this device</string>
     <!-- Share data view body -->
-    <string name="ShareData.body">Help improve BRD by sharing your anonymous data with us. This does not include any financial information. We respect your financial privacy.</string>
+    <string name="ShareData.body">Help improve CSPN by sharing your anonymous data with us. This does not include any financial information. We respect your financial privacy.</string>
     <!-- Share data header -->
     <string name="ShareData.header">Share Data?</string>
     <!-- Share data switch label. -->
@@ -674,7 +674,7 @@ users in a future update. </string>
     <!-- button label -->
     <string name="StartPaperPhrase.againButtonTitle">Write Down Paper Key Again</string>
     <!-- Paper key explanation text. -->
-    <string name="StartPaperPhrase.body">Your paper key is the only way to restore your BRD if your phone is lost, stolen, broken, or upgraded.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.</string>
+    <string name="StartPaperPhrase.body">Your paper key is the only way to restore your CSPN if your phone is lost, stolen, broken, or upgraded.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.</string>
     <!-- button label -->
     <string name="StartPaperPhrase.buttonTitle">Write Down Paper Key</string>
     <!-- Argument is date -->
@@ -726,13 +726,13 @@ users in a future update. </string>
     <!-- Fingerprint Is Not Setup -->
     <string name="TouchIdSettings.disabledWarning.title.android">Fingerprint Authentication Not Enabled</string>
     <!-- Touch Id screen label -->
-    <string name="TouchIdSettings.label">Use your fingerprint to unlock your BRD and send money up to a set limit.</string>
+    <string name="TouchIdSettings.label">Use your fingerprint to unlock your CSPN and send money up to a set limit.</string>
     <!-- Link Text (see TouchIdSettings.customizeText) -->
     <string name="TouchIdSettings.linkText">Touch ID Spending Limit Screen</string>
     <!-- Spending Limit: b100,000 ($100) -->
     <string name="TouchIdSettings.spendingLimit">Spending limit: %1$s (%2$s)</string>
     <!-- Touch id switch label. -->
-    <string name="TouchIdSettings.switchLabel">Enable Touch ID for BRD</string>
+    <string name="TouchIdSettings.switchLabel">Enable Touch ID for CSPN</string>
     <!-- Enable fingerprint for this wallet called Bread -->
     <string name="TouchIdSettings.switchLabel.android">Enable Fingerprint Authentication</string>
     <!-- Touch ID settings view title -->
@@ -783,7 +783,7 @@ users in a future update. </string>
     <string name="Transaction.sentTo">sent to %1$s</string>
     <!-- eg. Starting balance: $50.00 -->
     <string name="Transaction.starting">Starting balance: %1$s</string>
-    <!-- e.g. "[The money you paid was a] Fee for token transfer: BRD" (BRD is the token that was transfered) -->
+    <!-- e.g. "[The money you paid was a] Fee for token transfer: CSPN" (BRD is the token that was transfered) -->
     <string name="Transaction.tokenTransfer">Fee for token transfer: %1$s</string>
     <!-- Waiting to be confirmed string -->
     <string name="Transaction.waiting">Waiting to be confirmed. Some merchants require confirmation to complete a transaction. Estimated time: 1-2 hours.</string>
@@ -898,7 +898,7 @@ users in a future update. </string>
     <!-- Instruction to touch the sensor for fingerprint authentication -->
     <string name="UnlockScreen.touchIdInstructions.android">Touch Sensor</string>
     <!-- TouchID prompt text -->
-    <string name="UnlockScreen.touchIdPrompt">Unlock your BRD.</string>
+    <string name="UnlockScreen.touchIdPrompt">Unlock your CSPN.</string>
     <!-- Device authentication body -->
     <string name="UnlockScreen.touchIdPrompt.android">Please unlock your Android device to continue.</string>
     <!-- Unlock with TouchID accessibility label -->
@@ -908,7 +908,7 @@ users in a future update. </string>
     <!-- Update PIN caption text -->
     <string name="UpdatePin.caption">Remember this PIN. If you forget it, you won\'t be able to access your assets.</string>
     <!-- PIN creation info. -->
-    <string name="UpdatePin.createInstruction">Your PIN will be used to unlock your BRD and send money.</string>
+    <string name="UpdatePin.createInstruction">Your PIN will be used to unlock your CSPN and send money.</string>
     <!-- Update PIN title -->
     <string name="UpdatePin.createTitle">Set PIN</string>
     <!-- Update PIN title -->
@@ -942,7 +942,7 @@ users in a future update. </string>
     <!-- Authorize transaction with touch id message -->
     <string name="VerifyPin.touchIdMessage">Authorize this transaction</string>
     <!-- 'No wallet' warning for watch app -->
-    <string name="Watch.noWalletWarning">Open the BRD iPhone app to set up your wallet.</string>
+    <string name="Watch.noWalletWarning">Open the CSPN iPhone app to set up your wallet.</string>
     <!-- Dismiss button label -->
     <string name="Webview.dismiss">Dismiss</string>
     <!-- Webview loading error message -->
@@ -950,9 +950,9 @@ users in a future update. </string>
     <!-- Updating webview message -->
     <string name="Webview.updating">Updating...</string>
     <!-- Welcome screen text. (?) will be replaced with the help icon users should look for. -->
-    <string name="Welcome.body">BRDwallet has changed its name to BRD, with a brand new look and some new features.\n\nIf you need help, look for the (?) in the top right of most screens.</string>
+    <string name="Welcome.body">BRDwallet has changed its name to CSPN, with a brand new look and some new features.\n\nIf you need help, look for the (?) in the top right of most screens.</string>
     <!-- Top title of welcome screen -->
-    <string name="Welcome.title">Welcome to BRD!</string>
+    <string name="Welcome.title">Welcome to CSPN!</string>
     <!-- Wipe wallet alert message -->
     <string name="WipeWallet.alertMessage">Are you sure you want to delete this wallet?</string>
     <!-- Wipe wallet alert title -->
@@ -964,7 +964,7 @@ users in a future update. </string>
     <!-- Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). -->
     <string name="WipeWallet.instruction">To start a new wallet or restore an existing wallet, you must first erase the wallet that is currently installed. To continue, enter the current wallet\'s Paper Key.</string>
     <!-- Instructions for unlinking the wallet -->
-    <string name="WipeWallet.startMessage">Starting or recovering another wallet allows you to access and manage a different BRD wallet on this device.</string>
+    <string name="WipeWallet.startMessage">Starting or recovering another wallet allows you to access and manage a different CSPN wallet on this device.</string>
     <!-- Start wipe wallet view warning -->
     <string name="WipeWallet.startWarning">Your current wallet will be removed from this device. If you wish to restore it in the future, you will need to enter your Paper Key.</string>
     <!-- Unlink this wallet from this device. -->

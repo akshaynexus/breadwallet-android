@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.R;
-import com.breadwallet.presenter.activities.settings.WebViewActivity;
-import com.breadwallet.tools.manager.BRReportsManager;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.tools.util.Utils;
+import com.cspnwallet.BreadApp;
+import com.cspnwallet.R;
+import com.cspnwallet.presenter.activities.settings.WebViewActivity;
+import com.cspnwallet.tools.manager.BRReportsManager;
+import com.cspnwallet.tools.util.BRConstants;
+import com.cspnwallet.tools.util.Utils;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.interfaces.Plugin;

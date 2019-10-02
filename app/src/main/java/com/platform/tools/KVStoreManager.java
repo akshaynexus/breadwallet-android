@@ -5,20 +5,19 @@ import android.text.format.DateUtils;
 import android.util.Base64;
 import android.util.Log;
 
-import com.breadwallet.core.BRCoreKey;
-import com.breadwallet.presenter.entities.CurrencyEntity;
-import com.breadwallet.protocols.messageexchange.entities.PairingMetaData;
-import com.breadwallet.tools.crypto.CryptoHelper;
-import com.breadwallet.tools.manager.BRReportsManager;
-import com.breadwallet.tools.manager.BRSharedPrefs;
-import com.breadwallet.tools.sqlite.RatesDataSource;
-import com.breadwallet.tools.util.BRCompressor;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.tools.util.Utils;
-import com.breadwallet.wallet.abstracts.BaseWalletManager;
-import com.breadwallet.wallet.wallets.CryptoTransaction;
+import com.cspnwallet.core.BRCoreKey;
+import com.cspnwallet.presenter.entities.CurrencyEntity;
+import com.cspnwallet.protocols.messageexchange.entities.PairingMetaData;
+import com.cspnwallet.tools.crypto.CryptoHelper;
+import com.cspnwallet.tools.manager.BRReportsManager;
+import com.cspnwallet.tools.manager.BRSharedPrefs;
+import com.cspnwallet.tools.sqlite.RatesDataSource;
+import com.cspnwallet.tools.util.BRCompressor;
+import com.cspnwallet.tools.util.BRConstants;
+import com.cspnwallet.tools.util.Utils;
+import com.cspnwallet.wallet.abstracts.BaseWalletManager;
+import com.cspnwallet.wallet.wallets.CryptoTransaction;
 import com.platform.APIClient;
-import com.platform.entities.SegWitMetaData;
 import com.platform.entities.TokenListMetaData;
 import com.platform.entities.TxMetaData;
 import com.platform.entities.WalletInfoData;
@@ -175,6 +174,15 @@ public class KVStoreManager {
             Log.e(TAG, "setData: Error setting value for key: " + KEY_WALLET_INFO + ", err: " + completionObject.err);
         }
 
+    }
+    /**
+     * Synchronize wallet info with KV store.
+     *
+     * @param context Caller context.
+     */
+    public static void syncWalletInfo(Context context) {
+        ReplicatedKVStore replicatedKVStore = getReplicatedKvStore(context);
+        replicatedKVStore.syncKey(KEY_WALLET_INFO,1,1,null);
     }
 
     public static PairingMetaData getPairingMetadata(Context context, byte[] pubKey) {
@@ -745,5 +753,9 @@ public class KVStoreManager {
     private static String pairingKey(byte[] pubKey) {
         String suffix = BRCoreKey.encodeHex(CryptoHelper.sha256(pubKey));
         return PAIRING_META_DATA_KEY_PREFIX + suffix;
+    }
+    private static ReplicatedKVStore getReplicatedKvStore(Context context) {
+        RemoteKVStore remoteKVStore = RemoteKVStore.getInstance(APIClient.getInstance(context));
+        return ReplicatedKVStore.getInstance(context, remoteKVStore);
     }
 }

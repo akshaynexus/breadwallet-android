@@ -5,7 +5,7 @@
     <!-- About screen blog label -->
     <string name="About.blog">블로그</string>
     <!-- About screen footer -->
-    <string name="About.footer">글로벌 BRD 팀 제작. 버전 %1$s 빌드 %2$s</string>
+    <string name="About.footer">글로벌 CSPN 팀 제작. 버전 %1$s 빌드 %2$s</string>
     <!-- Privay Policy button label -->
     <string name="About.privacy">개인정보 보호정책</string>
     <!-- About screen reddit label -->
@@ -24,12 +24,12 @@
     <string name="AccessibilityLabels.faq">고객지원 센터</string>
     <!-- Account balance -->
     <string name="Account.balance">잔액</string>
-    <!-- $10000 per BTC -->
+    <!-- $10000 per CSPN -->
     <string name="Account.exchangeRate">%2$s 당 %1$s</string>
     <!-- Loading Wallet Message -->
     <string name="Account.loadingMessage">지갑 로딩</string>
     <!-- Default wallet name -->
-    <string name="AccountHeader.defaultWalletName">나의 BRD</string>
+    <string name="AccountHeader.defaultWalletName">나의 CSPN</string>
     <!-- Third party keyboard warning -->
     <string name="Alert.customKeyboard.android">제3자가 제공한 키보드를 사용하고 계신 것 같습니다, 귀하의 입력을 기록하고 귀하의 페이퍼 키가 도난 당할 수 있습니다. 추가적인 보호를 위해 기본 안드로이드 키보드로 전환해 주세요.</string>
     <!-- Error alert title -->
@@ -174,8 +174,8 @@
     <string name="Crowdsale.resume">인증 다시 하기</string>
     <!-- Retry Identity verification button -->
     <string name="Crowdsale.retry">다시 시도하기</string>
-    <!-- Bitcoin denomination picker label -->
-    <string name="DefaultCurrency.bitcoinLabel">Bitcoin Display Unit</string>
+    <!-- Crypto Sports denomination picker label -->
+    <string name="DefaultCurrency.bitcoinLabel">Crypto Sports Display Unit</string>
     <!-- Exchange rate label -->
     <string name="DefaultCurrency.rateLabel">환율</string>
     <!-- The wallet is disabled. -->
@@ -204,7 +204,7 @@
     <string name="FaceIDSettings.label">얼굴을 사용하여 브레드의 잠금을 해제하고 설정 한도까지 돈을 보내세요.</string>
     <!-- Title of the screen for setting the Face ID Spending Limit -->
     <string name="FaceIDSettings.linkText">페이스 ID 지출 한도 화면</string>
-    <!-- Setting to turn on Face ID for BRD -->
+    <!-- Setting to turn on Face ID for CSPN -->
     <string name="FaceIDSettings.switchLabel">브레드에 페이스 ID 사용하기</string>
     <!-- Face ID settings view title -->
     <string name="FaceIDSettings.title">페이스 ID</string>
@@ -269,7 +269,7 @@
     <!-- password textfield placeholder -->
     <string name="Import.passwordPlaceholder">비밀번호</string>
     <!-- Caption for graphics -->
-    <string name="Import.rightCaption">귀하의 BRD 지갑</string>
+    <string name="Import.rightCaption">귀하의 CSPN 지갑</string>
     <!-- Scan Private key button label -->
     <string name="Import.scan">개인 열쇠 스캔</string>
     <!-- Import wallet success alert title -->
@@ -762,7 +762,7 @@
     <string name="Transaction.sentTo">%1$s으로 전송되었습니다</string>
     <!-- eg. Starting balance: $50.00 -->
     <string name="Transaction.starting">기초 잔액: %1$s</string>
-    <!-- e.g. "[The money you paid was a] Fee for token transfer: BRD" (BRD is the token that was transfered) -->
+    <!-- e.g. "[The money you paid was a] Fee for token transfer: CSPN" (BRD is the token that was transfered) -->
     <string name="Transaction.tokenTransfer">토큰 송금 수수료: %1$s</string>
     <!-- Waiting to be confirmed string -->
     <string name="Transaction.waiting">확인 대기 중. 일부 판매자는 트랜잭션을 완료하기 위해 확인을 요구합니다. 예상 소요 시간: 1~2시간.</string>
@@ -859,7 +859,7 @@
     <!-- Tx detail field header -->
     <string name="TransactionDetails.totalHeader">합계</string>
     <!-- Transaction ID header -->
-    <string name="TransactionDetails.txHashHeader">Bitcoin Transaction ID</string>
+    <string name="TransactionDetails.txHashHeader">Crypto Sports Transaction ID</string>
     <!-- (this transaction was) Received at this address: -->
     <string name="TransactionDirection.address">이 주소에서 받음</string>
     <!-- (this transaction was) Sent to this address: -->
@@ -921,7 +921,7 @@
     <!-- Authorize transaction with touch id message -->
     <string name="VerifyPin.touchIdMessage">이 거래 승인</string>
     <!-- 'No wallet' warning for watch app -->
-    <string name="Watch.noWalletWarning">귀하의 월렛을 설정하려면 BRD 앱을 열어 주세요.</string>
+    <string name="Watch.noWalletWarning">귀하의 월렛을 설정하려면 CSPN 앱을 열어 주세요.</string>
     <!-- Dismiss button label -->
     <string name="Webview.dismiss">무시</string>
     <!-- Webview loading error message -->
@@ -945,7 +945,7 @@
     <!-- Instructions for unlinking the wallet -->
     <string name="WipeWallet.startMessage">지갑의 연결을 해제하여 이 기기에서 제거하세요. 이 지갑의 연결이 해제되면, 새로운 지갑을 시작하거나 이 기기에 다른 지갑을 복구할 수 있습니다.</string>
     <!-- Start wipe wallet view warning -->
-    <string name="WipeWallet.startWarning">이장치에서 현재 BRD 지갑을 더는 이용할 수 없게 됩니다. 잔고는 남아 있게 됩니다.</string>
+    <string name="WipeWallet.startWarning">이장치에서 현재 CSPN 지갑을 더는 이용할 수 없게 됩니다. 잔고는 남아 있게 됩니다.</string>
     <!-- Unlink this wallet from this device. -->
     <string name="WipeWallet.title">지갑 연결 해제</string>
     <!-- Wipe wallet button title -->

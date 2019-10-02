@@ -43,7 +43,7 @@
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="81dp"/>
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.cspnwallet.presenter.customviews.BaseTextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,15 +87,17 @@
             android:orientation="horizontal"
             android:weightSum="2">
 
-            <com.breadwallet.presenter.customviews.BREdit
+            <com.cspnwallet.presenter.customviews.BREdit
                 android:id="@+id/address_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_gravity="center_vertical"
+                android:textColor="@color/add_wallets_border_color"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="16dp"
                 android:layout_weight="0.6"
                 android:background="@android:color/transparent"
+                android:textColorHint="@color/gray"
                 android:ellipsize="middle"
                 android:ems="10"
                 android:hint="@string/Send.toLabel"
@@ -103,7 +105,7 @@
                 android:maxLines="1"
                 />
 
-            <com.breadwallet.presenter.customviews.BRButton
+            <com.cspnwallet.presenter.customviews.BRButton
                 android:id="@+id/paste_button"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
@@ -124,7 +126,7 @@
                 app:isBreadButton="true"
                 />
 
-            <com.breadwallet.presenter.customviews.BRButton
+            <com.cspnwallet.presenter.customviews.BRButton
                 android:id="@+id/scan"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
@@ -161,7 +163,7 @@
             android:animateLayoutChanges="true"
             android:orientation="horizontal">
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.cspnwallet.presenter.customviews.BaseTextView
                 android:id="@+id/iso_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -169,13 +171,14 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:text="$"
+                android:textColor="@color/white"
                 android:textSize="28sp"
                 app:customTFont="CircularPro-Medium.otf"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.breadwallet.presenter.customviews.BREdit
+            <com.cspnwallet.presenter.customviews.BREdit
                 android:id="@+id/amount_edit"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -185,6 +188,8 @@
                 android:layout_toEndOf="@id/iso_text"
                 android:background="@android:color/transparent"
                 android:clickable="false"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray"
                 android:cursorVisible="false"
                 android:ems="10"
                 android:focusable="false"
@@ -198,7 +203,7 @@
                 app:layout_constraintTop_toTopOf="@+id/iso_text"
                 app:layout_constraintVertical_bias="0.5"/>
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.cspnwallet.presenter.customviews.BaseTextView
                 android:id="@+id/balance_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -210,7 +215,7 @@
                 app:layout_constraintLeft_toLeftOf="@+id/iso_text"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.cspnwallet.presenter.customviews.BaseTextView
                 android:id="@+id/fee_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -222,7 +227,7 @@
                 app:layout_constraintLeft_toLeftOf="@+id/iso_text"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.breadwallet.presenter.customviews.BRButton
+            <com.cspnwallet.presenter.customviews.BRButton
                 android:id="@+id/iso_button"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
@@ -260,33 +265,33 @@
 
         </android.support.constraint.ConstraintLayout>
 
-        <com.breadwallet.presenter.customviews.BRLinearLayoutWithCaret
+        <com.cspnwallet.presenter.customviews.BRLinearLayoutWithCaret
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/fee_buttons_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="2.0"
-            app:backgroundColor="@color/extra_light_blue_background"
+            app:backgroundColor="@color/almost_black"
             app:strokeColor="@color/extra_light_gray"
             app:withStroke="true">
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.cspnwallet.presenter.customviews.BaseTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/FeeSelector.title"
                 android:textSize="@dimen/sub_header"
-                android:textColor="@color/almost_black"
+                android:textColor="@color/white"
                 android:textStyle="bold"/>
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.cspnwallet.presenter.customviews.BaseTextView
                 android:id="@+id/fee_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:textColor="@color/light_gray"
+                android:textColor="@color/white"
                 />
 
             <LinearLayout
@@ -304,7 +309,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/BRText2">
 
-                <com.breadwallet.presenter.customviews.BRButton
+                <com.cspnwallet.presenter.customviews.BRButton
                     android:id="@+id/left_button"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -318,7 +323,7 @@
                     app:isBreadButton="false"
                     />
 
-                <com.breadwallet.presenter.customviews.BRButton
+                <com.cspnwallet.presenter.customviews.BRButton
                     android:id="@+id/right_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -333,7 +338,7 @@
                     />
             </LinearLayout>
 
-            <com.breadwallet.presenter.customviews.BaseTextView
+            <com.cspnwallet.presenter.customviews.BaseTextView
                 android:id="@+id/warning_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -346,7 +351,7 @@
                 />
 
 
-        </com.breadwallet.presenter.customviews.BRLinearLayoutWithCaret>
+        </com.cspnwallet.presenter.customviews.BRLinearLayoutWithCaret>
 
         <View
             android:id="@+id/separator2"
@@ -361,11 +366,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.breadwallet.presenter.customviews.BRKeyboard
+            <com.cspnwallet.presenter.customviews.BRKeyboard
                 android:id="@+id/keyboard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/extra_light_gray"
+                android:background="@color/almost_black"
                 />
 
             <View
@@ -380,7 +385,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp">
 
-            <com.breadwallet.presenter.customviews.BREdit
+            <com.cspnwallet.presenter.customviews.BREdit
                 android:id="@+id/comment_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -389,6 +394,8 @@
                 android:layout_marginStart="16dp"
                 android:background="@android:color/transparent"
                 android:hint="@string/Send.descriptionLabel"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/white"
                 android:textSize="@dimen/sub_header"
                 android:inputType="textPersonName"
                 android:maxLength="250"
@@ -403,7 +410,7 @@
             android:background="@color/extra_light_gray"
             />
 
-        <com.breadwallet.presenter.customviews.BRButton
+        <com.cspnwallet.presenter.customviews.BRButton
             android:id="@+id/send_button"
             android:layout_width="match_parent"
             android:layout_height="80dp"

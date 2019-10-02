@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.breadwallet">
+    package="com.cspnwallet">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -43,7 +43,7 @@
         android:required="false" />
 
     <application
-        android:name=".BreadApp"
+        android:name="com.cspnwallet.BreadApp"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="${applicationIcon}"
@@ -68,7 +68,7 @@
             android:value="false" />
 
         <activity
-            android:name=".presenter.activities.intro.IntroActivity"
+            android:name="com.cspnwallet.presenter.activities.intro.IntroActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
@@ -79,7 +79,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presenter.activities.WalletActivity"
+            android:name="com.cspnwallet.presenter.activities.WalletActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -113,140 +113,140 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".presenter.activities.InputPinActivity"
+            android:name="com.cspnwallet.presenter.activities.InputPinActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.intro.RecoverActivity"
+            android:name="com.cspnwallet.presenter.activities.intro.RecoverActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.UnlinkActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.UnlinkActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.ImportActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.ImportActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.LoginActivity"
+            android:name="com.cspnwallet.presenter.activities.LoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.SettingsActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.NotificationActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.NotificationActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.SyncBlockchainActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.SyncBlockchainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.DisplayCurrencyActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.DisplayCurrencyActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.AboutActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.AboutActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.ShareDataActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.ShareDataActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.intro.WriteDownActivity"
+            android:name="com.cspnwallet.presenter.activities.intro.WriteDownActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.PaperKeyActivity"
+            android:name="com.cspnwallet.presenter.activities.PaperKeyActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.SpendLimitActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.SpendLimitActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-          android:name=".presenter.activities.settings.SegWitActivity"
+          android:name="com.cspnwallet.presenter.activities.settings.SegWitActivity"
           android:launchMode="singleTask"
           android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.PaperKeyProveActivity"
+            android:name="com.cspnwallet.presenter.activities.PaperKeyProveActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.InputWordsActivity"
+            android:name="com.cspnwallet.presenter.activities.InputWordsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.camera.ScanQRActivity"
+            android:name="com.cspnwallet.presenter.activities.camera.ScanQRActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!-- Use launchMode="standard for WebViewActivity in order to be able to have multiple instances" -->
         <activity
-            android:name=".presenter.activities.settings.WebViewActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.WebViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".presenter.activities.DisabledActivity"
+            android:name="com.cspnwallet.presenter.activities.DisabledActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.FingerprintActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.FingerprintActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.AdvancedActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.AdvancedActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.NodesActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.NodesActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.camera.CameraActivity"
+            android:name="com.cspnwallet.presenter.activities.camera.CameraActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.settings.TestActivity"
+            android:name="com.cspnwallet.presenter.activities.settings.TestActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.HomeActivity"
+            android:name="com.cspnwallet.presenter.activities.HomeActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.CurrencySettingsActivity"
+            android:name="com.cspnwallet.presenter.activities.CurrencySettingsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.AddWalletsActivity"
+            android:name="com.cspnwallet.presenter.activities.AddWalletsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".presenter.activities.ManageWalletsActivity"
+            android:name="com.cspnwallet.presenter.activities.ManageWalletsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presenter.activities.ConfirmationActivity"
+            android:name="com.cspnwallet.presenter.activities.ConfirmationActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <service
-            android:name=".tools.services.SyncService"
+            android:name="com.cspnwallet.tools.services.SyncService"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:enabled="true"
             android:exported="false" />
         <service
-            android:name=".protocols.messageexchange.MessageExchangeService"
+            android:name="com.cspnwallet.protocols.messageexchange.MessageExchangeService"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:enabled="true"
             android:exported="false" />
-        <service android:name=".tools.services.BRDFirebaseMessagingService">
+        <service android:name="com.cspnwallet.tools.services.BRDFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

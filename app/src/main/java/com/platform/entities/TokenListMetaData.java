@@ -1,12 +1,9 @@
 package com.platform.entities;
 
 
-import android.util.Log;
-
-import com.breadwallet.presenter.entities.TokenItem;
-import com.breadwallet.wallet.wallets.bitcoin.WalletBchManager;
-import com.breadwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
-import com.breadwallet.wallet.wallets.ethereum.WalletEthManager;
+import com.cspnwallet.wallet.wallets.bitcoin.WalletBchManager;
+import com.cspnwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
+import com.cspnwallet.wallet.wallets.ethereum.WalletEthManager;
 
 import java.util.ArrayList;
 import java.util.List;

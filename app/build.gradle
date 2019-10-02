@@ -4,7 +4,6 @@ apply plugin: 'com.google.protobuf'
 
 android {
     compileSdkVersion = 27
-    buildToolsVersion = '27.0.3'
     ext {
         brdMarketingVersion = 3   // Major version. Usually affected by marketing. Maximum value: 99
         brdProductVersion = 5     // Minor version. Usually affected by product. Maximum value: 99
@@ -21,9 +20,10 @@ android {
     }
     defaultConfig {
         testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
-        applicationId = 'com.breadwallet'
+        applicationId = 'com.cspnwallet'
         minSdkVersion 23
         targetSdkVersion 27
+        vectorDrawables.useSupportLibrary = true
 
         versionCode brdVersionCode
         versionName "$brdMarketingVersion.$brdProductVersion.$brdEngineeringVersion"
@@ -74,9 +74,9 @@ android {
     flavorDimensions "mode"
     productFlavors {
         brd {
-            applicationId = "com.breadwallet"
+            applicationId = "com.cspnwallet"
             dimension "mode"
-            resValue "string", "app_name", "BRD"
+            resValue "string", "app_name", "Crypto Sports"
             buildConfigField "boolean", "BITCOIN_TESTNET", "false"
             externalNativeBuild {
                 cmake {
@@ -90,7 +90,7 @@ android {
             //signingConfig signingConfigs.FakeSigningConfig // Uncomment to fake sign a mainnet release build for testing.
         }
         brdTestnet {
-            applicationId = "com.breadwallet.testnet"
+            applicationId = "com.cspnwallet.testnet"
             dimension "mode"
             resValue "string", "app_name", "BRD Testnet"
             buildConfigField "boolean", "BITCOIN_TESTNET", "true"
@@ -134,7 +134,7 @@ android {
         }
         debug {
             applicationIdSuffix '.debug'
-            manifestPlaceholders = [applicationIcon: "@mipmap/ic_launcher_grayscale"]
+            manifestPlaceholders = [applicationIcon: "@mipmap/ic_launcher"]
             debuggable = true
             jniDebuggable = true
             minifyEnabled = false
@@ -208,10 +208,11 @@ dependencies {
     implementation 'org.eclipse.jetty.websocket:websocket-server:9.2.19.v20160908' //do not update
     implementation 'org.eclipse.jetty:jetty-continuation:9.2.19.v20160908' //do not update
     implementation 'org.slf4j:slf4j-api:1.7.22'
+    compile 'com.android.support:support-v13:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:gridlayout-v7:27.1.1'
-    implementation 'com.android.support:support-v13:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.squareup.okhttp3:okhttp:3.7.0'

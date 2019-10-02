@@ -1,0 +1,75 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn",
+      "sdkFolder": "C:\\Users\\Akshay\\AppData\\Local\\Android\\Sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\build\\intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app",
+      "makeFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\.cxx",
+      "cxxFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx",
+      "ndkFolder": "C:\\Users\\Akshay\\AppData\\Local\\Android\\Sdk\\ndk\\20.0.5594570",
+      "ndkVersion": "20.0.5594570",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [
+      "-DBITCOIN_TESTNET\u003d1",
+      "-DBITCOIN_DEBUG\u003d1"
+    ],
+    "cppFlagsList": [],
+    "variantName": "brdTestnetDebug",
+    "soFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\build\\intermediates\\cmake\\brdTestnetDebug\\lib",
+    "objFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\build\\intermediates\\cmake\\brdTestnetDebug\\obj",
+    "jsonFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug",
+    "gradleBuildOutputFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": [
+      "core"
+    ]
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 23,
+  "cxxBuildFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug\\arm64-v8a",
+  "jsonFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug\\arm64-v8a\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a",
+  "objFolder": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\build\\intermediates\\cmake\\brdTestnetDebug\\obj\\arm64-v8a",
+  "buildCommandFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug\\arm64-v8a\\build_command.txt",
+  "buildOutputFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug\\arm64-v8a\\build_output.txt",
+  "modelOutputFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug\\arm64-v8a\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a\\CMakeLists.txt",
+    "toolchainWrapperFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a\\build_generation_state.json",
+    "cacheKeyFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a\\compiler_cache_key.json",
+    "compilerCacheUseFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cxx\\brdTestnetDebug\\arm64-v8a\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug\\arm64-v8a\\json_generation_record.json",
+  "compileCommandsJsonFile": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdTestnetDebug\\arm64-v8a\\compile_commands.json"
+}

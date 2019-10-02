@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Akshay\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdDebug\\arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "core-Debug-arm64-v8a": {
+      "artifactName": "core",
+      "buildCommand": "C:\\Users\\Akshay\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\.cxx\\cmake\\brdDebug\\arm64-v8a --target core",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Akshay\\Documents\\breadwallet-android-cspn\\app\\build\\intermediates\\cmake\\brdDebug\\obj\\arm64-v8a\\libcore.so"
+    }
+  }
+}

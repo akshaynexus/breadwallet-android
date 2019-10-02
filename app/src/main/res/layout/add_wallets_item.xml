@@ -6,7 +6,7 @@
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:background="@android:color/transparent">
 
-    <!--<com.breadwallet.presenter.customviews.BaseTextView-->
+    <!--<com.cspnwallet.presenter.customviews.BaseTextView-->
         <!--android:id="@+id/add_wallets"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
