@@ -56,6 +56,7 @@ import com.cspnwallet.wallet.util.CryptoUriParser;
 import com.cspnwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
 
 import java.math.BigDecimal;
+import java.util.Map;
 
 public class FragmentShowLegacyAddress extends ModalDialogFragment implements BalanceUpdateListener {
     private static final String TAG = FragmentShowLegacyAddress.class.getName();
@@ -87,7 +88,7 @@ public class FragmentShowLegacyAddress extends ModalDialogFragment implements Ba
         mQrImage = rootView.findViewById(R.id.qr_image);
         mShareButton = rootView.findViewById(R.id.share_button);
         mShareEmailButton = rootView.findViewById(R.id.share_email);
-        mShareMessageButton = rootView.findViewById(R.id.share_text);
+//        mShareMessageButton = rootView.findViewById(R.id.share_text);
         mShareButtonsLayout = rootView.findViewById(R.id.share_buttons_layout);
         mCopiedLayout = rootView.findViewById(R.id.copied_layout);
         mCloseButton = rootView.findViewById(R.id.close_button);
@@ -111,16 +112,16 @@ public class FragmentShowLegacyAddress extends ModalDialogFragment implements Ba
                 QRUtils.share(QRUtils.VIA_EMAIL, getActivity(), cryptoUri.toString());
             }
         });
-        mShareMessageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                BaseWalletManager walletManager = WalletsMaster.getInstance(getActivity()).getCurrentWallet(getActivity());
-                Uri cryptoUri = CryptoUriParser.createCryptoUrl(getActivity(), walletManager,
-                        walletManager.decorateAddress(mReceiveAddress),
-                        BigDecimal.ZERO, null, null, null);
-                QRUtils.share(QRUtils.VIA_MESSAGE, getActivity(), cryptoUri.toString());
-            }
-        });
+//        mShareMessageButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                BaseWalletManager walletManager = WalletsMaster.getInstance(getActivity()).getCurrentWallet(getActivity());
+//                Uri cryptoUri = CryptoUriParser.createCryptoUrl(getActivity(), walletManager,
+//                        walletManager.decorateAddress(mReceiveAddress),
+//                        BigDecimal.ZERO, null, null, null);
+//                QRUtils.share(QRUtils.VIA_MESSAGE, getActivity(), cryptoUri.toString());
+//            }
+//        });
         mShareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -241,7 +242,12 @@ public class FragmentShowLegacyAddress extends ModalDialogFragment implements Ba
     }
 
     @Override
-    public void onBalanceChanged(BigDecimal newBalance) {
+    public void onBalanceChanged(String currencyCode, BigDecimal newBalance) {
+        updateQr();
+    }
+
+    @Override
+    public void onBalancesChanged(Map<String, BigDecimal> balanceMap) {
         updateQr();
     }
 }

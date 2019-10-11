@@ -82,20 +82,20 @@ public class CryptoRequest implements Serializable {
         return minAmount != null && absAmt.compareTo(minAmount) < 0;
     }
 
-    public boolean isLargerThanBalance(Context app, BaseWalletManager walletManager) {
-        return amount.abs().compareTo(walletManager.getCachedBalance(app)) > 0
+    public boolean isLargerThanBalance(BaseWalletManager walletManager) {
+        return amount.abs().compareTo(walletManager.getBalance()) > 0
                 && amount.abs().compareTo(BigDecimal.ZERO) > 0;
     }
 
     //not enough money for a tx + fee
     public boolean notEnoughForFee(Context app, BaseWalletManager walletManager) {
-        BigDecimal balance = walletManager.getCachedBalance(app);
+        BigDecimal balance = walletManager.getBalance();
 
         boolean isErc20 = WalletsMaster.getInstance(app).isIsoErc20(app, walletManager.getIso());
 
         if (isErc20) {
             BigDecimal feeForTx = walletManager.getEstimatedFee(amount, null);
-            return amount.compareTo(balance) > 0 || feeForTx.compareTo(WalletEthManager.getInstance(app).getCachedBalance(app)) > 0;
+            return amount.compareTo(balance) > 0 || feeForTx.compareTo(WalletEthManager.getInstance(app).getBalance()) > 0;
         } else {
             BigDecimal minAmount = walletManager.getMinOutputAmount(app);
             BigDecimal feeForTx = walletManager.getEstimatedFee(amount, null);
@@ -106,7 +106,7 @@ public class CryptoRequest implements Serializable {
 
     //the fee needs adjustments (amount + fee > balance but possible to adjust the amount to create a tx)
     public boolean feeOverBalance(Context app, BaseWalletManager walletManager) {
-        BigDecimal balance = walletManager.getCachedBalance(app);
+        BigDecimal balance = walletManager.getBalance();
 
         boolean isErc20 = WalletsMaster.getInstance(app).isIsoErc20(app, walletManager.getIso());
 

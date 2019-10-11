@@ -50,6 +50,8 @@ public abstract class BaseEthereumWalletManager implements BaseWalletManager {
         return mAddress;
     }
 
+    public abstract void rescanX(Context app, boolean isRestored);
+
     public abstract BREthereumWallet getWallet();
 
     @Override

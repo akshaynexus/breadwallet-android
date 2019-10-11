@@ -418,7 +418,7 @@ public class WalletPlugin implements Plugin {
                 JSONObject balance = new JSONObject();
 
                 boolean isErc20 = WalletsMaster.getInstance(app).isIsoErc20(app, w.getIso());
-                BigDecimal rawBalance = w.getCachedBalance(app);
+                BigDecimal rawBalance = w.getBalance();
                 String denominator = w.getDenominator();
                 balance.put("currency", w.getIso());
                 balance.put("numerator", isErc20 ? rawBalance.multiply(new BigDecimal(denominator)).toPlainString() : rawBalance.toPlainString());

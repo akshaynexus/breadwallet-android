@@ -200,6 +200,16 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
     }
 
     @Override
+    public void rescanX(Context app, boolean isRestored, boolean fastSync) {
+
+    }
+
+    @Override
+    public void rescanX(Context app, boolean isRestored) {
+
+    }
+
+    @Override
     public CryptoTransaction[] getTxs(Context app) {
         long start = System.currentTimeMillis();
         BREthereumTransaction[] txs = mWalletToken.getTransactions();
@@ -342,13 +352,19 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
     }
 
     @Override
-    public BigDecimal getCachedBalance(Context app) {
-        return BRSharedPrefs.getCachedBalance(app, getIso());
+    public BigDecimal getBalance() {
+        return new BigDecimal(getWallet().getBalance());
     }
+
 
     @Override
     public BigDecimal getTotalSent(Context app) {
         return mWalletEthManager.getTotalSent(app);
+    }
+
+    @Override
+    public BigDecimal getTotalRecived(Context app) {
+        return null;
     }
 
     @Override
@@ -397,7 +413,7 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
     @Override
     public BigDecimal getFiatBalance(Context app) {
         if (app == null) return null;
-        return getFiatForSmallestCrypto(app, getCachedBalance(app), null);
+        return getFiatForSmallestCrypto(app, getBalance(), null);
     }
 
     @Override

@@ -60,6 +60,7 @@ import java.io.InputStream;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.Map;
 
 /**
  * Created by byfieldj on 1/16/18.
@@ -214,7 +215,7 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
             public void run() {
                 Thread.currentThread().setName("BG:" + TAG + ":refreshBalances and address");
                 Activity app = WalletActivity.this;
-                WalletsMaster.getInstance(app).refreshBalances(app);
+                WalletsMaster.getInstance(app).refreshBalances();
                 if (mWallet != null) {
                     mWallet.refreshAddress(app);
                 }
@@ -262,7 +263,7 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
 
         String fiatExchangeRate = CurrencyUtils.getFormattedAmount(this, BRSharedPrefs.getPreferredFiatIso(this), bigExchangeRate);
         String fiatBalance = CurrencyUtils.getFormattedAmount(this, BRSharedPrefs.getPreferredFiatIso(this), walletManager.getFiatBalance(this));
-        String cryptoBalance = CurrencyUtils.getFormattedAmount(this, walletManager.getIso(), walletManager.getCachedBalance(this), walletManager.getUiConfiguration().getMaxDecimalPlacesForUi());
+        String cryptoBalance = CurrencyUtils.getFormattedAmount(this, walletManager.getIso(), walletManager.getBalance(), walletManager.getUiConfiguration().getMaxDecimalPlacesForUi());
 
         mCurrencyTitle.setText(walletManager.getName());
         mCurrencyPriceUsd.setText(String.format("%s per %s", fiatExchangeRate, walletManager.getIso()));
@@ -396,7 +397,6 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
                 @Override
                 public void run() {
                     WalletEthManager.getInstance(WalletActivity.this).estimateGasPrice();
-                    wallet.refreshCachedBalance(WalletActivity.this);
                     BRExecutor.getInstance().forMainThreadTasks().execute(new Runnable() {
                         @Override
                         public void run() {
@@ -550,15 +550,25 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
     }
 
     @Override
-    public void onBalanceChanged(BigDecimal newBalance) {
-        BRExecutor.getInstance().forMainThreadTasks().execute(new Runnable() {
-            @Override
-            public void run() {
-                updateUi();
-            }
-        });
+    public void onBalanceChanged(String currencyCode,BigDecimal newBalance) {
+            BRExecutor.getInstance().forMainThreadTasks().execute(new Runnable() {
+                @Override
+                public void run() {
+                    updateUi();
+                }
+            });
     }
-
+    @Override
+    public void onBalancesChanged(Map<String, BigDecimal> balanceMap) {
+        if (balanceMap.containsKey(mCurrentWalletIso)) {
+            BRExecutor.getInstance().forMainThreadTasks().execute(new Runnable() {
+                @Override
+                public void run() {
+                    updateUi();
+                }
+            });
+        }
+    }
     /**
      * The {@link SyncNotificationBroadcastReceiver} is responsible for receiving updates from the
      * {@link SyncService} and updating the UI accordingly.

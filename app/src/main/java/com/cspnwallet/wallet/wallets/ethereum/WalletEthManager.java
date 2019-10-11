@@ -280,6 +280,16 @@ public class WalletEthManager extends BaseEthereumWalletManager implements BREth
     }
 
     @Override
+    public void rescanX(Context app, boolean isRestored, boolean fastSync) {
+
+    }
+
+    @Override
+    public void rescanX(Context app, boolean isRestored) {
+
+    }
+
+    @Override
     public CryptoTransaction[] getTxs(Context app) {
         BREthereumTransaction[] txs = mWallet.getTransactions();
         CryptoTransaction[] arr = new CryptoTransaction[txs.length];
@@ -321,7 +331,7 @@ public class WalletEthManager extends BaseEthereumWalletManager implements BREth
 
     @Override
     public BigDecimal getMaxOutputAmount(Context app) {
-        BigDecimal balance = getCachedBalance(app);
+        BigDecimal balance = getBalance();
         if (balance.compareTo(BigDecimal.ZERO) == 0) {
             return BigDecimal.ZERO;
         }
@@ -469,13 +479,19 @@ public class WalletEthManager extends BaseEthereumWalletManager implements BREth
     }
 
     @Override
-    public BigDecimal getCachedBalance(Context app) {
-        return BRSharedPrefs.getCachedBalance(app, getIso());
+    public BigDecimal getBalance() {
+        return new BigDecimal(getWallet().getBalance());
     }
+
 
     @Override
     public BigDecimal getTotalSent(Context app) {
         return BigDecimal.ZERO;
+    }
+
+    @Override
+    public BigDecimal getTotalRecived(Context app) {
+        return null;
     }
 
     @Override
@@ -524,7 +540,7 @@ public class WalletEthManager extends BaseEthereumWalletManager implements BREth
     @Override
     public BigDecimal getFiatBalance(Context app) {
         if (app == null) return null;
-        return getFiatForSmallestCrypto(app, getCachedBalance(app), null);
+        return getFiatForSmallestCrypto(app, getBalance(), null);
     }
 
     @Override
@@ -1192,7 +1208,7 @@ public class WalletEthManager extends BaseEthereumWalletManager implements BREth
                     break;
                 case BALANCE_UPDATED:
                     if (status == Status.SUCCESS) {
-                        WalletsMaster.getInstance(context).refreshBalances(context);
+                        WalletsMaster.getInstance(context).refreshBalances();
                         printInfo("New Balance: " + wallet.getBalance(), iso, event.name());
                     } else {
                         BRReportsManager.reportBug(new IllegalArgumentException("BALANCE_UPDATED: Failed to update balance: status:"

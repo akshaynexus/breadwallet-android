@@ -183,6 +183,7 @@ public class KVStoreManager {
     public static void syncWalletInfo(Context context) {
         ReplicatedKVStore replicatedKVStore = getReplicatedKvStore(context);
         replicatedKVStore.syncKey(KEY_WALLET_INFO,1,1,null);
+
     }
 
     public static PairingMetaData getPairingMetadata(Context context, byte[] pubKey) {
@@ -458,11 +459,11 @@ public class KVStoreManager {
         return result;
     }
 
-    public static TxMetaData getTxMetaData(Context app, byte[] txHash) {
+    public static TxMetaData getTxMetaData(Context context, byte[] txHash) {
         String key = txKey(txHash);
 
-        RemoteKVStore remoteKVStore = RemoteKVStore.getInstance(APIClient.getInstance(app));
-        ReplicatedKVStore kvStore = ReplicatedKVStore.getInstance(app, remoteKVStore);
+        ReplicatedKVStore kvStore = getReplicatedKvStore(context);
+
         long ver = kvStore.localVersion(key).version;
 
         CompletionObject obj = kvStore.get(key, ver);
@@ -475,10 +476,9 @@ public class KVStoreManager {
         return valueToMetaData(obj.kv.value);
     }
 
-    public static Map<String, TxMetaData> getAllTxMD(Context app) {
+    public static Map<String, TxMetaData> getAllTxMD(Context context) {
         Map<String, TxMetaData> mds = new HashMap<>();
-        RemoteKVStore remoteKVStore = RemoteKVStore.getInstance(APIClient.getInstance(app));
-        ReplicatedKVStore kvStore = ReplicatedKVStore.getInstance(app, remoteKVStore);
+        ReplicatedKVStore kvStore = getReplicatedKvStore(context);
         List<KVItem> list = kvStore.getAllTxMdKv();
         for (int i = 0; i < list.size(); i++) {
             TxMetaData md = valueToMetaData(list.get(i).value);
@@ -657,8 +657,7 @@ public class KVStoreManager {
     }
 
     private static byte[] getData(Context context, String key) {
-        RemoteKVStore remoteKVStore = RemoteKVStore.getInstance(APIClient.getInstance(context));
-        ReplicatedKVStore kvStore = ReplicatedKVStore.getInstance(context, remoteKVStore);
+        ReplicatedKVStore kvStore = getReplicatedKvStore(context);
         long ver = kvStore.localVersion(key).version;
         CompletionObject obj = kvStore.get(key, ver);
         if (obj.kv == null) {
@@ -758,4 +757,5 @@ public class KVStoreManager {
         RemoteKVStore remoteKVStore = RemoteKVStore.getInstance(APIClient.getInstance(context));
         return ReplicatedKVStore.getInstance(context, remoteKVStore);
     }
+
 }

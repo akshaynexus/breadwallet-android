@@ -38,6 +38,8 @@ import com.cspnwallet.wallet.wallets.ethereum.WalletEthManager;
 import com.crashlytics.android.Crashlytics;
 import com.platform.APIClient;
 import com.platform.HTTPServer;
+import com.cspnwallet.wallet.util.WalletConnectionCleanUpWorker;
+import com.cspnwallet.wallet.util.WalletConnectionWorker;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -53,8 +55,8 @@ import io.fabric.sdk.android.Fabric;
 /**
  * BreadWallet
  * <p/>
- * Created by Mihail Gutan <mihail@breadwallet.com> on 7/22/15.
- * Copyright (c) 2016 breadwallet LLC
+ * Created by Mihail Gutan <mihail@cspnwallet.com> on 7/22/15.
+ * Copyright (c) 2016 cspnwallet LLC
  * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -91,38 +93,6 @@ public class BreadApp extends Application implements ApplicationLifecycleObserve
     private static long mBackgroundedTime;
     private static Activity mCurrentActivity;
     private static final Map<String, String> mHeaders = new HashMap<>();
-
-    private Runnable mDisconnectWalletsRunnable = new Runnable() {
-        @Override
-        public void run() {
-            List<BaseWalletManager> list = new ArrayList<>(WalletsMaster.getInstance(BreadApp.this).getAllWallets(BreadApp.this));
-            for (final BaseWalletManager walletManager : list) {
-                //TODO Temporary new thread until the core lags are fixed
-                BRExecutor.getInstance().forLightWeightBackgroundTasks().execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        walletManager.disconnect(BreadApp.this);
-                    }
-                });
-            }
-        }
-    };
-
-    private Runnable mConnectWalletsRunnable = new Runnable() {
-        @Override
-        public void run() {
-            List<BaseWalletManager> list = new ArrayList<>(WalletsMaster.getInstance(BreadApp.this).getAllWallets(BreadApp.this));
-            for (final BaseWalletManager walletManager : list) {
-                //TODO Temporary new thread until the core lags are fixed
-                BRExecutor.getInstance().forLightWeightBackgroundTasks().execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        walletManager.connect(BreadApp.this);
-                    }
-                });
-            }
-        }
-    };
 
     private static final String PACKAGE_NAME = BreadApp.getBreadContext() == null ? null : BreadApp.getBreadContext().getApplicationContext().getPackageName();
 
@@ -334,8 +304,8 @@ public class BreadApp extends Application implements ApplicationLifecycleObserve
             case ON_START:
                 Log.d(TAG, "onLifeCycle: START");
                 mBackgroundedTime = 0;
-                BRExecutor.getInstance().forLightWeightBackgroundTasks().remove(mDisconnectWalletsRunnable);
-                BRExecutor.getInstance().forLightWeightBackgroundTasks().execute(mConnectWalletsRunnable);
+               WalletConnectionCleanUpWorker.cancelEnqueuedWork();
+               WalletConnectionWorker.enqueueWork();
 
                 HTTPServer.startServer();
 
@@ -350,8 +320,8 @@ public class BreadApp extends Application implements ApplicationLifecycleObserve
             case ON_STOP:
                 Log.d(TAG, "onLifeCycle: STOP");
                 mBackgroundedTime = System.currentTimeMillis();
-                BRExecutor.getInstance().forLightWeightBackgroundTasks().execute(mDisconnectWalletsRunnable);
-                BRExecutor.getInstance().forLightWeightBackgroundTasks().remove(mConnectWalletsRunnable);
+                    WalletConnectionCleanUpWorker.enqueueWork();
+
 
                 HTTPServer.stopServer();
 

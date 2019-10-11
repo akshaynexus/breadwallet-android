@@ -35,6 +35,7 @@ import com.cspnwallet.wallet.abstracts.BalanceUpdateListener;
 import com.cspnwallet.wallet.util.CryptoUriParser;
 
 import java.math.BigDecimal;
+import java.util.Map;
 
 import static com.platform.HTTPServer.URL_SUPPORT;
 
@@ -101,7 +102,7 @@ public class FragmentReceive extends ModalDialogFragment implements BalanceUpdat
         mQrImage = rootView.findViewById(R.id.qr_image);
         mShareButton = rootView.findViewById(R.id.share_button);
         mShareEmailButton = rootView.findViewById(R.id.share_email);
-        mShareMessageButton = rootView.findViewById(R.id.share_text);
+//        mShareMessageButton = rootView.findViewById(R.id.share_text);
         mShareButtonsLayout = rootView.findViewById(R.id.share_buttons_layout);
         mCopiedLayout = rootView.findViewById(R.id.copied_layout);
         mRequestButton = rootView.findViewById(R.id.request_button);
@@ -158,17 +159,17 @@ public class FragmentReceive extends ModalDialogFragment implements BalanceUpdat
 
             }
         });
-        mShareMessageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!UiUtils.isClickAllowed()) return;
-                BaseWalletManager walletManager = WalletsMaster.getInstance(getActivity()).getCurrentWallet(getActivity());
-                Uri cryptoUri = CryptoUriParser.createCryptoUrl(getActivity(), walletManager,
-                        walletManager.decorateAddress(mReceiveAddress),
-                        BigDecimal.ZERO, null, null, null);
-                QRUtils.share("sms:", getActivity(), cryptoUri.toString());
-            }
-        });
+//        mShareMessageButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (!UiUtils.isClickAllowed()) return;
+//                BaseWalletManager walletManager = WalletsMaster.getInstance(getActivity()).getCurrentWallet(getActivity());
+//                Uri cryptoUri = CryptoUriParser.createCryptoUrl(getActivity(), walletManager,
+//                        walletManager.decorateAddress(mReceiveAddress),
+//                        BigDecimal.ZERO, null, null, null);
+//                QRUtils.share("sms:", getActivity(), cryptoUri.toString());
+//            }
+//        });
         mShareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -315,7 +316,12 @@ public class FragmentReceive extends ModalDialogFragment implements BalanceUpdat
     }
 
     @Override
-    public void onBalanceChanged(BigDecimal newBalance) {
+    public void onBalanceChanged(String currencyCode, BigDecimal newBalance) {
+        updateQr();
+    }
+
+    @Override
+    public void onBalancesChanged(Map<String, BigDecimal> balanceMap) {
         updateQr();
     }
 }

@@ -194,7 +194,16 @@ public class BRSharedPrefs {
         editor.putString("lastRescanModeUsed_" + iso.toUpperCase(), mode);
         editor.apply();
     }
-
+    public static void putLastBlockhash(Context activity, String iso, String hash) {
+        SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("putLastBlockhash_" + iso.toUpperCase(), hash);
+        editor.apply();
+    }
+    public static String getLastBlockhash(Context activity, String iso) {
+        SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        return prefs.getString("putLastBlockhash_" + iso.toUpperCase(), null);
+    }
     public static long getLastSendTransactionBlockheight(Context activity, String iso) {
         SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         return prefs.getLong("lastSendTransactionBlockheight_" + iso.toUpperCase(), 0);
@@ -206,7 +215,18 @@ public class BRSharedPrefs {
         editor.putLong("lastSendTransactionBlockheight_" + iso.toUpperCase(), blockHeight);
         editor.apply();
     }
+    public static void putLastReceiveTransactionBlockheight(Context activity, String iso, long blockHeight) {
+        SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putLong("lastRecvTransactionBlockheight_" + iso.toUpperCase(), blockHeight);
+        editor.apply();
+    }
 
+    public static long getLastReceiveTransactionBlockheight(Context activity, String iso) {
+        SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        Log.i("RESYNCHIEHT :",prefs.getLong("lastRecvTransactionBlockheight_" + iso.toUpperCase(), 0) + "");
+        return prefs.getLong("lastRecvTransactionBlockheight_" + iso.toUpperCase(), 0);
+    }
     public static long getFeeTime(Context activity, String iso) {
         SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         return prefs.getLong("feeTime_" + iso.toUpperCase(), 0);

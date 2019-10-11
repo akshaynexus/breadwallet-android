@@ -126,7 +126,7 @@ public final class BRConstants {
      * Social media links and privacy policy URLS
      */
 
-    public static final String URL_PRIVACY_POLICY = "https://brd.com/privacy";
+    public static final String URL_PRIVACY_POLICY = "https://www.crypto-sports.io/privacy/app";
     public static final String URL_TWITTER = "https://twitter.com/CryptoSportsIO";
     public static final String URL_REDDIT = "https://reddit.com/r/breadwallet/";
     public static final String URL_TELEGRAM = "https://t.me/CryptoSportsIO";

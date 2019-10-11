@@ -10,6 +10,7 @@ import com.cspnwallet.wallet.configs.WalletSettingsConfiguration;
 import com.cspnwallet.wallet.configs.WalletUiConfiguration;
 import com.cspnwallet.wallet.wallets.CryptoAddress;
 import com.cspnwallet.wallet.wallets.CryptoTransaction;
+import com.cspnwallet.wallet.wallets.bitcoin.BaseBitcoinWalletManager;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -103,7 +104,9 @@ public interface BaseWalletManager {
     //Rescan the wallet (PeerManager for Crypto Sports)
     @WorkerThread
     void rescan(Context app);
-
+    //Rescan the wallet (PeerManager for Crypto Sports)
+    @WorkerThread
+    void rescanX(Context app,boolean isRestored,boolean fastSync);
     @WorkerThread
         //get a list of all the transactions sorted by timestamp (e.g. BRCoreTransaction[] for CSPN)
     CryptoTransaction[] getTxs(Context app);
@@ -186,11 +189,12 @@ public interface BaseWalletManager {
     int getMaxDecimalPlaces(Context app);
 
     //get the cached balance in the smallest unit:  satoshis.
-    BigDecimal getCachedBalance(Context app);
+    BigDecimal getBalance();
 
     //get the total amount sent in the smallest crypto unit:  satoshis.
     BigDecimal getTotalSent(Context app);
-
+    //get the total amount sent in the smallest crypto unit:  satoshis.
+    BigDecimal getTotalRecived(Context app);
     //wipe all wallet data
     void wipeData(Context app);
 

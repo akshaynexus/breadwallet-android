@@ -120,7 +120,7 @@ public class FragmentRequestAmount extends ModalDialogFragment implements BRKeyb
         mQrImage = rootView.findViewById(R.id.qr_image);
         mShareButton = rootView.findViewById(R.id.share_button);
         mShareEmail = rootView.findViewById(R.id.share_email);
-        mShareTextMessage = rootView.findViewById(R.id.share_text);
+//        mShareTextMessage = rootView.findViewById(R.id.share_text);
         mShareButtonsLayout = rootView.findViewById(R.id.share_buttons_layout);
         mCloseButton = rootView.findViewById(R.id.close_button);
         mKeyboardIndex = mSignalLayout.indexOfChild(mKeyboardLayout);
@@ -209,19 +209,19 @@ public class FragmentRequestAmount extends ModalDialogFragment implements BRKeyb
 
             }
         });
-        mShareTextMessage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                removeCurrencySelector();
-                if (!UiUtils.isClickAllowed()) return;
-                showKeyboard(false);
-                BaseWalletManager wm = WalletsMaster.getInstance(getActivity()).getCurrentWallet(getActivity());
-
-                Uri bitcoinUri = CryptoUriParser.createCryptoUrl(getActivity(), wm, wm.decorateAddress(mReceiveAddress),
-                        getAmount(), null, null, null);
-                QRUtils.share("sms:", getActivity(), bitcoinUri.toString());
-            }
-        });
+//        mShareTextMessage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                removeCurrencySelector();
+//                if (!UiUtils.isClickAllowed()) return;
+//                showKeyboard(false);
+//                BaseWalletManager wm = WalletsMaster.getInstance(getActivity()).getCurrentWallet(getActivity());
+//
+//                Uri bitcoinUri = CryptoUriParser.createCryptoUrl(getActivity(), wm, wm.decorateAddress(mReceiveAddress),
+//                        getAmount(), null, null, null);
+//                QRUtils.share("sms:", getActivity(), bitcoinUri.toString());
+//            }
+//        });
         mShareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

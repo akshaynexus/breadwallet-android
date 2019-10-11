@@ -30,6 +30,7 @@ import com.cspnwallet.wallet.WalletsMaster;
 import com.cspnwallet.wallet.abstracts.BaseWalletManager;
 import com.cspnwallet.wallet.entities.GenericTransactionMetaData;
 import com.cspnwallet.wallet.wallets.CryptoTransaction;
+import com.cspnwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
 import com.cspnwallet.wallet.wallets.ethereum.WalletEthManager;
 import com.platform.entities.TxMetaData;
 import com.platform.tools.BRBitId;
@@ -159,7 +160,7 @@ public class PostAuth {
         }
 
         try {
-            boolean success = false;
+            boolean success;
             try {
                 success = BRKeyStore.putPhrase(mCachedPaperKey.getBytes(),
                         activity, BRConstants.PUT_PHRASE_RECOVERY_WALLET_REQUEST_CODE);
@@ -181,16 +182,17 @@ public class PostAuth {
                     byte[] seed = BRCoreKey.getSeedFromPhrase(mCachedPaperKey.getBytes());
                     byte[] authKey = BRCoreKey.getAuthPrivKeyForAPI(seed);
                     BRKeyStore.putAuthKey(authKey, activity);
+                    // Recover wallet-info before starting to sync wallets.
+                    KVStoreManager.syncWalletInfo(activity);
                     BRCoreMasterPubKey mpk = new BRCoreMasterPubKey(mCachedPaperKey.getBytes(), true);
                     BRKeyStore.putMasterPublicKey(mpk.serialize(), activity);
                     BreadApp.initialize(false);
                     // Recover wallet-info before starting to sync wallets.
-                    KVStoreManager.syncWalletInfo(activity);
                     Intent intent = new Intent(activity, InputPinActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     activity.overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
                     activity.startActivityForResult(intent, InputPinActivity.SET_PIN_REQUEST_CODE);
-
+                    WalletsMaster.getInstance(activity).getWalletByIso(activity, WalletBitcoinManager.BITCOIN_CURRENCY_CODE).rescanX(activity,true,true);
                     mCachedPaperKey = null;
                 }
 

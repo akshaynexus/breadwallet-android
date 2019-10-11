@@ -25,6 +25,7 @@ import com.cspnwallet.tools.manager.BRSharedPrefs;
 import com.cspnwallet.tools.security.AuthManager;
 import com.cspnwallet.tools.security.PostAuth;
 import com.cspnwallet.tools.security.SmartValidator;
+import com.cspnwallet.tools.threads.executor.BRExecutor;
 import com.cspnwallet.tools.util.BRConstants;
 import com.cspnwallet.tools.util.Utils;
 import com.cspnwallet.wallet.WalletsMaster;
@@ -58,18 +59,29 @@ public class InputWordsActivity extends BRActivity implements View.OnFocusChange
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_words);
 
-//        if (Utils.isEmulatorOrDebug(this)) {
+        if (Utils.isEmulatorOrDebug(this)) {
 //            //japanese
 //            mDebugPhrase = "こせき　ぎじにってい　けっこん　せつぞく　うんどう　ふこう　にっすう　こせい　きさま　なまみ　たきび　はかい";
 //            //english
-//            mDebugPhrase = "blush wear arctic fruit unique quantum because mammal entry country school curtain";
+            mDebugPhrase = "again " +
+                    "wine " +
+                    "express " +
+                    "calm " +
+                    "code " +
+                    "exist " +
+                    "dish " +
+                    "giraffe " +
+                    "push " +
+                    "among " +
+                    "view " +
+                    "trust";
 //            //french
 //            mDebugPhrase = "eyebrow elbow weasel again gate organ mobile then behind name debate joke";
 //            //spanish
 //            mDebugPhrase = "zorro turismo mezcla nicho morir chico blanco pájaro alba esencia roer repetir";
 //            //chinese
 //            mDebugPhrase = "怨 贪 旁 扎 吹 音 决 廷 十 助 畜 怒";
-//        }
+        }
 
         mNextButton = findViewById(R.id.send_button);
 
@@ -209,13 +221,18 @@ public class InputWordsActivity extends BRActivity implements View.OnFocusChange
                     } else {
                         // Recover Wallet
                         Utils.hideKeyboard(app);
-                        WalletsMaster m = WalletsMaster.getInstance(InputWordsActivity.this);
                         PostAuth.getInstance().setCachedPaperKey(cleanPhrase);
                         //Disallow CSPN and BCH sending.
                         BRSharedPrefs.putAllowSpend(app, BaseBitcoinWalletManager.BITCASH_CURRENCY_CODE, false);
                         BRSharedPrefs.putAllowSpend(app, BaseBitcoinWalletManager.BITCOIN_CURRENCY_CODE, false);
 
-                        PostAuth.getInstance().onRecoverWalletAuth(app, false);
+                        findViewById(R.id.loading_view).setVisibility(View.VISIBLE);
+                        BRExecutor.getInstance().forBackgroundTasks().execute(new Runnable() {
+                            @Override
+                            public void run() {
+                                PostAuth.getInstance().onRecoverWalletAuth(app, false);
+                            }
+                        });
                     }
 
                 } else {

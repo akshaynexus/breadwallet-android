@@ -38,7 +38,7 @@ public class WalletManagerHelper {
         BRSharedPrefs.putCachedBalance(context, currencyCode, balance);
         for (BalanceUpdateListener listener : mOnBalanceChangedListeners) {
             if (listener != null) {
-                listener.onBalanceChanged(balance);
+                listener.onBalanceChanged(currencyCode,balance);
             }
         }
     }

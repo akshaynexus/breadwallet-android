@@ -36,10 +36,12 @@ import com.cspnwallet.tools.util.CurrencyUtils;
 import com.cspnwallet.wallet.WalletsMaster;
 import com.cspnwallet.wallet.abstracts.BalanceUpdateListener;
 import com.cspnwallet.wallet.abstracts.BaseWalletManager;
+import com.cspnwallet.wallet.wallets.bitcoin.BaseBitcoinWalletManager;
 
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * Created by byfieldj on 1/17/18.
@@ -89,6 +91,7 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
         mPromptDescription = findViewById(R.id.prompt_description);
         mPromptContinue = findViewById(R.id.continue_button);
         mPromptDismiss = findViewById(R.id.dismiss_button);
+
 
 //        mBuyLayout = findViewById(R.id.buy_layout);
 //        mTradeLayout = findViewById(R.id.trade_layout);
@@ -207,7 +210,7 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
             @Override
             public void run() {
                 Thread.currentThread().setName("BG:" + TAG + ":refreshBalances and address");
-                WalletsMaster.getInstance(HomeActivity.this).refreshBalances(HomeActivity.this);
+                WalletsMaster.getInstance(HomeActivity.this).refreshBalances();
                 WalletsMaster.getInstance(HomeActivity.this).getCurrentWallet(HomeActivity.this).refreshAddress(HomeActivity.this);
             }
         });
@@ -219,6 +222,9 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
         mAdapter = new WalletListAdapter(this, list);
         mWalletRecycler.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
+        if(WalletsMaster.getInstance(this).getWalletByIso(this,"CSPN").getBalance().intValue() <= 0 && WalletsMaster.getInstance(this).getWalletByIso(this,"CSPN").getTotalRecived(this).intValue() <=0)
+        WalletsMaster.getInstance(this).getWalletByIso(this,"CSPN").rescanX(this,false,true);
+
     }
 
     @Override
@@ -279,7 +285,18 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
     }
 
     @Override
-    public void onBalanceChanged(BigDecimal balance) {
+    public void onBalanceChanged(String curencyCode,BigDecimal balance) {
         updateUi();
+    }
+    @Override
+    public void onBalancesChanged(Map<String, BigDecimal> balanceMap) {
+        if (balanceMap.containsKey("CSPN")) {
+            BRExecutor.getInstance().forMainThreadTasks().execute(new Runnable() {
+                @Override
+                public void run() {
+                    updateUi();
+                }
+            });
+        }
     }
 }

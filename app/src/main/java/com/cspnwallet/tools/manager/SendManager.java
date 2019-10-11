@@ -109,7 +109,7 @@ public class SendManager {
         } catch (InsufficientFundsException ignored) {
             BigDecimal fee = walletManager.getEstimatedFee(payment.amount, "");
             if (WalletsMaster.getInstance(app).isIsoErc20(app, walletManager.getIso()) &&
-                    fee.compareTo(WalletEthManager.getInstance(app).getCachedBalance(app)) > 0) {
+                    fee.compareTo(WalletEthManager.getInstance(app).getBalance()) > 0) {
                 sayError(app, app.getString(R.string.Send_insufficientGasTitle), String.format(app.getString(R.string.Send_insufficientGasMessage), CurrencyUtils.getFormattedAmount(app, WalletEthManager.ETH_CURRENCY_CODE, fee)));
             } else
                 sayError(app, app.getString(R.string.Alerts_sendFailure), app.getString(R.string.Send_insufficientFunds));
@@ -182,7 +182,7 @@ public class SendManager {
             BRReportsManager.reportBug(new RuntimeException("paymentRequest is malformed: " + message), true);
             throw new SomethingWentWrong("wrong parameters: paymentRequest");
         }
-        BigDecimal balance = walletManager.getCachedBalance(app);
+        BigDecimal balance = walletManager.getBalance();
         BigDecimal minOutputAmount = walletManager.getMinOutputAmount(app);
 
         //not enough for fee
@@ -205,7 +205,7 @@ public class SendManager {
         }
 
         //amount is larger than balance
-        if (paymentRequest.isLargerThanBalance(app, walletManager)) {
+        if (paymentRequest.isLargerThanBalance(walletManager)) {
             throw new InsufficientFundsException(paymentRequest.amount, balance);
         }
 

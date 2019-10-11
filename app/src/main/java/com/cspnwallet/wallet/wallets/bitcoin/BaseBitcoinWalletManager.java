@@ -301,6 +301,12 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
                 //store the latest send transaction blockheight
                 BRSharedPrefs.putLastSendTransactionBlockheight(app, getIso(), tx.getBlockHeight());
             }
+            else{
+                if(!(BRSharedPrefs.getLastReceiveTransactionBlockheight(app,getIso()) > 0))
+                BRSharedPrefs.putLastReceiveTransactionBlockheight(app, getIso(), tx.getBlockHeight());
+                Log.i("RECV","HEIGHTRECv : " + tx.getBlockHeight());
+
+            }
             uiTxs.add(new TxUiHolder(tx, isReceived, tx.getTimestamp(), (int) tx.getBlockHeight(), tx.getHash(),
                     tx.getReverseHash(), new BigDecimal(getWallet().getTransactionFee(tx)),
                     toAddress, tx.getInputAddresses()[0],
@@ -401,15 +407,19 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
     }
 
     @Override
-    public BigDecimal getCachedBalance(Context app) {
-        return BRSharedPrefs.getCachedBalance(app, getIso());
+    public BigDecimal getBalance() {
+        return new BigDecimal(getWallet().getBalance());
     }
+
 
     @Override
     public BigDecimal getTotalSent(Context app) {
         return new BigDecimal(getWallet().getTotalSent());
     }
-
+    @Override
+    public BigDecimal getTotalRecived(Context app) {
+        return new BigDecimal(getWallet().getTotalReceived());
+    }
     @Override
     public void wipeData(Context app) {
         BtcBchTransactionDataStore.getInstance(app).deleteAllTransactions(app, getIso());
@@ -448,7 +458,7 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
         if (app == null) {
             return null;
         }
-        BigDecimal balance = getFiatForSmallestCrypto(app, getCachedBalance(app), null);
+        BigDecimal balance = getFiatForSmallestCrypto(app, getBalance(), null);
         if (balance == null) {
             return BigDecimal.ZERO;
         }
@@ -640,33 +650,70 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
         long lastSentTransactionBlockheight = BRSharedPrefs.getLastSendTransactionBlockheight(app, getIso());
         //was the rescan used within the last 24 hours
         boolean wasLastRescanWithin24h = now - lastRescanTime <= DateUtils.DAY_IN_MILLIS;
+        rescan(app, RescanMode.FROM_CHECKPOINT);
+    }
 
-        if (wasLastRescanWithin24h) {
-            if (isModeSame(RescanMode.FROM_BLOCK, lastRescanModeUsedValue)) {
-                rescan(app, RescanMode.FROM_CHECKPOINT);
-            } else if (isModeSame(RescanMode.FROM_CHECKPOINT, lastRescanModeUsedValue)) {
-                rescan(app, RescanMode.FULL);
-            }
+    @Override
+    public void rescanX(Context app,boolean isRestored,boolean isFast) {
+        //the last time the app has done a rescan (not a regular scan)
+        long lastRescanTime = BRSharedPrefs.getLastRescanTime(app, getIso());
+        long now = System.currentTimeMillis();
+        //the last rescan mode that was used for rescan
+        String lastRescanModeUsedValue = BRSharedPrefs.getLastRescanModeUsed(app, getIso());
+        //the last successful recv transaction's blockheight (if there is one, 0 otherwise)
+        long lastRecvTransactionBlockheight = BRSharedPrefs.getLastReceiveTransactionBlockheight(app, getIso());
+        if(lastRecvTransactionBlockheight == 0 || lastRecvTransactionBlockheight == 292641){lastRecvTransactionBlockheight =400427; }
+
+        //was the rescan used within the last 24 hours
+        boolean wasLastRescanWithin24h = now - lastRescanTime <= DateUtils.DAY_IN_MILLIS;
+if(isFast){rescan(app,RescanMode.FROM_CHECKPOINT);}
+        else if (wasLastRescanWithin24h && isRestored) {
+                rescan(app, RescanMode.FROM_BLOCK);
         } else {
-            if (lastSentTransactionBlockheight > 0) {
+            if (lastRecvTransactionBlockheight > 0) {
                 rescan(app, RescanMode.FROM_BLOCK);
             } else {
                 rescan(app, RescanMode.FROM_CHECKPOINT);
             }
         }
     }
-
     /**
      * Trigger the appropriate rescan and save the name and time to BRSharedPrefs
      *
      * @param app  android context to use
      * @param mode the RescanMode to be used
      */
-    private void rescan(Context app, RescanMode mode) {
+    private void rescan(final Context app, RescanMode mode) {
         if (RescanMode.FROM_BLOCK == mode) {
-            long lastSentTransactionBlockheight = BRSharedPrefs.getLastSendTransactionBlockheight(app, getIso());
-            Log.d(TAG, "rescan -> with last block: " + lastSentTransactionBlockheight);
-            getPeerManager().rescanFromBlock(lastSentTransactionBlockheight);
+            final long lastRecvTransactionBlockheight = BRSharedPrefs.getLastReceiveTransactionBlockheight(app, getIso());
+            Log.d(TAG, "rescan -> with last block: " + lastRecvTransactionBlockheight);
+
+            Thread thread = new Thread(new Runnable() {
+
+                @Override
+                public void run() {
+                    try  {
+                        long trialblockx;
+                        String blockhashX;
+
+                        trialblockx = (lastRecvTransactionBlockheight == 0 || lastRecvTransactionBlockheight == 292641) ? 400427 : lastRecvTransactionBlockheight;
+                        //Your code goes here
+                         blockhashX = BRApiManager.urlGET(app,"http://chain.cspn.io/api/getblockhash?height=" + trialblockx);
+                        Log.i("Goethash",blockhashX);
+                        BRSharedPrefs.putLastBlockhash(app,getIso(),blockhashX);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            thread.start();
+            String lastBlockhash = BRSharedPrefs.getLastBlockhash(app,getIso());
+            if(lastBlockhash != ""){getPeerManager().rescanFromBlockHash(lastBlockhash);}
+            else
+            getPeerManager().rescanFromBlock(lastRecvTransactionBlockheight);
+
         } else if (RescanMode.FROM_CHECKPOINT == mode) {
             Log.e(TAG, "rescan -> from checkpoint");
             getPeerManager().rescanFromCheckPoint();

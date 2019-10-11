@@ -165,6 +165,7 @@ public class LoginActivity extends BRActivity implements PinLayout.OnPinInserted
         mPinLayout.animate().translationY(-R.dimen.animation_long).setInterpolator(new AccelerateInterpolator());
         mKeyboard.animate().translationY(R.dimen.animation_long).setInterpolator(new AccelerateInterpolator());
         titleImage.animate().alpha(0f);
+
         mUnlockedImage.animate().alpha(1f).setListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
@@ -178,6 +179,7 @@ public class LoginActivity extends BRActivity implements PinLayout.OnPinInserted
 
                         Class toGo = showHomeActivity ? HomeActivity.class : WalletActivity.class;
                         Intent intent = new Intent(LoginActivity.this, toGo);
+
                         startActivity(intent);
                         overridePendingTransition(R.anim.fade_up, R.anim.fade_down);
                         if (!LoginActivity.this.isDestroyed()) {
@@ -188,6 +190,7 @@ public class LoginActivity extends BRActivity implements PinLayout.OnPinInserted
             }
         });
         mUnlockedText.animate().alpha(1f);
+
     }
 
     private void showFailedToUnlock() {
