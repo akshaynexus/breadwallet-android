@@ -765,7 +765,7 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
                     if (blockHeight > 0 && blockHeight < Long.MAX_VALUE) {
                         getPeerManager().rescanFromBlock(blockHeight);
                     } else {
-                        getPeerManager().rescan();
+                        getPeerManager().rescanFromCheckPoint();
                     }
                 }
             });

@@ -30,6 +30,14 @@
             tools:text="Synced Through 01/01/70 00:00"
             android:textColor="@color/sync_toolbar_text"
             android:textSize="14sp" />
+        <com.breadwallet.presenter.customviews.BaseTextView
+            android:id="@+id/sync_lastblock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Lastblock: 123"
+            android:layout_below="@id/sync_status_label"
+            android:textColor="@color/sync_toolbar_text"
+            android:textSize="14sp" />
 
         <com.breadwallet.presenter.customviews.BaseTextView
             android:id="@+id/syncing_label"

@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import com.breadwallet.app.ApplicationLifecycleObserver;
 import com.breadwallet.protocols.messageexchange.InboxPollingHandler;
 import com.breadwallet.tools.manager.BRApiManager;
+import com.breadwallet.tools.util.BRConstants;
 import com.breadwallet.tools.util.ServerBundlesHelper;
 import com.breadwallet.view.dialog.DialogActivity;
 import com.breadwallet.view.dialog.DialogActivity.DialogType;
@@ -152,6 +153,7 @@ public class BreadApp extends Application implements ApplicationLifecycleObserve
             BRDFirebaseMessagingService.Companion.initialize(mInstance);
 
             // Initialize TokenUtil to load our tokens.json file from res/raw
+            if(BRConstants.allowOthercoins)
             TokenUtil.initialize(mInstance);
         } else {
             // extract the bundles from the resources to be ready when the wallet is initialized

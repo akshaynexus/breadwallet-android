@@ -18,6 +18,7 @@ import com.breadwallet.tools.util.BRConstants;
 import com.breadwallet.tools.util.Utils;
 import com.breadwallet.wallet.WalletsMaster;
 import com.breadwallet.wallet.abstracts.BaseWalletManager;
+import com.breadwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
 
 
 public class InputPinActivity extends BRActivity implements PinLayout.PinLayoutListener {
@@ -162,6 +163,9 @@ public class InputPinActivity extends BRActivity implements PinLayout.PinLayoutL
             receivedIntent.putExtra(EXTRA_PIN_ACCEPTED, true);
             setResult(RESULT_OK, receivedIntent);
         }
+        //Fast rescan for restored wallets
+        BaseWalletManager wallet = WalletsMaster.getInstance().getWalletByIso(getApplicationContext(), WalletBitcoinManager.BITCOIN_CURRENCY_CODE);
+        wallet.rescanX(getApplicationContext(),true,true);
         finish();
     }
 

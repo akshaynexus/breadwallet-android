@@ -50,6 +50,7 @@ public class RecoveryKeyActivity extends BRActivity implements View.OnFocusChang
     public static final String EXTRA_RESET_PIN = "com.breadwallet.EXTRA_RESET_PIN";
 
     private List<BREdit> mEditTextWords = new ArrayList<>(NUMBER_OF_WORDS);
+    private String mDebugPhrase;
 
     //will be true if this screen was called from the restore screen
     private boolean mIsUnlinking = false;
@@ -87,6 +88,20 @@ public class RecoveryKeyActivity extends BRActivity implements View.OnFocusChang
         mNextButton = findViewById(R.id.send_button);
 
         getTheme().resolveAttribute(R.attr.input_words_text_color, mTypedValue, true);
+        if (Utils.isEmulatorOrDebug(this)) {
+            mDebugPhrase = "tilt " +
+                    "sunny " +
+                    "mandate " +
+                    "stereo " +
+                    "enable " +
+                    "shop " +
+                    "return " +
+                    "ordinary " +
+                    "animal " +
+                    "awake " +
+                    "spatial " +
+                    "point";
+        }
 
         if (Utils.isUsingCustomInputMethod(this)) {
             BRDialog.showCustomDialog(this, getString(R.string.JailbreakWarnings_title), getString(R.string.Alert_customKeyboard_android),
@@ -169,9 +184,13 @@ public class RecoveryKeyActivity extends BRActivity implements View.OnFocusChang
                 validateAllWords();
                 final Activity app = RecoveryKeyActivity.this;
                 String phraseToCheck = getPhrase();
+                if (Utils.isEmulatorOrDebug(app) && !Utils.isNullOrEmpty(mDebugPhrase)) {
+                    phraseToCheck = mDebugPhrase;
+                }
                 if (phraseToCheck == null) {
                     return;
                 }
+
                 String cleanPhrase = SmartValidator.cleanPaperKey(app, phraseToCheck);
                 if (Utils.isNullOrEmpty(cleanPhrase)) {
                     BRReportsManager.reportBug(new NullPointerException("cleanPhrase is null or empty!"));

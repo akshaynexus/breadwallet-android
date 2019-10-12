@@ -213,12 +213,12 @@ public class PostAuth {
 
                     // Recover wallet-info and token list before starting to sync wallets.
                     KVStoreManager.syncWalletInfo(activity);
+                    if(BRConstants.allowOthercoins)
                     KVStoreManager.syncTokenList(activity);
 
                     BRCoreMasterPubKey mpk = new BRCoreMasterPubKey(mCachedPaperKey.getBytes(), true);
                     BRKeyStore.putMasterPublicKey(mpk.serialize(), activity);
                     BreadApp.initialize(false);
-                    WalletsMaster.getInstance().getWalletByIso(activity, WalletBitcoinManager.BITCOIN_CURRENCY_CODE).rescanX(activity,true,true);
 
                     mCachedPaperKey = null;
                     return true;

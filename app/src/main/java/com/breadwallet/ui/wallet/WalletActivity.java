@@ -104,6 +104,8 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
     private BRButton mSellButton;
     private LinearLayout mProgressLayout;
     private BaseTextView mSyncStatusLabel;
+    private BaseTextView mSyncLastblock;
+
     private BaseTextView mProgressLabel;
     private BRSearchBar mSearchBar;
     private ConstraintLayout mToolBarConstraintLayout;
@@ -166,6 +168,7 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
         mToolBarConstraintLayout = findViewById(R.id.bread_toolbar);
         mProgressLayout = findViewById(R.id.progress_layout);
         mSyncStatusLabel = findViewById(R.id.sync_status_label);
+        mSyncLastblock = findViewById(R.id.sync_lastblock);
         mProgressLabel = findViewById(R.id.syncing_label);
         mWalletFooter = findViewById(R.id.bottom_toolbar_layout1);
         mDelistedTokenBanner = findViewById(R.id.delisted_token_layout);
@@ -559,7 +562,8 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
                 String syncedThroughDate = new SimpleDateFormat(SYNCED_THROUGH_DATE_FORMAT,
                         Locale.getDefault()).format(syncThroughDateInMillis);
                 mSyncStatusLabel.setText(String.format(getString(R.string.SyncingView_syncedThrough),
-                        syncedThroughDate));
+                        syncedThroughDate + "\n"));
+                mSyncLastblock.setText("Last Block :" + baseBitcoinWalletManager.getPeerManager().getLastBlockHeight() + "");
             }
         } else {
             mProgressLayout.animate()
