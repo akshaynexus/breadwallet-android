@@ -4,6 +4,7 @@ package com.platform.entities;
 import android.util.Log;
 
 import com.breadwallet.presenter.entities.TokenItem;
+import com.breadwallet.tools.util.BRConstants;
 import com.breadwallet.wallet.wallets.bitcoin.WalletBchManager;
 import com.breadwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
 import com.breadwallet.wallet.wallets.ethereum.WalletEthManager;
@@ -56,7 +57,11 @@ public class TokenListMetaData {
         this.enabledCurrencies = enabledCurrencies;
         this.hiddenCurrencies = hiddenCurrencies;
 
-        if (this.enabledCurrencies == null) {
+        if (this.enabledCurrencies == null && !BRConstants.allowOthercoins) {
+            this.enabledCurrencies = new ArrayList<>();
+            this.enabledCurrencies.add(new TokenInfo(WalletBitcoinManager.BITCOIN_CURRENCY_CODE, false, null));
+        }
+        else if(this.enabledCurrencies == null && BRConstants.allowOthercoins)  {
             this.enabledCurrencies = new ArrayList<>();
             this.enabledCurrencies.add(new TokenInfo(WalletBitcoinManager.BITCOIN_CURRENCY_CODE, false, null));
             this.enabledCurrencies.add(new TokenInfo(WalletBchManager.BITCASH_CURRENCY_CODE, false, null));
