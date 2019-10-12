@@ -291,6 +291,11 @@ public class WalletEthManager extends BaseEthereumWalletManager implements BREth
     }
 
     @Override
+    public void rescanX(Context app, boolean isRestored, boolean fastSync) {
+
+    }
+
+    @Override
     public CryptoTransaction[] getTxs(Context app) {
         BREthereumTransfer[] txs = mWallet.getTransfers();
         CryptoTransaction[] arr = new CryptoTransaction[txs.length];

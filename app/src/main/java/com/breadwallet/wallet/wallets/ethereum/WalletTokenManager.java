@@ -203,6 +203,11 @@ public class WalletTokenManager extends BaseEthereumWalletManager {
     }
 
     @Override
+    public void rescanX(Context app, boolean isRestored, boolean fastSync) {
+
+    }
+
+    @Override
     public CryptoTransaction[] getTxs(Context context) {
         long start = System.currentTimeMillis();
         BREthereumTransfer[] txs = mWalletToken.getTransfers();

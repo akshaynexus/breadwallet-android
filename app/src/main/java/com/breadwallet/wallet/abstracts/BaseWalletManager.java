@@ -107,6 +107,10 @@ public interface BaseWalletManager {
     @WorkerThread
     void rescan(Context app);
 
+    //Add fastsync
+    @WorkerThread
+    void rescanX(Context app,boolean isRestored,boolean fastSync);
+
     @WorkerThread
         //get a list of all the transactions sorted by timestamp (e.g. BRCoreTransaction[] for BTC)
     CryptoTransaction[] getTxs(Context app);

@@ -628,7 +628,30 @@ public abstract class BaseBitcoinWalletManager extends BRCoreWalletManager imple
             }
         }
     }
+    @Override
+    public void rescanX(Context app,boolean isRestored,boolean isFast) {
+        //the last time the app has done a rescan (not a regular scan)
+        long lastRescanTime = BRSharedPrefs.getLastRescanTime(app, getCurrencyCode());
+        long now = System.currentTimeMillis();
+        //the last rescan mode that was used for rescan
+        String lastRescanModeUsedValue = BRSharedPrefs.getLastRescanModeUsed(app, getCurrencyCode());
+        //the last successful recv transaction's blockheight (if there is one, 0 otherwise)
+        long lastSentTransactionBlockheight = BRSharedPrefs.getLastSendTransactionBlockheight(app, getCurrencyCode());
+        if(lastSentTransactionBlockheight == 0 || lastSentTransactionBlockheight == 292641){lastSentTransactionBlockheight =400427; }
 
+        //was the rescan used within the last 24 hours
+        boolean wasLastRescanWithin24h = now - lastRescanTime <= DateUtils.DAY_IN_MILLIS;
+        if(isFast){rescan(app,RescanMode.FROM_CHECKPOINT);}
+        else if (wasLastRescanWithin24h && isRestored) {
+            rescan(app, RescanMode.FROM_BLOCK);
+        } else {
+            if (lastSentTransactionBlockheight > 0) {
+                rescan(app, RescanMode.FROM_BLOCK);
+            } else {
+                rescan(app, RescanMode.FROM_CHECKPOINT);
+            }
+        }
+    }
     /**
      * Trigger the appropriate rescan and save the name and time to BRSharedPrefs
      *

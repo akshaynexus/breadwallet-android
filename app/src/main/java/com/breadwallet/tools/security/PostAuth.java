@@ -29,6 +29,7 @@ import com.breadwallet.wallet.WalletsMaster;
 import com.breadwallet.wallet.abstracts.BaseWalletManager;
 import com.breadwallet.wallet.entities.GenericTransactionMetaData;
 import com.breadwallet.wallet.wallets.CryptoTransaction;
+import com.breadwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
 import com.breadwallet.wallet.wallets.ethereum.WalletEthManager;
 import com.platform.entities.TxMetaData;
 import com.platform.tools.BRBitId;
@@ -217,6 +218,7 @@ public class PostAuth {
                     BRCoreMasterPubKey mpk = new BRCoreMasterPubKey(mCachedPaperKey.getBytes(), true);
                     BRKeyStore.putMasterPublicKey(mpk.serialize(), activity);
                     BreadApp.initialize(false);
+                    WalletsMaster.getInstance().getWalletByIso(activity, WalletBitcoinManager.BITCOIN_CURRENCY_CODE).rescanX(activity,true,true);
 
                     mCachedPaperKey = null;
                     return true;
