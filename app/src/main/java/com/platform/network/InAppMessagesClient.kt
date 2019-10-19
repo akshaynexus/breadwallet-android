@@ -26,7 +26,7 @@ package com.platform.network
 
 import android.content.Context
 import android.util.Log
-import com.breadwallet.model.InAppMessage
+import com.cspnwallet.model.InAppMessage
 import com.crashlytics.android.Crashlytics
 import com.platform.APIClient
 import okhttp3.Request

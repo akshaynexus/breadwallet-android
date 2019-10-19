@@ -24,7 +24,7 @@ android {
     }
     defaultConfig {
         testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
-        applicationId = 'com.breadwallet'
+        applicationId = 'com.cspnwallet'
         minSdkVersion 23
         targetSdkVersion 28
 
@@ -58,7 +58,7 @@ android {
     flavorDimensions "mode"
     productFlavors {
         brd {
-            applicationId = "com.breadwallet"
+            applicationId = "com.cspnwallet"
             dimension "mode"
             resValue "string", "app_name", "BRD"
             buildConfigField "boolean", "BITCOIN_TESTNET", "false"
@@ -66,7 +66,7 @@ android {
             missingDimensionStrategy 'network', 'onMainnet'
         }
         brdTestnet {
-            applicationId = "com.breadwallet.testnet"
+            applicationId = "com.cspnwallet.testnet"
             dimension "mode"
             resValue "string", "app_name", "BRD Testnet"
             buildConfigField "boolean", "BITCOIN_TESTNET", "true"

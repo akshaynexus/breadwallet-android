@@ -22,7 +22,7 @@
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-        <com.breadwallet.presenter.customviews.BaseTextView
+        <com.cspnwallet.presenter.customviews.BaseTextView
             android:id="@+id/sync_status_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             tools:text="Synced Through 01/01/70 00:00"
             android:textColor="@color/sync_toolbar_text"
             android:textSize="14sp" />
-        <com.breadwallet.presenter.customviews.BaseTextView
+        <com.cspnwallet.presenter.customviews.BaseTextView
             android:id="@+id/sync_lastblock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:textColor="@color/sync_toolbar_text"
             android:textSize="14sp" />
 
-        <com.breadwallet.presenter.customviews.BaseTextView
+        <com.cspnwallet.presenter.customviews.BaseTextView
             android:id="@+id/syncing_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

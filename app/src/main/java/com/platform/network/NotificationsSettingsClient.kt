@@ -26,8 +26,8 @@ package com.platform.network
 
 import android.content.Context
 import android.util.Log
-import com.breadwallet.BuildConfig
-import com.breadwallet.tools.util.BRConstants
+import com.cspnwallet.BuildConfig
+import com.cspnwallet.tools.util.BRConstants
 import com.platform.APIClient
 import okhttp3.MediaType
 import okhttp3.Request

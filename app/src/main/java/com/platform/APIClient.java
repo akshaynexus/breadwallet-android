@@ -11,23 +11,23 @@ import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.BuildConfig;
-import com.breadwallet.core.BRCoreKey;
-import com.breadwallet.repository.ExperimentsRepositoryImpl;
-import com.breadwallet.tools.animation.UiUtils;
-import com.breadwallet.tools.crypto.Base58;
-import com.breadwallet.tools.crypto.CryptoHelper;
-import com.breadwallet.tools.manager.BRReportsManager;
-import com.breadwallet.tools.manager.BRSharedPrefs;
-import com.breadwallet.tools.security.BRKeyStore;
-import com.breadwallet.tools.threads.executor.BRExecutor;
-import com.breadwallet.tools.util.BRCompressor;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.tools.util.ServerBundlesHelper;
-import com.breadwallet.tools.util.Utils;
-import com.breadwallet.wallet.WalletsMaster;
-import com.breadwallet.wallet.abstracts.BaseWalletManager;
+import com.cspnwallet.BreadApp;
+import com.cspnwallet.BuildConfig;
+import com.cspnwallet.core.BRCoreKey;
+import com.cspnwallet.repository.ExperimentsRepositoryImpl;
+import com.cspnwallet.tools.animation.UiUtils;
+import com.cspnwallet.tools.crypto.Base58;
+import com.cspnwallet.tools.crypto.CryptoHelper;
+import com.cspnwallet.tools.manager.BRReportsManager;
+import com.cspnwallet.tools.manager.BRSharedPrefs;
+import com.cspnwallet.tools.security.BRKeyStore;
+import com.cspnwallet.tools.threads.executor.BRExecutor;
+import com.cspnwallet.tools.util.BRCompressor;
+import com.cspnwallet.tools.util.BRConstants;
+import com.cspnwallet.tools.util.ServerBundlesHelper;
+import com.cspnwallet.tools.util.Utils;
+import com.cspnwallet.wallet.WalletsMaster;
+import com.cspnwallet.wallet.abstracts.BaseWalletManager;
 import com.platform.kvstore.RemoteKVStore;
 import com.platform.kvstore.ReplicatedKVStore;
 import com.platform.tools.TokenHolder;
@@ -60,11 +60,11 @@ import okhttp3.ResponseBody;
 import okio.Buffer;
 import okio.BufferedSink;
 
-import static com.breadwallet.tools.util.BRConstants.CONTENT_TYPE_JSON_CHARSET_UTF8;
-import static com.breadwallet.tools.util.BRConstants.FALSE;
-import static com.breadwallet.tools.util.BRConstants.FEE_PER_KB;
-import static com.breadwallet.tools.util.BRConstants.HEADER_ACCEPT;
-import static com.breadwallet.tools.util.BRConstants.TRUE;
+import static com.cspnwallet.tools.util.BRConstants.CONTENT_TYPE_JSON_CHARSET_UTF8;
+import static com.cspnwallet.tools.util.BRConstants.FALSE;
+import static com.cspnwallet.tools.util.BRConstants.FEE_PER_KB;
+import static com.cspnwallet.tools.util.BRConstants.HEADER_ACCEPT;
+import static com.cspnwallet.tools.util.BRConstants.TRUE;
 
 
 /**

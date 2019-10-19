@@ -29,11 +29,9 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.text.format.DateUtils
-import com.breadwallet.R
-import com.breadwallet.presenter.entities.TxUiHolder
-import com.breadwallet.tools.manager.BRSharedPrefs
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.GoogleApiAvailability
+import com.cspnwallet.R
+import com.cspnwallet.presenter.entities.TxUiHolder
+import com.cspnwallet.tools.manager.BRSharedPrefs
 
 
 /**
@@ -42,8 +40,8 @@ import com.google.android.gms.common.GoogleApiAvailability
 object AppReviewPromptManager {
 
     private const val MIN_FOREGROUNDED_TIMES_FOR_FEEDBACK = 10
-    private const val GOOGLE_PLAY_APP_URI = "market://details?id=com.breadwallet"
-    private const val GOOGLE_PLAY_URI = "https://play.google.com/store/apps/details?id=com.breadwallet"
+    private const val GOOGLE_PLAY_APP_URI = "market://details?id=com.cspnwallet"
+    private const val GOOGLE_PLAY_URI = "https://play.google.com/store/apps/details?id=com.cspnwallet"
     private const val GOOGLE_PLAY_PACKAGE = "com.android.vending"
 
     /**

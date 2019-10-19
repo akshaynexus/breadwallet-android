@@ -25,8 +25,8 @@
 package com.platform.middlewares
 
 import android.util.Log
-import com.breadwallet.tools.util.Utils
-import com.breadwallet.ui.browser.BrdNativeJs
+import com.cspnwallet.tools.util.Utils
+import com.cspnwallet.ui.browser.BrdNativeJs
 import com.platform.BRHTTPHelper
 import com.platform.interfaces.Middleware
 import org.eclipse.jetty.server.Request

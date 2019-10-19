@@ -3,8 +3,8 @@ package com.platform.middlewares.plugins;
 import android.content.Context;
 import android.util.Log;
 
-import com.breadwallet.BreadApp;
-import com.breadwallet.tools.util.BRConstants;
+import com.cspnwallet.BreadApp;
+import com.cspnwallet.tools.util.BRConstants;
 import com.platform.APIClient;
 import com.platform.BRHTTPHelper;
 import com.platform.interfaces.Plugin;

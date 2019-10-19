@@ -2,12 +2,11 @@ package com.platform.kvstore;
 
 import android.util.Log;
 
-import com.breadwallet.tools.util.Utils;
+import com.cspnwallet.tools.util.Utils;
 import com.platform.APIClient;
 import com.platform.interfaces.KVStoreAdaptor;
 import com.platform.sqlite.KVItem;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.sql.Date;

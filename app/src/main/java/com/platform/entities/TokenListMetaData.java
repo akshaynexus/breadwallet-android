@@ -1,13 +1,10 @@
 package com.platform.entities;
 
 
-import android.util.Log;
-
-import com.breadwallet.presenter.entities.TokenItem;
-import com.breadwallet.tools.util.BRConstants;
-import com.breadwallet.wallet.wallets.bitcoin.WalletBchManager;
-import com.breadwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
-import com.breadwallet.wallet.wallets.ethereum.WalletEthManager;
+import com.cspnwallet.tools.util.BRConstants;
+import com.cspnwallet.wallet.wallets.bitcoin.WalletBchManager;
+import com.cspnwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
+import com.cspnwallet.wallet.wallets.ethereum.WalletEthManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +65,10 @@ public class TokenListMetaData {
             this.enabledCurrencies.add(new TokenInfo(WalletEthManager.ETH_CURRENCY_CODE, false, null));
         }
         if (this.hiddenCurrencies == null) this.hiddenCurrencies = new ArrayList<>();
+        if(!BRConstants.allowOthercoins){
+            this.hiddenCurrencies.add(new TokenInfo(WalletBchManager.BITCASH_CURRENCY_CODE, false, null));
+            this.hiddenCurrencies.add(new TokenInfo(WalletEthManager.ETH_CURRENCY_CODE, false, null));
+        }
     }
 
     public synchronized boolean isCurrencyHidden(String symbol) {
