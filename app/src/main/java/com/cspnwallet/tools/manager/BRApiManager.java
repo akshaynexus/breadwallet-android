@@ -288,12 +288,13 @@ public final class BRApiManager {
             }
             Iterator<String> keys = ratesJsonObject.keys();
             Set<CurrencyEntity> ratesList = new LinkedHashSet<>();
+
             while (keys.hasNext()) {
                 String currencyCode = keys.next();
                 JSONObject jsonObject = ratesJsonObject.getJSONObject(currencyCode);
-                String code = WalletBitcoinManager.BITCOIN_CURRENCY_CODE;
+                String code = "BTC";
                 String rate = jsonObject.getString(code);
-                CurrencyEntity currencyEntity = new CurrencyEntity(code, "", Float.valueOf(rate), currencyCode);
+                CurrencyEntity currencyEntity = new CurrencyEntity(WalletBitcoinManager.BITCOIN_CURRENCY_CODE, "", Float.valueOf(rate), currencyCode);
                 ratesList.add(currencyEntity);
             }
             RatesRepository.getInstance(context).putCurrencyRates(ratesList);
@@ -327,7 +328,7 @@ public final class BRApiManager {
     @WorkerThread
     private static JSONArray fetchFiatRates(Context app) {
         //Fetch the BTC-Fiat rates
-        String url = APIClient.getBaseURL() + CURRENCY_QUERY_STRING + WalletBitcoinManager.BITCOIN_CURRENCY_CODE;
+        String url = APIClient.getBaseURL() + CURRENCY_QUERY_STRING + "BTC";
         String jsonString = urlGET(app, url);
         JSONArray jsonArray = null;
         if (jsonString == null) {

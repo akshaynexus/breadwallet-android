@@ -69,7 +69,7 @@ public class BRSQLiteHelper extends SQLiteOpenHelper {
     private static final String MB_DATABASE_CREATE = "create table if not exists " + MB_TABLE_NAME + " (" +
             MB_COLUMN_ID + " integer primary key autoincrement, " +
             MB_BUFF + " blob, " +
-            MB_ISO + " text DEFAULT 'BTC' , " +
+            MB_ISO + " text DEFAULT 'CSPN' , " +
             MB_HEIGHT + " integer);";
 
     /**
@@ -89,7 +89,7 @@ public class BRSQLiteHelper extends SQLiteOpenHelper {
             TX_BUFF + " blob, " +
             TX_BLOCK_HEIGHT + " integer, " +
             TX_TIME_STAMP + " integer, " +
-            TX_ISO + " text DEFAULT 'BTC' );";
+            TX_ISO + " text DEFAULT 'CSPN' );";
 
     /**
      * Peer table
@@ -108,7 +108,7 @@ public class BRSQLiteHelper extends SQLiteOpenHelper {
             PEER_ADDRESS + " blob," +
             PEER_PORT + " blob," +
             PEER_TIMESTAMP + " blob," +
-            PEER_ISO + "  text default 'BTC');";
+            PEER_ISO + "  text default 'CSPN');";
     /**
      * Currency table
      */
