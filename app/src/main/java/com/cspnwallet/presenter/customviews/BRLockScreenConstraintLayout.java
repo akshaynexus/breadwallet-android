@@ -10,6 +10,7 @@ import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
 
 import com.cspnwallet.R;
+import com.cspnwallet.tools.util.BRConstants;
 
 /**
  * BreadWallet
@@ -143,9 +144,10 @@ public class BRLockScreenConstraintLayout extends ConstraintLayout {
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawPath(pathBlack, trianglesPaintBlack);
-        canvas.drawPath(path, trianglesPaint);
-
+        if(!BRConstants.enableWhiteonDarkCSPNStyle) {
+            canvas.drawPath(pathBlack, trianglesPaintBlack);
+            canvas.drawPath(path, trianglesPaint);
+        }
     }
 
 }

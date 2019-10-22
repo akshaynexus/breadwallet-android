@@ -26,6 +26,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import com.cspnwallet.BreadApp;
 import com.cspnwallet.BuildConfig;
 import com.cspnwallet.R;
 import com.cspnwallet.model.PriceDataPoint;
@@ -150,7 +151,10 @@ public class WalletActivity extends BRActivity implements InternetManager.Connec
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_wallet);
-
+        if(BRConstants.enableWhiteonDarkCSPNStyle) {
+            BreadApp.setBackgroundImageR(findViewById(R.id.tx_list));
+            BreadApp.setBackgroundImageforNest(findViewById(R.id.plant_detail_scrollview));
+        }
         BRSharedPrefs.putIsNewWallet(this, false);
         mCurrencyCode = getIntent().hasExtra(EXTRA_CURRENCY_CODE) ? getIntent().getStringExtra(EXTRA_CURRENCY_CODE)
                 : WalletsMaster.getInstance().getCurrentWallet(this).getCurrencyCode(); // TODO USE A SINGLE SOURCE FOR CURRENCY

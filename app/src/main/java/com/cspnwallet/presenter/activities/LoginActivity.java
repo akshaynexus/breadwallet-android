@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.cspnwallet.BreadApp;
 import com.cspnwallet.R;
 import com.cspnwallet.presenter.activities.util.BRActivity;
 import com.cspnwallet.presenter.customviews.BRKeyboard;
@@ -47,7 +48,6 @@ public class LoginActivity extends BRActivity implements PinLayout.PinLayoutList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin);
-
         mPinDigitViews = findViewById(R.id.pin_digits);
         mKeyboard = findViewById(R.id.brkeyboard);
         mPinLayout = findViewById(R.id.pinLayout);
@@ -115,6 +115,8 @@ public class LoginActivity extends BRActivity implements PinLayout.PinLayoutList
     @Override
     protected void onResume() {
         super.onResume();
+        if(BRConstants.enableWhiteonDarkCSPNStyle)
+        BreadApp.setBackgroundImage(findViewById(R.id.activity_pit));
 
         mPinDigitViews.setup(mKeyboard, this);
         BRExecutor.getInstance().forLightWeightBackgroundTasks().execute(() -> {

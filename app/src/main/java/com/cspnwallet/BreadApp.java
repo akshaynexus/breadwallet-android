@@ -8,15 +8,24 @@ import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.ProcessLifecycleOwner;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.constraint.ConstraintLayout;
+import android.support.v4.widget.NestedScrollView;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 
 import com.cspnwallet.app.ApplicationLifecycleObserver;
+import com.cspnwallet.presenter.customviews.BRLockScreenConstraintLayout;
 import com.cspnwallet.protocols.messageexchange.InboxPollingHandler;
 import com.cspnwallet.tools.manager.BRApiManager;
 import com.cspnwallet.tools.util.BRConstants;
@@ -44,6 +53,7 @@ import com.crashlytics.android.Crashlytics;
 import com.platform.APIClient;
 import com.platform.HTTPServer;
 
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.regex.Matcher;
@@ -254,7 +264,30 @@ public class BreadApp extends Application implements ApplicationLifecycleObserve
     public static boolean isInBackground() {
         return mBackgroundedTime > 0;
     }
-
+    public static void setBackgroundImage(ConstraintLayout layout){
+        InputStream imageStream = getBreadContext().getResources().openRawResource(R.raw.cspn_background_sm);
+        Bitmap bitmap = BitmapFactory.decodeStream(imageStream);
+        Drawable d = new BitmapDrawable(getBreadContext().getResources(), bitmap);
+        layout.setBackground(d);
+    }
+    public static void setBackgroundImageR(RecyclerView layout){
+        InputStream imageStream = getBreadContext().getResources().openRawResource(R.raw.cspn_background_sm);
+        Bitmap bitmap = BitmapFactory.decodeStream(imageStream);
+        Drawable d = new BitmapDrawable(getBreadContext().getResources(), bitmap);
+        layout.setBackground(d);
+    }
+    public static void setBackgroundImageRL(RelativeLayout layout){
+        InputStream imageStream = getBreadContext().getResources().openRawResource(R.raw.cspn_background_sm);
+        Bitmap bitmap = BitmapFactory.decodeStream(imageStream);
+        Drawable d = new BitmapDrawable(getBreadContext().getResources(), bitmap);
+        layout.setBackground(d);
+    }
+    public static void setBackgroundImageforNest(NestedScrollView layout){
+        InputStream imageStream = getBreadContext().getResources().openRawResource(R.raw.cspn_background_sm);
+        Bitmap bitmap = BitmapFactory.decodeStream(imageStream);
+        Drawable d = new BitmapDrawable(getBreadContext().getResources(), bitmap);
+        layout.setBackground(d);
+    }
     // TODO: Refactor so this does not store the current activity like this.
     @Deprecated
     public static Context getBreadContext() {

@@ -16,6 +16,7 @@ import com.cspnwallet.tools.manager.BRClipboardManager;
 import com.cspnwallet.tools.manager.BRSharedPrefs;
 import com.cspnwallet.tools.util.BRConstants;
 import com.cspnwallet.tools.util.LogsUtils;
+import com.cspnwallet.BreadApp;
 
 import java.util.Locale;
 
@@ -41,7 +42,21 @@ public class AboutActivity extends BaseSettingsActivity {
 
         TextView infoText = findViewById(R.id.info_text);
         TextView policyText = findViewById(R.id.policy_text);
-
+        if(BRConstants.enableWhiteonDarkCSPNStyle) {
+            BreadApp.setBackgroundImage(findViewById(R.id.activity_intro_set_pit));
+            BaseTextView tbrd_Rewards = findViewById(R.id.brd_rewards);
+            BaseTextView tbrd_Rewards_id = findViewById(R.id.brd_rewards_id);
+            BaseTextView tblog_text = findViewById(R.id.textView24);
+            BaseTextView ttwitter_text = findViewById(R.id.textView22);
+            BaseTextView treddit_text = findViewById(R.id.textView21);
+            //set text color to black to have it show properly on a white bg,disable this if we are using a dark theme
+            tbrd_Rewards.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
+            tbrd_Rewards_id.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
+            tblog_text.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
+            ttwitter_text.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
+            treddit_text.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
+            infoText.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
+        }
         infoText.setText(String.format(Locale.getDefault(), getString(R.string.About_footer), BuildConfig.VERSION_NAME, BuildConfig.BUILD_VERSION));
         infoText.setOnClickListener(new View.OnClickListener() {
             @Override

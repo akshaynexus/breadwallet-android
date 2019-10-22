@@ -1,6 +1,9 @@
 package com.cspnwallet.tools.util;
 
+import com.cspnwallet.wallet.wallets.bitcoin.WalletBchManager;
 import com.cspnwallet.wallet.wallets.bitcoin.WalletBitcoinManager;
+import com.cspnwallet.wallet.wallets.ethereum.WalletEthManager;
+import com.cspnwallet.wallet.wallets.ethereum.WalletTokenManager;
 import com.google.common.collect.ImmutableList;
 import com.platform.entities.TokenListMetaData;
 
@@ -33,16 +36,18 @@ import java.math.RoundingMode;
 
 public final class BRConstants {
 public static final boolean allowOthercoins = false;
-    public static final ImmutableList<TokenListMetaData.TokenInfo> DEFAULT_WALLETS = new ImmutableList
+public static final boolean enableWhiteonDarkCSPNStyle = true;
+    public static final ImmutableList<TokenListMetaData.TokenInfo> DEFAULT_WALLETS = (allowOthercoins) ? new ImmutableList
             .Builder<TokenListMetaData.TokenInfo>()
             .add(new TokenListMetaData.TokenInfo(WalletBitcoinManager.BITCOIN_CURRENCY_CODE, false, null))
-            // Uncomment this to add support for eth and its er20 token list
-//            .add(new TokenListMetaData.TokenInfo(WalletBchManager.BITCASH_CURRENCY_CODE, false, null))
-//            .add(new TokenListMetaData.TokenInfo(WalletEthManager.ETH_CURRENCY_CODE, false, null))
-//            .add(new TokenListMetaData.TokenInfo(WalletTokenManager.BRD_CURRENCY_CODE, true, WalletTokenManager.BRD_CONTRACT_ADDRESS))
-//            .add(new TokenListMetaData.TokenInfo(WalletTokenManager.DAI_CURRENCY_CODE, true, WalletTokenManager.DAI_CONTRACT_ADDRESS))
-//            .add(new TokenListMetaData.TokenInfo(WalletTokenManager.TUSD_CURRENCY_CODE, true, WalletTokenManager.TUSD_CONTRACT_ADDRESS))
-            .build();
+            .add(new TokenListMetaData.TokenInfo(WalletBchManager.BITCASH_CURRENCY_CODE, false, null))
+            .add(new TokenListMetaData.TokenInfo(WalletEthManager.ETH_CURRENCY_CODE, false, null))
+            .add(new TokenListMetaData.TokenInfo(WalletTokenManager.BRD_CURRENCY_CODE, true, WalletTokenManager.BRD_CONTRACT_ADDRESS))
+            .add(new TokenListMetaData.TokenInfo(WalletTokenManager.DAI_CURRENCY_CODE, true, WalletTokenManager.DAI_CONTRACT_ADDRESS))
+            .add(new TokenListMetaData.TokenInfo(WalletTokenManager.TUSD_CURRENCY_CODE, true, WalletTokenManager.TUSD_CONTRACT_ADDRESS))
+            .build() : new ImmutableList
+            .Builder<TokenListMetaData.TokenInfo>()
+            .add(new TokenListMetaData.TokenInfo(WalletBitcoinManager.BITCOIN_CURRENCY_CODE, false, null)).build() ;
     /**
      * Boolean values as Strings.
      */

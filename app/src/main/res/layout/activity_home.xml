@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
+    android:id="@+id/home_layout"
     android:clipToPadding="false"
     android:descendantFocusability="beforeDescendants"
     android:filterTouchesWhenObscured="true"

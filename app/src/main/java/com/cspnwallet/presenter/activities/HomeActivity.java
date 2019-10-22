@@ -38,6 +38,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.cspnwallet.BreadApp;
 import com.cspnwallet.BuildConfig;
 import com.cspnwallet.R;
 import com.cspnwallet.model.Experiments;
@@ -98,7 +99,8 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
 
         // Show build info as a watermark on non prod builds like: TESTNET 3.10.1 build 1
         setUpBuildInfoLabel();
-
+        if(BRConstants.enableWhiteonDarkCSPNStyle)
+            BreadApp.setBackgroundImageRL(findViewById(R.id.home_layout));
         mWalletRecycler = findViewById(R.id.rv_wallet_list);
         mFiatTotal = findViewById(R.id.total_assets_usd);
         mNotificationBar = findViewById(R.id.notification_bar);

@@ -2,10 +2,12 @@ package com.cspnwallet.presenter.activities.settings;
 
 import android.widget.ListView;
 
+import com.cspnwallet.BreadApp;
 import com.cspnwallet.R;
 import com.cspnwallet.presenter.customviews.BaseTextView;
 import com.cspnwallet.presenter.entities.BRSettingsItem;
 import com.cspnwallet.tools.adapter.SettingsAdapter;
+import com.cspnwallet.tools.util.BRConstants;
 import com.cspnwallet.tools.util.SettingsUtil;
 import com.cspnwallet.wallet.WalletsMaster;
 import com.cspnwallet.wallet.abstracts.BaseWalletManager;
@@ -38,6 +40,8 @@ public class SettingsActivity extends BaseSettingsActivity {
         setTitleAndList();
         //call super on resume after the child's to allow for the mode to be detected
         super.onResume();
+        if(BRConstants.enableWhiteonDarkCSPNStyle)
+            BreadApp.setBackgroundImageRL(findViewById(R.id.activity_intro_set_pit));
     }
 
     private void setTitleAndList() {
