@@ -99,8 +99,7 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
 
         // Show build info as a watermark on non prod builds like: TESTNET 3.10.1 build 1
         setUpBuildInfoLabel();
-        if(BRConstants.enableWhiteonDarkCSPNStyle)
-            BreadApp.setBackgroundImageRL(findViewById(R.id.home_layout));
+
         mWalletRecycler = findViewById(R.id.rv_wallet_list);
         mFiatTotal = findViewById(R.id.total_assets_usd);
         mNotificationBar = findViewById(R.id.notification_bar);
@@ -109,7 +108,12 @@ public class HomeActivity extends BRActivity implements InternetManager.Connecti
         mMenuLayout = findViewById(R.id.menu_layout);
         mListGroupLayout = findViewById(R.id.list_group_layout);
         mBuyMenuLabel = findViewById(R.id.buy_text_view);
-
+        if(BRConstants.enableWhiteonDarkCSPNStyle) {
+            BreadApp.setBackgroundImageRL(findViewById(R.id.home_layout));
+            TextView totalassetlabel = findViewById(R.id.total_assets_label);
+            totalassetlabel.setTextColor(getResources().getColor(R.color.textonlightbg,getTheme()));
+            mFiatTotal.setTextColor(totalassetlabel.getCurrentTextColor());
+        }
         boolean showBuyAndSell = BRConstants.USD.equals(BRSharedPrefs.getPreferredFiatIso(this)) &&
                 ExperimentsRepositoryImpl.INSTANCE.isExperimentActive(Experiments.BUY_SELL_MENU_BUTTON) && BRConstants.allowOthercoins;
         boolean showtradeandbuy = BRConstants.allowOthercoins;

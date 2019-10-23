@@ -49,6 +49,7 @@ public class AboutActivity extends BaseSettingsActivity {
             BaseTextView tblog_text = findViewById(R.id.textView24);
             BaseTextView ttwitter_text = findViewById(R.id.textView22);
             BaseTextView treddit_text = findViewById(R.id.textView21);
+            BaseTextView mabout_text = findViewById(R.id.title);
             //set text color to black to have it show properly on a white bg,disable this if we are using a dark theme
             tbrd_Rewards.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
             tbrd_Rewards_id.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
@@ -56,6 +57,7 @@ public class AboutActivity extends BaseSettingsActivity {
             ttwitter_text.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
             treddit_text.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
             infoText.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
+            mabout_text.setTextColor(getResources().getColor(R.color.textonlightbg, getTheme()));
         }
         infoText.setText(String.format(Locale.getDefault(), getString(R.string.About_footer), BuildConfig.VERSION_NAME, BuildConfig.BUILD_VERSION));
         infoText.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +109,7 @@ public class AboutActivity extends BaseSettingsActivity {
                 AboutActivity.this.overridePendingTransition(R.anim.enter_from_bottom, R.anim.empty_300);
             }
         });
-
+        if(BRConstants.allowOthercoins)
         mRewardsId.setText(BRSharedPrefs.getWalletRewardId(this));
 
         mCopy.setOnClickListener(new View.OnClickListener() {

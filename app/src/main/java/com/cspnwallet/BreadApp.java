@@ -183,13 +183,15 @@ public class BreadApp extends Application implements ApplicationLifecycleObserve
      * Initialize the wallet id (rewards id), and save it in the SharedPreferences.
      */
     private static void initializeWalletId() {
-        String walletId = generateWalletId();
-        if (!Utils.isNullOrEmpty(walletId) && walletId.matches(WALLET_ID_PATTERN)) {
-            BRSharedPrefs.putWalletRewardId(mInstance, walletId);
-        } else {
-            Log.e(TAG, "initializeWalletId: walletId is empty or faulty after generation");
-            BRSharedPrefs.putWalletRewardId(mInstance, "");
-            BRReportsManager.reportBug(new IllegalArgumentException("walletId is empty or faulty after generation: " + walletId));
+        if(BRConstants.allowOthercoins) {
+            String walletId = generateWalletId();
+            if (!Utils.isNullOrEmpty(walletId) && walletId.matches(WALLET_ID_PATTERN)) {
+                BRSharedPrefs.putWalletRewardId(mInstance, walletId);
+            } else {
+                Log.e(TAG, "initializeWalletId: walletId is empty or faulty after generation");
+                BRSharedPrefs.putWalletRewardId(mInstance, "");
+                BRReportsManager.reportBug(new IllegalArgumentException("walletId is empty or faulty after generation: " + walletId));
+            }
         }
     }
 

@@ -398,7 +398,7 @@ public final class SettingsUtil {
                 currentActivity.overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
             }
         }, false, 0));
-        if (!BRSharedPrefs.getIsSegwitEnabled(context)) {
+        if (!BRSharedPrefs.getIsSegwitEnabled(context) && BRConstants.showSegwitUI) {
             items.add(new BRSettingsItem(context.getString(R.string.Settings_EnableSegwit), "", new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

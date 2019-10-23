@@ -37,6 +37,7 @@ import java.math.RoundingMode;
 public final class BRConstants {
 public static final boolean allowOthercoins = false;
 public static final boolean enableWhiteonDarkCSPNStyle = true;
+public static final boolean showSegwitUI = false;
     public static final ImmutableList<TokenListMetaData.TokenInfo> DEFAULT_WALLETS = (allowOthercoins) ? new ImmutableList
             .Builder<TokenListMetaData.TokenInfo>()
             .add(new TokenListMetaData.TokenInfo(WalletBitcoinManager.BITCOIN_CURRENCY_CODE, false, null))

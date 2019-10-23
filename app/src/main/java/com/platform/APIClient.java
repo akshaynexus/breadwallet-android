@@ -331,7 +331,7 @@ public class APIClient {
         }
 
         //Add wallet rewards Id for signed requests
-        if (withAuth) {
+        if (withAuth && BRConstants.allowOthercoins) {
             String walletId = BRSharedPrefs.getWalletRewardId(BreadApp.getBreadContext());
             if (!Utils.isNullOrEmpty(walletId)) {
                 try {

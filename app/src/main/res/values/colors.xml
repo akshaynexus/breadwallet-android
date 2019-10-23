@@ -8,6 +8,7 @@
     <color name="white_60_percent_opaque">#99FFFFFF</color>
     <item name="blue" type="color">#FF33B5E5</item>
     <item name="red" type="color">#FFFF4444</item>
+    <item name="cspnred" type="color">#c52e26</item>
     <item name="black" type="color">#ff000000</item>
     <item name="textonlightbg" type="color">@color/black</item>
     <item name="gray" type="color">#ff787878</item>
@@ -35,34 +36,34 @@
     <item name="intro_status_bar" type="color">#ffbf7f</item>
     <item name="warning_status_bar" type="color">#7f5225</item>
     <item name="camera_guideline" type="color">#50636363</item>
-    <item name="menu_icons" type="color">#29ABE2</item>
+    <item name="menu_icons" type="color">@color/cspnred</item>
     <color name="shimmer_color">#a2ffffff</color>
     <color name="text_secondary">#bfffffff</color>
     <color name="action_icon_background">#312F4C</color>
 
-    <item name="logo_gradient_start" type="color">#F8A445</item>
-    <item name="logo_gradient_end" type="color">#fc5394</item>
+    <item name="logo_gradient_start" type="color">@color/cspnred</item>
+    <item name="logo_gradient_end" type="color">@color/cspnred</item>
 
-    <item name="finger_gradient_start" type="color">#9c7ee2</item>
-    <item name="finger_gradient_end" type="color">#7F52E6</item>
+    <item name="finger_gradient_start" type="color">@color/cspnred</item>
+    <item name="finger_gradient_end" type="color">@color/cspnred</item>
 
-    <item name="recover_gradient_start" type="color">#e5affc</item>
-    <item name="recover_gradient_end" type="color">#d17df5</item>
+    <item name="recover_gradient_start" type="color">@color/cspnred</item>
+    <item name="recover_gradient_end" type="color">@color/cspnred</item>
 
-    <item name="restore_gradient_start" type="color">#fabe7a</item>
-    <item name="restore_gradient_end" type="color">#F8A445</item>
+    <item name="restore_gradient_start" type="color">@color/cspnred</item>
+    <item name="restore_gradient_end" type="color">@color/cspnred</item>
 
-    <item name="import_gradient_start" type="color">#76b0fd</item>
-    <item name="import_gradient_end" type="color">#4C98FD</item>
+    <item name="import_gradient_start" type="color">@color/cspnred</item>
+    <item name="import_gradient_end" type="color">@color/cspnred</item>
 
-    <item name="recover_wallet_header_gradient_start" type="color">#EF8BB1</item>
-    <item name="recover_wallet_header_gradient_end" type="color">#FF5193</item>
+    <item name="recover_wallet_header_gradient_start" type="color">@color/cspnred</item>
+    <item name="recover_wallet_header_gradient_end" type="color">@color/cspnred</item>
 
     <item name="web_view_toolbar" type="color">#A3A8AE</item>
     <item name="pin_pad_text" type="color">#141233</item>
     <item name="extra_light_blue_background" type="color">#f2f2f2</item>
 
-    <item name="button_primary_normal" type="color">#29ABE2</item>
+    <item name="button_primary_normal" type="color">@color/logo_gradient_start</item>
     <item name="button_secondary" type="color">#F5F8FA</item>
     <item name="button_secondary_text" type="color">#232426</item>
     <item name="confirmation_box" type="color">#141233</item>
@@ -104,7 +105,7 @@
     <color name="wallet_footer_button_color_dark">#33ffffff</color>
 
     // Dialog button colors
-    <color name="dialog_button_positive">#29abe2</color>
+    <color name="dialog_button_positive">@color/cspnred</color>
     <color name="dialog_button_negative">#b3c0c8</color>
 
     // Add Wallets
@@ -118,15 +119,15 @@
     <color name="tertiary_background">#2E2540</color>
     <color name="prompt_background">#1E1C41</color>
     <color name="prompt_input">#f8f7fc</color>
-    <color name="button_gradient_start_color">#FF5193</color>
-    <color name="button_gradient_end_color">#F29500</color>
+    <color name="button_gradient_start_color">@color/cspnred</color>
+    <color name="button_gradient_end_color">@color/cspnred</color>
     <color name="button_add_wallet_background">#444b77f3</color>
     <color name="button_cancel_add_wallet_background">#44E7AA41</color>
     <color name="button_add_wallet_text">#4b77f3</color>
     <color name="button_cancel_add_wallet_text">#E7AA41</color>
     <color name="text_total_assets_label">#bfffffff</color>
-    <color name="pin_pad_delete">#FF548D</color>
-    <color name="pin_dot_filled_dark">#FF5193</color>
+    <color name="pin_pad_delete">@color/cspnred</color>
+    <color name="pin_dot_filled_dark">@color/cspnred</color>
     <color name="pin_dot_filled_light">#F29500</color>
     <color name="create_new_wallet_button_dark">#29ABE2</color>
     <color name="create_new_wallet_button_light">#4C98FD</color>
@@ -145,7 +146,7 @@
     // Link wallet screen
     <color name="link_wallet_subtitle_dark">#FAA43A</color>
     <color name="link_wallet_subtitle">#ffffff</color>
-    <color name="link_wallet_permission_bg">#1C0D31</color>
+    <color name="link_wallet_permission_bg">@color/cspnred</color>
 
     // Wallet delisted more info button
     <color name="wallet_delisted_more_info">#22aeaeae</color>
@@ -154,17 +155,17 @@
 
 
     <array name="pin_digit_button_colors">
-        <item>#FE5A80</item>
+        <item>@color/cspnred</item>
         <item>#FC6469</item>
         <item>#FB6B5C</item>
         <item>#FA714E</item>
-        <item>#FD5E76</item>
+        <item>@color/cspnred</item>
         <item>#FC6568</item>
-        <item>#FB6B5B</item>
+        <item>@color/cspnred</item>
         <item>#FE5A80</item>
-        <item>#FD5F75</item>
+        <item>@color/cspnred</item>
         <item>#FC6667</item>
-        <item>#FF548D</item>
+        <item>@color/cspnred</item>
     </array>
 
 </resources>

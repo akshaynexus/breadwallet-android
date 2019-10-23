@@ -74,6 +74,7 @@ public class LogsUtils {
         stringBuilder.append("[Please add your feedback.]\n\n");
         stringBuilder.append("Device Info\n");
         stringBuilder.append("------------\n");
+        if(BRConstants.allowOthercoins)
         stringBuilder.append("Wallet id: " + BRSharedPrefs.getWalletRewardId(context));
         stringBuilder.append("\nDevice id: " + BRSharedPrefs.getDeviceId(context));
         stringBuilder.append("\nDebuggable: " + BuildConfig.DEBUG);

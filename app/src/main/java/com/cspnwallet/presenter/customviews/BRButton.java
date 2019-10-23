@@ -215,7 +215,7 @@ public class BRButton extends Button {
         if (type == 3) press(1);
         this.type = type;
 
-        if (type == 1) { //blue
+        if (type == 1) { //blue,now red cause cspn
             bPaint.setColor(getContext().getColor(R.color.button_primary_normal));
             setTextColor(getContext().getColor(R.color.white));
         } else if (type == 2) { //gray stroke
