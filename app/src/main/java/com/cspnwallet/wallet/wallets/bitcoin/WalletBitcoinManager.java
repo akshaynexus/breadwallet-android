@@ -1,9 +1,12 @@
 package com.cspnwallet.wallet.wallets.bitcoin;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.cspnwallet.BuildConfig;
+import com.cspnwallet.R;
 import com.cspnwallet.core.BRCoreAddress;
 import com.cspnwallet.core.BRCoreChainParams;
 import com.cspnwallet.core.BRCoreMasterPubKey;
@@ -55,7 +58,7 @@ public final class WalletBitcoinManager extends BaseBitcoinWalletManager {
     private static final String CURRENCY_CODE = BITCOIN_CURRENCY_CODE;
     public static final String NAME = "Crypto Sports";
     private static final String SCHEME = "cryptosports";
-    private static final String COLOR = "#c52e26";
+    private static final String COLOR = "#" + Integer.toHexString(Resources.getSystem().getColor(R.color.cspnred));
 
     private static WalletBitcoinManager mInstance;
 
